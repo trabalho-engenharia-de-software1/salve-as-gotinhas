@@ -19,6 +19,10 @@ config/icon="res://icons/icon.svg"
 
 buses/default_bus_layout="res://cenas/default_bus_layout.tres"
 
+[autoload]
+
+VolumeLabel="*res://cenas/menu-inicial/VolumeLabelUI.tscn"
+
 [display]
 
 window/size/viewport_width=480

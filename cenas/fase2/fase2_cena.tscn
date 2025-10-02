@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://dypx0nd08saj3"]
+[gd_scene load_steps=3 format=3 uid="uid://dypx0nd08saj3"]
+
+[ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://backgrounds/background_branco.jpg" id="1_5rxyx"]
+[ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://backgrounds/background-menu-inicial.png" id="2_75ht5"]
 
 [node name="Fase2Cena" type="Node2D"]
+
+[node name="BackgroundFase2" type="Sprite2D" parent="."]
+position = Vector2(240, 134.99998)
+scale = Vector2(0.07979166, 0.066999994)
+texture = ExtResource("1_5rxyx")
+region_filter_clip_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+editor_description = "RESERVATORIO"
+position = Vector2(62.06251, 140.5)
+scale = Vector2(0.045654316, 0.21777342)
+texture = ExtResource("2_75ht5")
