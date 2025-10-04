@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c00dmh5exfxlo"]
 
-[ext_resource type="Script" uid="uid://cbgafm2yk41gx" path="res://cenas/menu-inicial/menu_inicial.gd" id="1_jdc8s"]
+[ext_resource type="Script" uid="uid://cbgafm2yk41gx" path="res://scripts/menu_inicial.gd" id="1_jdc8s"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://backgrounds/background-menu-inicial.png" id="1_u4qhn"]
 [ext_resource type="AudioStream" uid="uid://b21kq6xrhsp47" path="res://sounds/musica-fundo.mp3" id="2_q6nbj"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="2_uerxx"]
@@ -19,7 +19,6 @@ script = ExtResource("1_jdc8s")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_q6nbj")
 autoplay = true
-bus = &"music"
 
 [node name="BackgroundMenuInicial" type="Sprite2D" parent="."]
 modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
