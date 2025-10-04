@@ -1,18 +1,93 @@
-[gd_scene load_steps=3 format=3 uid="uid://dypx0nd08saj3"]
+[gd_scene load_steps=6 format=3 uid="uid://dypx0nd08saj3"]
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://backgrounds/background_branco.jpg" id="1_5rxyx"]
-[ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://backgrounds/background-menu-inicial.png" id="2_75ht5"]
+[ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase_2.gd" id="1_8eytn"]
+[ext_resource type="PackedScene" uid="uid://cd77kf2d3uwya" path="res://cenas/fase2/opcao_gasto.tscn" id="4_eap3x"]
+[ext_resource type="PackedScene" uid="uid://bnpy5m36en3sk" path="res://cenas/fase2/reservatorio.tscn" id="5_8eytn"]
+[ext_resource type="Texture2D" uid="uid://mftyq74pt3m0" path="res://buttons/volume.png" id="5_x1yhp"]
 
 [node name="Fase2Cena" type="Node2D"]
+script = ExtResource("1_8eytn")
 
 [node name="BackgroundFase2" type="Sprite2D" parent="."]
+modulate = Color(3.4172833e-06, 0.6935256, 0.45432967, 1)
 position = Vector2(240, 134.99998)
 scale = Vector2(0.07979166, 0.066999994)
 texture = ExtResource("1_5rxyx")
 region_filter_clip_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-editor_description = "RESERVATORIO"
-position = Vector2(62.06251, 140.5)
-scale = Vector2(0.045654316, 0.21777342)
-texture = ExtResource("2_75ht5")
+[node name="Reservatorio" parent="." instance=ExtResource("5_8eytn")]
+position = Vector2(-2, 6)
+
+[node name="BoxOpcoes" type="Node2D" parent="."]
+
+[node name="OpcaoGasto" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
+offset_left = 233.0
+offset_top = 104.0
+offset_right = 302.66666
+offset_bottom = 128.0
+custo_e_gotas = 3
+
+[node name="SpriteOpcao1" type="Sprite2D" parent="BoxOpcoes"]
+position = Vector2(175, 75)
+scale = Vector2(4.5, 3.587)
+texture = ExtResource("5_x1yhp")
+
+[node name="SpriteOpcao2" type="Sprite2D" parent="BoxOpcoes"]
+position = Vector2(375, 185)
+scale = Vector2(4.5, 3.587)
+texture = ExtResource("5_x1yhp")
+
+[node name="SpriteOpcao3" type="Sprite2D" parent="BoxOpcoes"]
+position = Vector2(275, 75)
+scale = Vector2(4.5, 3.587)
+texture = ExtResource("5_x1yhp")
+
+[node name="SpriteOpcao4" type="Sprite2D" parent="BoxOpcoes"]
+position = Vector2(175, 185)
+scale = Vector2(4.5, 3.587)
+texture = ExtResource("5_x1yhp")
+
+[node name="SpriteOpcao5" type="Sprite2D" parent="BoxOpcoes"]
+position = Vector2(375, 75)
+scale = Vector2(4.5, 3.587)
+texture = ExtResource("5_x1yhp")
+
+[node name="SpriteOpcao6" type="Sprite2D" parent="BoxOpcoes"]
+position = Vector2(275, 185)
+scale = Vector2(4.5, 3.587)
+texture = ExtResource("5_x1yhp")
+
+[node name="OpcaoGasto3" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
+offset_left = 129.0
+offset_top = 104.0
+offset_right = 201.0
+offset_bottom = 128.0
+custo_e_gotas = 3
+
+[node name="OpcaoGasto4" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
+offset_left = 343.0
+offset_top = 212.0
+offset_right = 387.0
+offset_bottom = 236.0
+
+[node name="OpcaoGasto5" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
+offset_left = 331.0
+offset_top = 104.0
+offset_right = 400.0
+offset_bottom = 152.0
+custo_e_gotas = 7
+
+[node name="OpcaoGasto6" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
+offset_left = 139.0
+offset_top = 213.0
+offset_right = 206.0
+offset_bottom = 260.0
+custo_e_gotas = 4
+
+[node name="OpcaoGasto7" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
+offset_left = 229.0
+offset_top = 214.0
+offset_right = 311.0
+offset_bottom = 260.0
+custo_e_gotas = 5
