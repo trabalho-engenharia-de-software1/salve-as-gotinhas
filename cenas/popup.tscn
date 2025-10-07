@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://dna1hricujun3"]
+
+[ext_resource type="Script" uid="uid://dy5jlq68exyhy" path="res://scripts/popup.gd" id="1_8rg8x"]
+[ext_resource type="Texture2D" uid="uid://b05ehcnbprv76" path="res://buttons/tyeste.png" id="2_kb6tq"]
+
+[node name="Popup" type="CanvasLayer"]
+script = ExtResource("1_8rg8x")
+
+[node name="color" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.2)
+
+[node name="caixaTexto" type="Panel" parent="color"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -61.0
+offset_right = 110.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="color/caixaTexto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="texto" type="Label" parent="color/caixaTexto/VBoxContainer"]
+layout_mode = 2
+text = "TESTE "
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="botao" type="Button" parent="color/caixaTexto"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 25.0
+offset_bottom = 23.0
+icon = ExtResource("2_kb6tq")
