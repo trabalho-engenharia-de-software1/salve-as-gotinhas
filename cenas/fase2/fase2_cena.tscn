@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase_2.gd" id="1_8eytn"]
-[ext_resource type="PackedScene" uid="uid://cd77kf2d3uwya" path="res://cenas/fase2/opcao_gasto.tscn" id="4_eap3x"]
+[ext_resource type="PackedScene" uid="uid://cd77kf2d3uwya" path="res://backgrounds/opcao_gasto.tscn" id="4_eap3x"]
 [ext_resource type="PackedScene" uid="uid://bnpy5m36en3sk" path="res://cenas/fase2/reservatorio.tscn" id="5_8eytn"]
 [ext_resource type="Texture2D" uid="uid://mftyq74pt3m0" path="res://buttons/volume.png" id="5_x1yhp"]
 
@@ -16,78 +16,79 @@ scale = Vector2(0.07979166, 0.066999994)
 texture = ExtResource("1_5rxyx")
 region_filter_clip_enabled = true
 
-[node name="Reservatorio" parent="." instance=ExtResource("5_8eytn")]
-position = Vector2(-2, 6)
-
 [node name="BoxOpcoes" type="Node2D" parent="."]
 
-[node name="OpcaoGasto" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 233.0
-offset_top = 104.0
-offset_right = 302.66666
-offset_bottom = 128.0
-custo_e_gotas = 3
-
 [node name="SpriteOpcao1" type="Sprite2D" parent="BoxOpcoes"]
-position = Vector2(175, 75)
+position = Vector2(197.99998, 57)
 scale = Vector2(4.5, 3.587)
 texture = ExtResource("5_x1yhp")
 
 [node name="SpriteOpcao2" type="Sprite2D" parent="BoxOpcoes"]
-position = Vector2(375, 185)
+position = Vector2(413.99997, 178.00002)
 scale = Vector2(4.5, 3.587)
 texture = ExtResource("5_x1yhp")
 
 [node name="SpriteOpcao3" type="Sprite2D" parent="BoxOpcoes"]
-position = Vector2(275, 75)
+position = Vector2(309, 57)
 scale = Vector2(4.5, 3.587)
 texture = ExtResource("5_x1yhp")
 
 [node name="SpriteOpcao4" type="Sprite2D" parent="BoxOpcoes"]
-position = Vector2(175, 185)
+position = Vector2(198, 178.696)
 scale = Vector2(4.5, 3.587)
 texture = ExtResource("5_x1yhp")
 
 [node name="SpriteOpcao5" type="Sprite2D" parent="BoxOpcoes"]
-position = Vector2(375, 75)
+position = Vector2(413.99997, 59)
 scale = Vector2(4.5, 3.587)
 texture = ExtResource("5_x1yhp")
 
 [node name="SpriteOpcao6" type="Sprite2D" parent="BoxOpcoes"]
-position = Vector2(275, 185)
+position = Vector2(310, 180)
 scale = Vector2(4.5, 3.587)
 texture = ExtResource("5_x1yhp")
 
+[node name="OpcaoGasto" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
+offset_left = 213.0
+offset_top = 54.0
+offset_right = 257.0
+offset_bottom = 78.0
+custo_e_gotas = 6
+
+[node name="OpcaoGasto2" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
+offset_left = 324.0
+offset_top = 51.0
+offset_right = 368.0
+offset_bottom = 75.0
+custo_e_gotas = 6
+
 [node name="OpcaoGasto3" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 129.0
-offset_top = 104.0
-offset_right = 201.0
-offset_bottom = 128.0
-custo_e_gotas = 3
+offset_left = 428.0
+offset_top = 53.0
+offset_right = 472.0
+offset_bottom = 77.0
+custo_e_gotas = 6
 
 [node name="OpcaoGasto4" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 343.0
-offset_top = 212.0
-offset_right = 387.0
-offset_bottom = 236.0
+offset_left = 208.0
+offset_top = 176.0
+offset_right = 252.0
+offset_bottom = 200.0
+custo_e_gotas = 6
 
 [node name="OpcaoGasto5" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 331.0
-offset_top = 104.0
-offset_right = 400.0
-offset_bottom = 152.0
-custo_e_gotas = 7
+offset_left = 324.0
+offset_top = 174.0
+offset_right = 368.0
+offset_bottom = 198.0
+custo_e_gotas = 6
 
 [node name="OpcaoGasto6" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 139.0
-offset_top = 213.0
-offset_right = 206.0
-offset_bottom = 260.0
-custo_e_gotas = 4
+offset_left = 426.0
+offset_top = 172.0
+offset_right = 470.0
+offset_bottom = 196.0
+custo_e_gotas = 6
 
-[node name="OpcaoGasto7" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 229.0
-offset_top = 214.0
-offset_right = 311.0
-offset_bottom = 260.0
-custo_e_gotas = 5
+[node name="Reservatorio" parent="." instance=ExtResource("5_8eytn")]
+position = Vector2(5, 11)

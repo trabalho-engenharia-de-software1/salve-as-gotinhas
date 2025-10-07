@@ -29,10 +29,10 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 	
 	# Se a caixa foi marcada, gasta água
 	if foi_marcado:
-		agua_atual -= custo
+		agua_atual -= 10 * custo
 	# Se foi desmarcada, devolve a água
 	else:
-		agua_atual += custo
+		agua_atual += 10 * custo
 	
 	# Garante que a água não saia dos limites
 	agua_atual = clamp(agua_atual, 0.0, agua_maxima)
