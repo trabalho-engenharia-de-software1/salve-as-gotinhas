@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw1mpm7kjr3ak"
-path="res://.godot/imported/chuveiro.png-3f7715dc8091154a036ebf219749c613.ctex"
+uid="uid://cjl2ofsa4ypc2"
+path="res://.godot/imported/regador.png-b7cf3951c0b2e8c2c99e3f4c6639db73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagens/sprites-fase1/chuveiro.png"
-dest_files=["res://.godot/imported/chuveiro.png-3f7715dc8091154a036ebf219749c613.ctex"]
+source_file="res://imagens/sprites-fase1/arrumar/regador.png"
+dest_files=["res://.godot/imported/regador.png-b7cf3951c0b2e8c2c99e3f4c6639db73.ctex"]
 
 [params]
 

@@ -13,9 +13,9 @@ scale = Vector2(0.18719663, 0.24010894)
 texture = ExtResource("2_huco5")
 
 [node name="agua" type="Sprite2D" parent="."]
-position = Vector2(111, 181)
+position = Vector2(100.526665, 180)
 rotation = -3.1415925
-scale = Vector2(0.2419319, 0.3511236)
+scale = Vector2(0.19752961, 0.33093464)
 texture = ExtResource("3_huco5")
 centered = false
 region_enabled = true

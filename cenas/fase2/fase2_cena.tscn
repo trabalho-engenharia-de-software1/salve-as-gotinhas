@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://imagens/backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase2/fase_2.gd" id="1_8eytn"]
-[ext_resource type="Texture2D" uid="uid://6p8sst5iabs0" path="res://imagens/sprites-fase1/chuveiro.png" id="3_x1yhp"]
+[ext_resource type="Texture2D" uid="uid://cw1mpm7kjr3ak" path="res://imagens/sprites-fase1/chuveiro.png" id="3_x1yhp"]
 [ext_resource type="PackedScene" uid="uid://cd77kf2d3uwya" path="res://cenas/fase2/opcao_gasto.tscn" id="4_eap3x"]
-[ext_resource type="Texture2D" uid="uid://dyi3ocvnoi7kg" path="res://imagens/sprites-fase1/mangueira.png" id="4_i511i"]
+[ext_resource type="Texture2D" uid="uid://ba4bbwqnotdfp" path="res://imagens/sprites-fase1/mangueira.png" id="4_i511i"]
 [ext_resource type="PackedScene" uid="uid://bnpy5m36en3sk" path="res://cenas/fase2/reservatorio.tscn" id="5_8eytn"]
-[ext_resource type="Texture2D" uid="uid://kau3w0je4qom" path="res://imagens/sprites-fase1/regador.png" id="5_ftsb4"]
+[ext_resource type="Texture2D" uid="uid://bb6o2q0mgtrvo" path="res://imagens/sprites-fase1/regador.png" id="5_ftsb4"]
 [ext_resource type="Texture2D" uid="uid://ckklu65iouvfa" path="res://imagens/sprites-fase1/vazamento.png" id="6_irxvy"]
 [ext_resource type="Texture2D" uid="uid://dc3xdsperrqp0" path="res://imagens/sprites-fase1/torneira.png" id="7_kk3tn"]
 [ext_resource type="Texture2D" uid="uid://ckmo7ru1h660j" path="res://imagens/sprites-fase1/sanitario.png" id="8_tfabg"]
@@ -44,7 +44,7 @@ scale = Vector2(0.08408205, 0.06741667)
 texture = ExtResource("6_irxvy")
 
 [node name="SpriteOpcao5" type="Sprite2D" parent="BoxOpcoes"]
-position = Vector2(412.00003, 58)
+position = Vector2(400.95, 66.925)
 scale = Vector2(0.07802737, 0.06761068)
 texture = ExtResource("7_kk3tn")
 region_rect = Rect2(316, 709, 547, 9)
@@ -55,44 +55,44 @@ scale = Vector2(0.058398426, 0.04391276)
 texture = ExtResource("8_tfabg")
 
 [node name="OpcaoGasto" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 213.0
-offset_top = 54.0
-offset_right = 257.0
-offset_bottom = 78.0
+offset_left = 221.0
+offset_top = 58.0
+offset_right = 249.0
+offset_bottom = 82.0
 custo_e_gotas = 3
 
 [node name="OpcaoGasto2" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 324.0
-offset_top = 51.0
-offset_right = 368.0
-offset_bottom = 75.0
+offset_left = 334.0
+offset_top = 56.0
+offset_right = 362.0
+offset_bottom = 80.0
 
 [node name="OpcaoGasto3" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 435.0
-offset_top = 50.0
-offset_right = 479.0
-offset_bottom = 74.0
+offset_left = 433.94998
+offset_top = 59.925003
+offset_right = 461.94998
+offset_bottom = 83.925
 custo_e_gotas = 2
 
 [node name="OpcaoGasto4" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 208.0
+offset_left = 222.0
 offset_top = 176.0
 offset_right = 252.0
 offset_bottom = 200.0
 custo_e_gotas = 6
 
 [node name="OpcaoGasto5" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 324.0
-offset_top = 174.0
-offset_right = 368.0
-offset_bottom = 198.0
+offset_left = 327.0
+offset_top = 175.0
+offset_right = 355.0
+offset_bottom = 199.0
 custo_e_gotas = 4
 
 [node name="OpcaoGasto6" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 426.0
-offset_top = 172.0
-offset_right = 470.0
-offset_bottom = 196.0
+offset_left = 435.0
+offset_top = 173.0
+offset_right = 464.0
+offset_bottom = 197.0
 custo_e_gotas = 3
 
 [node name="Reservatorio" parent="." instance=ExtResource("5_8eytn")]

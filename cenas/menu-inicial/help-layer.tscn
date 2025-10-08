@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b83rhs5pm0s7u"]
+[gd_scene load_steps=4 format=3 uid="uid://b83rhs5pm0s7u"]
 
 [ext_resource type="Texture2D" uid="uid://b05ehcnbprv76" path="res://buttons/tyeste.png" id="1_iiy6b"]
 [ext_resource type="Script" uid="uid://dmatjc27ul14h" path="res://scripts/botao_ajuda.gd" id="2_67qyk"]
+[ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_xfxsx"]
 
 [node name="HelpLayer" type="CanvasLayer"]
 
@@ -19,10 +20,12 @@ icon = ExtResource("1_iiy6b")
 script = ExtResource("2_67qyk")
 
 [node name="ajuda" type="Label" parent="."]
-offset_left = 435.0
-offset_top = 12.0
-offset_right = 480.0
-offset_bottom = 35.0
+offset_left = 428.0
+offset_top = 20.0
+offset_right = 477.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("3_xfxsx")
+theme_override_font_sizes/font_size = 11
 text = "Ajuda"
 
 [connection signal="pressed" from="botaoAjuda" to="botaoAjuda" method="_on_pressed"]
