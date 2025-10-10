@@ -14,6 +14,7 @@ config/name="salve-as-gotinhas"
 run/main_scene="uid://c00dmh5exfxlo"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icons/icon.svg"
+boot_splash/defaults/default_clear_color=Color(0.3, 0.3, 0.3, 1)
 
 [audio]
 
@@ -42,3 +43,4 @@ project/assembly_name="salve-as-gotinhas"
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.31030568, 0.2999919, 0.29240432, 1)
