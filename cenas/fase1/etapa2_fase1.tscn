@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://h5rcomklnxkh"]
+[gd_scene load_steps=3 format=3 uid="uid://h5rcomklnxkh"]
 
 [ext_resource type="Script" uid="uid://d18uiht3kk45i" path="res://scripts/fase1/etapa2_fase1.gd" id="1_151ce"]
+[ext_resource type="PackedScene" uid="uid://8rnnbuqp0654" path="res://cenas/fase1/botão_fase1.tscn" id="2_7qwee"]
 
 [node name="Etapa2Fase1" type="Node2D"]
 script = ExtResource("1_151ce")
@@ -44,6 +45,48 @@ scale = Vector2(0.06, 0.06)
 [node name="Sprite2" type="Sprite2D" parent="."]
 position = Vector2(90, 180)
 scale = Vector2(0.06, 0.06)
+
+[node name="OpcaoGasto" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 68.0
+offset_top = 189.0
+offset_right = 112.0
+offset_bottom = 213.0
+custo_e_gotas = 3
+
+[node name="OpcaoGasto2" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 72.0
+offset_top = 88.0
+offset_right = 116.0
+offset_bottom = 112.0
+custo_e_gotas = 4
+
+[node name="OpcaoGasto3" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 379.0
+offset_top = 173.0
+offset_right = 423.0
+offset_bottom = 197.0
+custo_e_gotas = 8
+
+[node name="OpcaoGasto4" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 377.0
+offset_top = 121.0
+offset_right = 421.0
+offset_bottom = 145.0
+custo_e_gotas = 7
+
+[node name="OpcaoGasto5" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 379.0
+offset_top = 64.0
+offset_right = 423.0
+offset_bottom = 88.0
+custo_e_gotas = 4
+
+[node name="OpcaoGasto6" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 379.0
+offset_top = 8.0
+offset_right = 423.0
+offset_bottom = 32.0
+custo_e_gotas = 6
 
 [connection signal="button_down" from="resposta" to="." method="_on_resposta_button_down"]
 [connection signal="button_down" from="resposta2" to="." method="_on_resposta_2_button_down"]
