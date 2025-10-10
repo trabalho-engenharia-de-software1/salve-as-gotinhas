@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciho7o4g4t11k"]
+
+[ext_resource type="Script" uid="uid://b0uqv7pwr02ls" path="res://scripts/fase1/Botão9g.gd" id="1_ouaq5"]
+[ext_resource type="Texture2D" uid="uid://covqtvxxrwmxh" path="res://imagens/caixa-da-agua/gotinha.png" id="2_80vnh"]
+
+[node name="Botão9g" type="Node2D"]
+script = ExtResource("1_ouaq5")
+
+[node name="Gotas" type="Node2D" parent="."]
+position = Vector2(0, 2)
+script = ExtResource("1_ouaq5")
+
+[node name="gotinha1" type="Sprite2D" parent="Gotas"]
+position = Vector2(17, 19)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_80vnh")
+
+[node name="gotinha2" type="Sprite2D" parent="Gotas"]
+visible = false
+position = Vector2(31, 19)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_80vnh")
+
+[node name="gotinha3" type="Sprite2D" parent="Gotas"]
+visible = false
+position = Vector2(45, 19)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_80vnh")
+
+[node name="gotinha4" type="Sprite2D" parent="Gotas"]
+visible = false
+position = Vector2(17, 37)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_80vnh")
+
+[node name="gotinha5" type="Sprite2D" parent="Gotas"]
+visible = false
+position = Vector2(31, 37)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_80vnh")
+
+[node name="gotinha6" type="Sprite2D" parent="Gotas"]
+visible = false
+position = Vector2(45, 37)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_80vnh")
+
+[node name="gotinha7" type="Sprite2D" parent="Gotas"]
+visible = false
+position = Vector2(17, 55)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_80vnh")
+
+[node name="gotinha8" type="Sprite2D" parent="Gotas"]
+visible = false
+position = Vector2(31, 55)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_80vnh")
+
+[node name="gotinha9" type="Sprite2D" parent="Gotas"]
+visible = false
+position = Vector2(45, 55)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_80vnh")
