@@ -68,9 +68,26 @@ func _on_resposta_2_button_down() -> void:
 	DadosDoJogo.erro_etapa2 = erro
 	var texto_aviso = "parabens, você acertou"
 	PopupManager.mostrar(texto_aviso)
+	ir_prox_etapa()
 
 
 func _on_resposta_button_down() -> void:
 	erro += 1
 	var texto_aviso = "essa resposta não é a correta"
 	PopupManager.mostrar(texto_aviso)
+
+func ir_prox_etapa() -> void:
+	
+	# 1. SALVAR OS DADOS NO AUTOLOAD (DadosDoJogo)
+	# Copia o array de acertos da Fase 1 para a variável global
+	DadosDoJogo.erro_etapa2 = erro
+	
+	# 2. TROCA DE CENA
+	var proxima_cena_path = "res://cenas/menu-inicial/menu-inicial.tscn" 
+	
+	if ResourceLoader.exists(proxima_cena_path):
+		# Este comando troca a cena atual pela próxima
+		get_tree().change_scene_to_file(proxima_cena_path) 
+	else:
+		# Exibe um erro se o arquivo não for encontrado no caminho especificado
+		push_error("ERRO: O arquivo da próxima cena não foi encontrado: " + proxima_cena_path)
