@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://h5rcomklnxkh"]
 
 [ext_resource type="Script" uid="uid://d18uiht3kk45i" path="res://scripts/fase1/etapa2_fase1.gd" id="1_151ce"]
-[ext_resource type="Texture2D" uid="uid://covqtvxxrwmxh" path="res://imagens/caixa-da-agua/gotinha.png" id="2_7qwee"]
+[ext_resource type="PackedScene" uid="uid://8rnnbuqp0654" path="res://cenas/fase1/botão_fase1.tscn" id="2_7qwee"]
 
 [node name="Etapa2Fase1" type="Node2D"]
 script = ExtResource("1_151ce")
@@ -16,70 +16,77 @@ color = Color(0.3019608, 0.8235294, 0.81960785, 1)
 
 [node name="resposta" type="Button" parent="."]
 offset_left = 316.0
-offset_top = 234.0
+offset_top = 216.0
 offset_right = 324.0
-offset_bottom = 242.0
+offset_bottom = 224.0
 
 [node name="resposta2" type="Button" parent="."]
 offset_left = 316.0
-offset_top = 185.0
+offset_top = 162.0
 offset_right = 324.0
-offset_bottom = 193.0
+offset_bottom = 170.0
 
 [node name="resposta3" type="Button" parent="."]
-offset_left = 318.0
-offset_top = 124.0
-offset_right = 326.0
-offset_bottom = 132.0
+offset_left = 316.0
+offset_top = 108.0
+offset_right = 324.0
+offset_bottom = 116.0
 
 [node name="resposta4" type="Button" parent="."]
 offset_left = 316.0
-offset_top = 67.0
+offset_top = 54.0
 offset_right = 324.0
-offset_bottom = 75.0
+offset_bottom = 62.0
 
 [node name="Sprite1" type="Sprite2D" parent="."]
-position = Vector2(87, 62.000004)
+position = Vector2(90, 90)
 scale = Vector2(0.06, 0.06)
 
 [node name="Sprite2" type="Sprite2D" parent="."]
-position = Vector2(87, 178)
+position = Vector2(90, 180)
 scale = Vector2(0.06, 0.06)
 
-[node name="gota" type="Sprite2D" parent="."]
-position = Vector2(49, 139)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("2_7qwee")
+[node name="OpcaoGasto" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 68.0
+offset_top = 189.0
+offset_right = 112.0
+offset_bottom = 213.0
+custo_e_gotas = 3
 
-[node name="gota5" type="Sprite2D" parent="."]
-position = Vector2(111, 227)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("2_7qwee")
+[node name="OpcaoGasto2" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 72.0
+offset_top = 88.0
+offset_right = 116.0
+offset_bottom = 112.0
+custo_e_gotas = 4
 
-[node name="gota6" type="Sprite2D" parent="."]
-position = Vector2(83, 228)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("2_7qwee")
+[node name="OpcaoGasto3" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 379.0
+offset_top = 173.0
+offset_right = 423.0
+offset_bottom = 197.0
+custo_e_gotas = 8
 
-[node name="gota7" type="Sprite2D" parent="."]
-position = Vector2(57, 228)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("2_7qwee")
+[node name="OpcaoGasto4" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 377.0
+offset_top = 121.0
+offset_right = 421.0
+offset_bottom = 145.0
+custo_e_gotas = 7
 
-[node name="gota2" type="Sprite2D" parent="."]
-position = Vector2(126, 141)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("2_7qwee")
+[node name="OpcaoGasto5" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 379.0
+offset_top = 64.0
+offset_right = 423.0
+offset_bottom = 88.0
+custo_e_gotas = 4
 
-[node name="gota3" type="Sprite2D" parent="."]
-position = Vector2(104, 138)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("2_7qwee")
-
-[node name="gota4" type="Sprite2D" parent="."]
-position = Vector2(78, 139)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("2_7qwee")
+[node name="OpcaoGasto6" parent="." instance=ExtResource("2_7qwee")]
+offset_left = 379.0
+offset_top = 8.0
+offset_right = 423.0
+offset_bottom = 32.0
+custo_e_gotas = 6
 
 [connection signal="button_down" from="resposta" to="." method="_on_resposta_button_down"]
 [connection signal="button_down" from="resposta2" to="." method="_on_resposta_2_button_down"]
