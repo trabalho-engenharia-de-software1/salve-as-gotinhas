@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dybiibrlqhty5"]
+[gd_scene load_steps=7 format=3 uid="uid://dybiibrlqhty5"]
 
 [ext_resource type="Script" uid="uid://da85m5tgo2pci" path="res://scripts/menu-inicial/menu_selecao_fase.gd" id="1_30tso"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_uxpq5"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="2_4vtvw"]
 [ext_resource type="AudioStream" uid="uid://b21kq6xrhsp47" path="res://sounds/musica-fundo.mp3" id="2_ry13j"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_86dby"]
+[ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="6_ulre0"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -105,6 +106,8 @@ theme_override_fonts/font = ExtResource("3_86dby")
 theme_override_font_sizes/font_size = 16
 text = "iniciar fase 2
 "
+
+[node name="HelpLayer" parent="." instance=ExtResource("6_ulre0")]
 
 [connection signal="pressed" from="iniciarfase1" to="." method="_on_iniciarfase_1_pressed"]
 [connection signal="pressed" from="iniciarfase2" to="." method="_on_iniciarfase_2_pressed"]

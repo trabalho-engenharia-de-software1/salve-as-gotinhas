@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dna1hricujun3"]
 
 [ext_resource type="Script" uid="uid://dy5jlq68exyhy" path="res://scripts/popup.gd" id="1_8rg8x"]
-[ext_resource type="Texture2D" uid="uid://b05ehcnbprv76" path="res://buttons/tyeste.png" id="2_kb6tq"]
+[ext_resource type="Texture2D" uid="uid://bpq4xn8ac63er" path="res://buttons/x.png" id="2_kb6tq"]
 
 [node name="Popup" type="CanvasLayer"]
 script = ExtResource("1_8rg8x")
@@ -45,8 +45,7 @@ autowrap_mode = 3
 
 [node name="botao" type="Button" parent="color/caixaTexto"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 25.0
-offset_bottom = 23.0
+offset_left = 186.0
+offset_right = 210.0
+offset_bottom = 24.0
 icon = ExtResource("2_kb6tq")

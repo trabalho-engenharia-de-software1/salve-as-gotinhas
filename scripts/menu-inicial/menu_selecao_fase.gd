@@ -1,5 +1,9 @@
 extends Control
 
+@onready var botao_de_ajuda = $HelpLayer/botaoAjuda
+
+func _ready() -> void:
+	botao_de_ajuda.texto_de_ajuda = "Escolha uma das fases para jogar!"
 
 func _on_iniciarfase_1_pressed() -> void:
 	print("botao iniciar fase 1 pressionado")

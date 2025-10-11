@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dypx0nd08saj3"]
+[gd_scene load_steps=12 format=3 uid="uid://dypx0nd08saj3"]
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://imagens/backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase2/fase_2.gd" id="1_8eytn"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ckklu65iouvfa" path="res://imagens/sprites-fase1/vazamento.png" id="6_irxvy"]
 [ext_resource type="Texture2D" uid="uid://dc3xdsperrqp0" path="res://imagens/sprites-fase1/torneira.png" id="7_kk3tn"]
 [ext_resource type="Texture2D" uid="uid://ckmo7ru1h660j" path="res://imagens/sprites-fase1/sanitario.png" id="8_tfabg"]
+[ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="11_ftsb4"]
 
 [node name="Fase2Cena" type="Node2D"]
 script = ExtResource("1_8eytn")
@@ -97,3 +98,5 @@ custo_e_gotas = 3
 
 [node name="Reservatorio" parent="." instance=ExtResource("5_8eytn")]
 position = Vector2(5, 11)
+
+[node name="HelpLayer" parent="." instance=ExtResource("11_ftsb4")]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b83rhs5pm0s7u"]
 
-[ext_resource type="Texture2D" uid="uid://b05ehcnbprv76" path="res://buttons/tyeste.png" id="1_iiy6b"]
+[ext_resource type="Texture2D" uid="uid://0hwnbwdcg0fr" path="res://buttons/interrogacao.png" id="1_xfxsx"]
 [ext_resource type="Script" uid="uid://dmatjc27ul14h" path="res://scripts/botao_ajuda.gd" id="2_67qyk"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_xfxsx"]
 
@@ -10,13 +10,13 @@
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -21.0
+offset_left = -25.0
 offset_top = -2.0
-offset_right = 3.0
+offset_right = -1.0
 offset_bottom = 22.0
 grow_horizontal = 0
 theme_type_variation = &"FlatButton"
-icon = ExtResource("1_iiy6b")
+icon = ExtResource("1_xfxsx")
 script = ExtResource("2_67qyk")
 
 [node name="ajuda" type="Label" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c00dmh5exfxlo"]
+[gd_scene load_steps=8 format=3 uid="uid://c00dmh5exfxlo"]
 
 [ext_resource type="Script" uid="uid://cbgafm2yk41gx" path="res://scripts/menu-inicial/menu_inicial.gd" id="1_jdc8s"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_u4qhn"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="2_uerxx"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_fb2ec"]
 [ext_resource type="PackedScene" uid="uid://biuoqellwps4o" path="res://cenas/menu-inicial/VolumeLabelUI.tscn" id="5_tpqcy"]
+[ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="7_85pyl"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -80,6 +81,8 @@ theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "SAIR"
 
 [node name="volume-layer" parent="." instance=ExtResource("5_tpqcy")]
+
+[node name="HelpLayer" parent="." instance=ExtResource("7_85pyl")]
 
 [connection signal="pressed" from="VBoxContainer/jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]
