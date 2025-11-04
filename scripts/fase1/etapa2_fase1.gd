@@ -6,7 +6,7 @@ const TEXTURA_2 = preload("res:///imagens/sprites-fase1/mangueira.png")     # Se
 const TEXTURA_3 = preload("res:///imagens/sprites-fase1/regador.png")     # Se o valor for 1   # Se o valor for 3
 const TEXTURA_4 = preload("res:///imagens/sprites-fase1/sanitario.png")     # Se o valor for 1
 const TEXTURA_5 = preload("res:///imagens/sprites-fase1/torneira.png")     # Se o valor for 1
-const TEXTURA_6 = preload("res:///imagens/sprites-fase1/vazamento.png")     # Se o valor for 1
+const TEXTURA_6 = preload("res:///imagens/sprites-fase1/bebedouro.png")     # Se o valor for 1
 const TEXTURA_DEFAULT = preload("res:///imagens/sprites-fase1/vazamento.png") # Se o valor não existir
 var erro = 0
 

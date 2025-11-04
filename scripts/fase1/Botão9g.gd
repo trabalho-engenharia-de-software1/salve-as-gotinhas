@@ -1,16 +1,35 @@
-extends Node2D
+@tool # Permite que o script rode no editor para vermos as mudanças na hora
+extends CheckButton
 
-# Quantidade de gotas que você quer mostrar
-@export var quantidade: int = 5
+# O custo de água e o número de gotas a serem exibidas
+@export var custo_e_gotas: int = 1:
+	set(valor):
+		custo_e_gotas = valor
+		if is_inside_tree():
+			_atualizar_visual_gotas()
+
+# O ícone principal (torneira, chuveiro, etc.)
+@export var icone: Texture2D:
+	set(valor):
+		icone = valor
+		if is_inside_tree():
+			self.icon = valor 
 
 func _ready():
-	atualizar_gotinhas()
+	# Garante que os visuais estejam corretos quando o jogo começa
+	_atualizar_visual_gotas()
+	self.icon = icone
 
-func atualizar_gotinhas():
-	# Esconde todas as gotas primeiro
-	for gota in get_children():
-		gota.visible = false
+# Função para mostrar/esconder as gotinhas
+func _atualizar_visual_gotas():
+	# Checa se o nó MostradorDeGotas existe para evitar erros
+	var mostrador = find_child("Gotas")
+	if not mostrador:
+		return
 
-	# Mostra apenas a quantidade desejada
-	for i in range(min(quantidade, get_child_count())):
-		get_child(i).visible = true
+	var gotas = mostrador.get_children()
+	for i in range(gotas.size()):
+		if i < custo_e_gotas:
+			gotas[i].visible = true
+		else:
+			gotas[i].visible = false

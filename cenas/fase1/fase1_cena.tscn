@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvebkt51w2qkf"]
+[gd_scene load_steps=10 format=3 uid="uid://dvebkt51w2qkf"]
 
 [ext_resource type="Script" uid="uid://b6bhfv3w5jojj" path="res://scripts/fase1/fase_1_cena.gd" id="1_ep0u1"]
 [ext_resource type="Texture2D" uid="uid://cw1mpm7kjr3ak" path="res://imagens/sprites-fase1/chuveiro.png" id="2_cxcxk"]
 [ext_resource type="Texture2D" uid="uid://ba4bbwqnotdfp" path="res://imagens/sprites-fase1/mangueira.png" id="3_s2bnk"]
 [ext_resource type="Texture2D" uid="uid://ckmo7ru1h660j" path="res://imagens/sprites-fase1/sanitario.png" id="4_p0n21"]
 [ext_resource type="Texture2D" uid="uid://dc3xdsperrqp0" path="res://imagens/sprites-fase1/torneira.png" id="5_jt2rn"]
-[ext_resource type="Texture2D" uid="uid://ckklu65iouvfa" path="res://imagens/sprites-fase1/vazamento.png" id="6_7eouo"]
+[ext_resource type="Texture2D" uid="uid://bcn01tu2nuxs8" path="res://imagens/sprites-fase1/bebedouro.png" id="6_p0n21"]
 [ext_resource type="Texture2D" uid="uid://bb6o2q0mgtrvo" path="res://imagens/sprites-fase1/regador.png" id="7_gbic8"]
+[ext_resource type="Texture2D" uid="uid://5p0ft7mehs40" path="res://imagens/sprites-fase1/bola.png" id="8_jt2rn"]
+[ext_resource type="Texture2D" uid="uid://t56ko430n7x5" path="res://imagens/sprites-fase1/computador.png" id="9_7eouo"]
 
 [node name="Fase1Cena" type="Node2D"]
 script = ExtResource("1_ep0u1")
@@ -20,101 +22,111 @@ offset_bottom = 239.0
 color = Color(0, 0.6156863, 0.61960787, 1)
 
 [node name="botão1" type="Button" parent="."]
-custom_minimum_size = Vector2(92, 20)
-offset_left = 34.0
-offset_top = 119.0
-offset_right = 126.0
-offset_bottom = 139.0
+custom_minimum_size = Vector2(108, 20)
+offset_left = 9.0
+offset_top = 121.0
+offset_right = 117.0
+offset_bottom = 152.0
 text = "Chuveiro"
 
 [node name="botão2" type="Button" parent="."]
-custom_minimum_size = Vector2(92, 20)
-offset_left = 162.0
-offset_top = 123.0
-offset_right = 254.0
-offset_bottom = 143.0
+custom_minimum_size = Vector2(108, 20)
+offset_left = 127.0
+offset_top = 121.0
+offset_right = 235.0
+offset_bottom = 152.0
 text = "Mangueira"
 
 [node name="botão3" type="Button" parent="."]
-custom_minimum_size = Vector2(92, 20)
-offset_left = 275.0
-offset_top = 125.0
-offset_right = 367.0
-offset_bottom = 145.0
-text = "Erro"
+custom_minimum_size = Vector2(108, 20)
+offset_left = 245.0
+offset_top = 121.0
+offset_right = 353.0
+offset_bottom = 152.0
+text = "Computador"
 
 [node name="botão4" type="Button" parent="."]
-custom_minimum_size = Vector2(92, 20)
-offset_left = 379.0
-offset_top = 123.0
+custom_minimum_size = Vector2(108, 20)
+offset_left = 363.0
+offset_top = 121.0
 offset_right = 471.0
-offset_bottom = 143.0
+offset_bottom = 152.0
 text = "Regador"
 
 [node name="botão5" type="Button" parent="."]
-custom_minimum_size = Vector2(92, 20)
-offset_left = 29.0
-offset_top = 221.0
-offset_right = 121.0
-offset_bottom = 241.0
+custom_minimum_size = Vector2(108, 20)
+offset_left = 9.0
+offset_top = 222.0
+offset_right = 117.0
+offset_bottom = 253.0
 text = "Descarga
 "
 
 [node name="botão6" type="Button" parent="."]
-custom_minimum_size = Vector2(92, 20)
-offset_left = 143.0
-offset_top = 229.0
+custom_minimum_size = Vector2(108, 20)
+offset_left = 127.0
+offset_top = 222.0
 offset_right = 235.0
-offset_bottom = 249.0
+offset_bottom = 253.0
 toggle_mode = true
 text = "Torneira"
 
 [node name="botão7" type="Button" parent="."]
-custom_minimum_size = Vector2(92, 20)
-offset_left = 265.0
+custom_minimum_size = Vector2(108, 20)
+offset_left = 245.0
 offset_top = 222.0
-offset_right = 357.0
-offset_bottom = 242.0
-text = "Erro"
+offset_right = 353.0
+offset_bottom = 253.0
+text = "Esportes
+"
 
 [node name="botão8" type="Button" parent="."]
-custom_minimum_size = Vector2(92, 20)
-offset_left = 366.0
-offset_top = 225.0
-offset_right = 480.0
-offset_bottom = 256.0
+custom_minimum_size = Vector2(108, 20)
+offset_left = 363.0
+offset_top = 222.0
+offset_right = 477.0
+offset_bottom = 253.0
 keep_pressed_outside = true
-text = "Trocar depois"
+text = "Bebedouro"
 
 [node name="chuveiro" type="Sprite2D" parent="."]
-position = Vector2(77, 78)
+position = Vector2(63, 78)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("2_cxcxk")
 
 [node name="mangueira" type="Sprite2D" parent="."]
-position = Vector2(209, 82.99999)
+position = Vector2(181, 78)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("3_s2bnk")
 
 [node name="descarga" type="Sprite2D" parent="."]
-position = Vector2(78, 184)
+position = Vector2(63, 184)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("4_p0n21")
 
 [node name="torneira" type="Sprite2D" parent="."]
-position = Vector2(190, 196)
+position = Vector2(181, 184)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("5_jt2rn")
 
-[node name="Trocar depois" type="Sprite2D" parent="."]
-position = Vector2(420, 194)
+[node name="bebedouro" type="Sprite2D" parent="."]
+position = Vector2(417, 184)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("6_7eouo")
+texture = ExtResource("6_p0n21")
 
 [node name="regador" type="Sprite2D" parent="."]
-position = Vector2(423.99997, 83.99999)
+position = Vector2(417, 78)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("7_gbic8")
+
+[node name="bola" type="Sprite2D" parent="."]
+position = Vector2(299, 184)
+texture = ExtResource("8_jt2rn")
+
+[node name="pc" type="Sprite2D" parent="."]
+position = Vector2(299, 78)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("9_7eouo")
 
 [connection signal="button_down" from="botão1" to="." method="_on_botão_1_button_down"]
 [connection signal="button_down" from="botão2" to="." method="_on_botão_2_button_down"]
