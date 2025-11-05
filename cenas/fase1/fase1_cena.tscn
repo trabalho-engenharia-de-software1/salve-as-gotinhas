@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvebkt51w2qkf"]
+[gd_scene load_steps=11 format=3 uid="uid://dvebkt51w2qkf"]
 
 [ext_resource type="Script" uid="uid://b6bhfv3w5jojj" path="res://scripts/fase1/fase_1_cena.gd" id="1_ep0u1"]
 [ext_resource type="Texture2D" uid="uid://cw1mpm7kjr3ak" path="res://imagens/sprites-fase1/chuveiro.png" id="2_cxcxk"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bb6o2q0mgtrvo" path="res://imagens/sprites-fase1/regador.png" id="7_gbic8"]
 [ext_resource type="Texture2D" uid="uid://5p0ft7mehs40" path="res://imagens/sprites-fase1/bola.png" id="8_jt2rn"]
 [ext_resource type="Texture2D" uid="uid://t56ko430n7x5" path="res://imagens/sprites-fase1/computador.png" id="9_7eouo"]
+[ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="10_jt2rn"]
 
 [node name="Fase1Cena" type="Node2D"]
 script = ExtResource("1_ep0u1")
@@ -127,6 +128,8 @@ texture = ExtResource("8_jt2rn")
 position = Vector2(299, 78)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("9_7eouo")
+
+[node name="HelpLayer" parent="." instance=ExtResource("10_jt2rn")]
 
 [connection signal="button_down" from="botão1" to="." method="_on_botão_1_button_down"]
 [connection signal="button_down" from="botão2" to="." method="_on_botão_2_button_down"]
