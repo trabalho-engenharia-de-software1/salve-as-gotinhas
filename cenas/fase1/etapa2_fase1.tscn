@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://h5rcomklnxkh"]
+[gd_scene load_steps=5 format=3 uid="uid://h5rcomklnxkh"]
 
 [ext_resource type="Script" uid="uid://d18uiht3kk45i" path="res://scripts/fase1/etapa2_fase1.gd" id="1_151ce"]
 [ext_resource type="PackedScene" uid="uid://8rnnbuqp0654" path="res://cenas/fase1/botão_fase1.tscn" id="2_7qwee"]
+[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_mbmvc"]
+[ext_resource type="Texture2D" uid="uid://c6tn8055qfy1c" path="res://buttons/mais.png" id="4_hdvhq"]
 
 [node name="Etapa2Fase1" type="Node2D"]
 script = ExtResource("1_151ce")
@@ -87,6 +89,68 @@ offset_top = 8.0
 offset_right = 423.0
 offset_bottom = 32.0
 custo_e_gotas = 6
+
+[node name="Label" type="Label" parent="."]
+offset_left = 103.0
+offset_top = 114.0
+offset_right = 143.0
+offset_bottom = 148.0
+theme_override_fonts/font = ExtResource("3_mbmvc")
+theme_override_font_sizes/font_size = 26
+text = "4"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 422.0
+offset_top = 32.0
+offset_right = 462.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("3_mbmvc")
+theme_override_font_sizes/font_size = 26
+text = "6"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 390.0
+offset_top = 89.0
+offset_right = 430.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("3_mbmvc")
+theme_override_font_sizes/font_size = 26
+text = "4"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 425.0
+offset_top = 146.0
+offset_right = 465.0
+offset_bottom = 180.0
+theme_override_fonts/font = ExtResource("3_mbmvc")
+theme_override_font_sizes/font_size = 26
+text = "7"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 442.0
+offset_top = 199.0
+offset_right = 482.0
+offset_bottom = 233.0
+theme_override_fonts/font = ExtResource("3_mbmvc")
+theme_override_font_sizes/font_size = 26
+text = "8"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 85.0
+offset_top = 215.0
+offset_right = 125.0
+offset_bottom = 249.0
+theme_override_fonts/font = ExtResource("3_mbmvc")
+theme_override_font_sizes/font_size = 26
+text = "3"
+
+[node name="Mais" type="Sprite2D" parent="."]
+position = Vector2(94, 134)
+texture = ExtResource("4_hdvhq")
+
+[node name="Mais2" type="Sprite2D" parent="."]
+position = Vector2(77, 235)
+texture = ExtResource("4_hdvhq")
 
 [connection signal="button_down" from="resposta" to="." method="_on_resposta_button_down"]
 [connection signal="button_down" from="resposta2" to="." method="_on_resposta_2_button_down"]

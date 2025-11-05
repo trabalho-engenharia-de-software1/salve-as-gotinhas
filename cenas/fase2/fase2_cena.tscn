@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dypx0nd08saj3"]
+[gd_scene load_steps=15 format=3 uid="uid://dypx0nd08saj3"]
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://imagens/backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase2/fase_2.gd" id="1_8eytn"]
@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://dc3xdsperrqp0" path="res://imagens/sprites-fase1/torneira.png" id="7_kk3tn"]
 [ext_resource type="Texture2D" uid="uid://ckmo7ru1h660j" path="res://imagens/sprites-fase1/sanitario.png" id="8_tfabg"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="11_ftsb4"]
+[ext_resource type="Texture2D" uid="uid://dn7kkyjqbv8ot" path="res://buttons/menos.png" id="12_tfabg"]
+[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="13_xjsfo"]
+[ext_resource type="PackedScene" uid="uid://8rnnbuqp0654" path="res://cenas/fase1/botão_fase1.tscn" id="14_rlqut"]
 
 [node name="Fase2Cena" type="Node2D"]
 script = ExtResource("1_8eytn")
@@ -60,7 +63,6 @@ offset_left = 221.0
 offset_top = 58.0
 offset_right = 249.0
 offset_bottom = 82.0
-custo_e_gotas = 3
 
 [node name="OpcaoGasto2" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
 offset_left = 334.0
@@ -94,9 +96,105 @@ offset_left = 435.0
 offset_top = 173.0
 offset_right = 464.0
 offset_bottom = 197.0
-custo_e_gotas = 3
 
 [node name="Reservatorio" parent="." instance=ExtResource("5_8eytn")]
-position = Vector2(5, 11)
+offset_left = 5.0
+offset_top = 11.0
+offset_right = 5.0
+offset_bottom = 11.0
 
 [node name="HelpLayer" parent="." instance=ExtResource("11_ftsb4")]
+
+[node name="Menos" type="Sprite2D" parent="."]
+position = Vector2(232, 106)
+texture = ExtResource("12_tfabg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 242.0
+offset_top = 86.0
+offset_right = 282.0
+offset_bottom = 120.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "3"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 127.0
+offset_top = 8.0
+offset_right = 167.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "10"
+
+[node name="Menos2" type="Sprite2D" parent="."]
+position = Vector2(342, 105)
+texture = ExtResource("12_tfabg")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 352.0
+offset_top = 85.0
+offset_right = 392.0
+offset_bottom = 119.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "3"
+
+[node name="Menos3" type="Sprite2D" parent="."]
+position = Vector2(442, 108)
+texture = ExtResource("12_tfabg")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 452.0
+offset_top = 88.0
+offset_right = 492.0
+offset_bottom = 122.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "2"
+
+[node name="Menos4" type="Sprite2D" parent="."]
+position = Vector2(230, 237)
+texture = ExtResource("12_tfabg")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 240.0
+offset_top = 217.0
+offset_right = 280.0
+offset_bottom = 251.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "6"
+
+[node name="Menos5" type="Sprite2D" parent="."]
+position = Vector2(336, 236)
+texture = ExtResource("12_tfabg")
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 346.0
+offset_top = 216.0
+offset_right = 386.0
+offset_bottom = 250.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "4"
+
+[node name="Menos6" type="Sprite2D" parent="."]
+position = Vector2(446, 221)
+texture = ExtResource("12_tfabg")
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 456.0
+offset_top = 201.0
+offset_right = 496.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "3"
+
+[node name="OpcaoGasto" parent="." instance=ExtResource("14_rlqut")]
+offset_left = 41.0
+offset_top = -17.0
+offset_right = 85.0
+offset_bottom = 7.0
+custo_e_gotas = 10

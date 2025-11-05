@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3bvdh6qcah2q"]
+
+[ext_resource type="Script" uid="uid://b83id4ffjr6xo" path="res://cenas/menu-inicial/creditos.gd" id="1_wwioi"]
+[ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="2_dlmhd"]
+[ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_ssii2"]
+[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_ckb85"]
+
+[node name="credios" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wwioi")
+
+[node name="BackgroundMenuInicial2" type="Sprite2D" parent="."]
+modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
+position = Vector2(239, 124)
+scale = Vector2(0.317, 0.317)
+texture = ExtResource("2_dlmhd")
+
+[node name="fase1" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 21.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("3_ssii2")
+text = "SALVE AS GOTINHAS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fase2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 41.0
+offset_right = 475.0
+offset_bottom = 182.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("4_ckb85")
+text = "O OBJETIVO DO JOGO E AUXILIAR NO ENSINO, 
+CONSCIENTIZANDO SOBRE O USO CORRETO DA AGUA
+UTILIZANDO EXPRESSOES MATEMATICAS
+Jogo EDUCACIONAL, LIVRE PARA TODOS OS
+ PUBLICOS.
+"
+horizontal_alignment = 1
+
+[node name="fase3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -193.0
+offset_top = -89.0
+offset_right = 193.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("4_ckb85")
+text = "produzido por Daniel, Felipe BENHUK, 
+FELIPE DE SANTOS, FERNANDO, TOBIAS."
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -44.0
+offset_right = 77.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_ssii2")
+text = "SAIR"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
