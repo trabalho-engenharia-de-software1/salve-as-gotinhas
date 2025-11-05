@@ -65,7 +65,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "jogar"
 
-[node name="configuracoes" type="Button" parent="VBoxContainer"]
+[node name="relatorio" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "RELATORIO"

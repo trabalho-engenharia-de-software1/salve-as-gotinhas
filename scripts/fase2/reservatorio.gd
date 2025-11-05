@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 # O caminho DEVE ser este por causa da nossa hierarquia
 @onready var agua_sprite: Sprite2D = $agua
