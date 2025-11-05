@@ -1,8 +1,17 @@
+# Anexado ao seu nó "botaoAjuda" (o Button)
 extends Button
 
-# Crie uma variável pública para guardar o texto.
-var texto_de_ajuda: String = "Nenhuma ajuda definida para esta tela."
+# --- "Memória" do Botão ---
+var no_alvo: Node = null # O NÓ QUE VAMOS DESTACAR
+var texto_de_ajuda: String = "Ajuda não definida."
+
+func _ready():
+	self.pressed.connect(_on_pressed)
 
 func _on_pressed():
-	# Quando o botão for pressionado, mostre o texto que está guardado na variável.
-	PopupManager.mostrar(texto_de_ajuda)
+	if not is_instance_valid(no_alvo):
+		print("ERRO: Botão de ajuda clicado, mas 'no_alvo' não foi configurado pela cena pai.")
+		return
+		
+	# CHAMA A FUNÇÃO DE AJUDA, NÃO A FUNÇÃO SIMPLES
+	PopupManager.mostrar_ajuda_contextual(no_alvo, texto_de_ajuda)

@@ -1,12 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dna1hricujun3"]
+[gd_scene load_steps=5 format=3 uid="uid://dna1hricujun3"]
 
 [ext_resource type="Script" uid="uid://dy5jlq68exyhy" path="res://scripts/popup.gd" id="1_8rg8x"]
 [ext_resource type="Texture2D" uid="uid://bpq4xn8ac63er" path="res://buttons/x.png" id="2_kb6tq"]
+[ext_resource type="Shader" uid="uid://g11jqf3drdtl" path="res://scripts/popup.gdshader" id="2_n3wty"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pwa7c"]
+shader = ExtResource("2_n3wty")
+shader_parameter/circle_center = Vector2(0.5, 0.5)
+shader_parameter/circle_radius = 0.1
+shader_parameter/overlay_color = Color(0, 0, 0, 0.7)
 
 [node name="Popup" type="CanvasLayer"]
 script = ExtResource("1_8rg8x")
 
 [node name="color" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_pwa7c")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -16,16 +24,15 @@ color = Color(0, 0, 0, 0.2)
 
 [node name="caixaTexto" type="Panel" parent="color"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -61.0
-offset_right = 110.0
-offset_bottom = 64.0
-grow_horizontal = 2
+anchors_preset = -1
+anchor_left = 0.717
+anchor_top = 0.356
+anchor_right = 1.0
+anchor_bottom = 0.68100005
+offset_left = 7.8399963
+offset_top = -0.12000275
+offset_bottom = 0.12998962
+grow_horizontal = 0
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="color/caixaTexto"]
@@ -33,6 +40,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 5.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -44,8 +53,13 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="botao" type="Button" parent="color/caixaTexto"]
-layout_mode = 0
-offset_left = 186.0
-offset_right = 210.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_right = 8.0
 offset_bottom = 24.0
+grow_horizontal = 0
+scale = Vector2(0.6, 0.6)
 icon = ExtResource("2_kb6tq")
