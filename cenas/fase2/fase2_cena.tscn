@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dypx0nd08saj3"]
+[gd_scene load_steps=16 format=3 uid="uid://dypx0nd08saj3"]
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://imagens/backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase2/fase_2.gd" id="1_8eytn"]
@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://dc3xdsperrqp0" path="res://imagens/sprites-fase1/torneira.png" id="7_kk3tn"]
 [ext_resource type="Texture2D" uid="uid://ckmo7ru1h660j" path="res://imagens/sprites-fase1/sanitario.png" id="8_tfabg"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="11_ftsb4"]
+[ext_resource type="Texture2D" uid="uid://dn7kkyjqbv8ot" path="res://buttons/menos.png" id="12_tfabg"]
+[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="13_xjsfo"]
+[ext_resource type="PackedScene" uid="uid://t20bmq3sv6xd" path="res://cenas/fase2/MedidorTotal.tscn" id="14_tfabg"]
+[ext_resource type="PackedScene" uid="uid://cl04gfo4i5sy8" path="res://cenas/BotaoSair.tscn" id="15_xjsfo"]
 
 [node name="Fase2Cena" type="Node2D"]
 script = ExtResource("1_8eytn")
@@ -40,63 +44,148 @@ scale = Vector2(0.064331114, 0.062078107)
 texture = ExtResource("5_ftsb4")
 
 [node name="SpriteOpcao4" type="Sprite2D" parent="BoxOpcoes"]
-position = Vector2(187, 174)
+position = Vector2(193.00002, 169.99998)
 scale = Vector2(0.08408205, 0.06741667)
 texture = ExtResource("6_irxvy")
 
 [node name="SpriteOpcao5" type="Sprite2D" parent="BoxOpcoes"]
-position = Vector2(400.95, 66.925)
-scale = Vector2(0.07802737, 0.06761068)
+position = Vector2(404.45, 66.925)
+scale = Vector2(0.071191445, 0.06761068)
 texture = ExtResource("7_kk3tn")
 region_rect = Rect2(316, 709, 547, 9)
 
 [node name="SpriteOpcao6" type="Sprite2D" parent="BoxOpcoes"]
-position = Vector2(299.1, 172.27501)
+position = Vector2(299.1, 173.275)
 scale = Vector2(0.058398426, 0.04391276)
 texture = ExtResource("8_tfabg")
 
 [node name="OpcaoGasto" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 221.0
+offset_left = 216.0
 offset_top = 58.0
-offset_right = 249.0
+offset_right = 247.0
 offset_bottom = 82.0
-custo_e_gotas = 3
 
 [node name="OpcaoGasto2" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 334.0
+offset_left = 318.0
 offset_top = 56.0
-offset_right = 362.0
+offset_right = 360.0
 offset_bottom = 80.0
 
 [node name="OpcaoGasto3" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 433.94998
-offset_top = 59.925003
-offset_right = 461.94998
-offset_bottom = 83.925
+offset_left = 432.0
+offset_top = 57.925003
+offset_right = 468.94998
+offset_bottom = 81.925
 custo_e_gotas = 2
 
-[node name="OpcaoGasto4" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 222.0
-offset_top = 176.0
-offset_right = 252.0
-offset_bottom = 200.0
-custo_e_gotas = 6
-
 [node name="OpcaoGasto5" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 327.0
-offset_top = 175.0
-offset_right = 355.0
-offset_bottom = 199.0
+offset_left = 320.0
+offset_top = 172.0
+offset_right = 356.0
+offset_bottom = 196.0
 custo_e_gotas = 4
 
 [node name="OpcaoGasto6" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 435.0
-offset_top = 173.0
-offset_right = 464.0
-offset_bottom = 197.0
-custo_e_gotas = 3
+offset_left = 432.0
+offset_top = 172.0
+offset_right = 469.0
+offset_bottom = 196.0
 
 [node name="Reservatorio" parent="." instance=ExtResource("5_8eytn")]
-position = Vector2(5, 11)
+offset_left = 5.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = -4.0
 
 [node name="HelpLayer" parent="." instance=ExtResource("11_ftsb4")]
+
+[node name="Menos" type="Sprite2D" parent="."]
+position = Vector2(227, 103)
+texture = ExtResource("12_tfabg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 234.0
+offset_top = 83.0
+offset_right = 274.0
+offset_bottom = 117.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "3"
+
+[node name="Menos2" type="Sprite2D" parent="."]
+position = Vector2(328, 101)
+texture = ExtResource("12_tfabg")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 336.0
+offset_top = 82.0
+offset_right = 376.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "3"
+
+[node name="Menos3" type="Sprite2D" parent="."]
+position = Vector2(432, 102)
+texture = ExtResource("12_tfabg")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 441.0
+offset_top = 82.0
+offset_right = 481.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "2"
+
+[node name="Menos4" type="Sprite2D" parent="."]
+position = Vector2(233, 217)
+texture = ExtResource("12_tfabg")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 240.0
+offset_top = 198.0
+offset_right = 272.0
+offset_bottom = 232.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "5"
+
+[node name="Menos5" type="Sprite2D" parent="."]
+position = Vector2(342, 215)
+texture = ExtResource("12_tfabg")
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 350.0
+offset_top = 196.0
+offset_right = 390.0
+offset_bottom = 230.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "4"
+
+[node name="Menos6" type="Sprite2D" parent="."]
+position = Vector2(442, 215)
+texture = ExtResource("12_tfabg")
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 449.0
+offset_top = 195.0
+offset_right = 489.0
+offset_bottom = 229.0
+theme_override_fonts/font = ExtResource("13_xjsfo")
+theme_override_font_sizes/font_size = 26
+text = "3"
+
+[node name="OpcaoGasto2" parent="." instance=ExtResource("4_eap3x")]
+offset_left = 211.0
+offset_top = 173.0
+offset_right = 255.0
+offset_bottom = 197.0
+custo_e_gotas = 5
+
+[node name="MedidorTotal" parent="." instance=ExtResource("14_tfabg")]
+position = Vector2(66, -20)
+
+[node name="BotaoSair" parent="." instance=ExtResource("15_xjsfo")]
+position = Vector2(-4, 220)

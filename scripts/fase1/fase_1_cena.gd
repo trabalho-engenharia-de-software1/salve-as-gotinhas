@@ -1,9 +1,31 @@
 extends Node2D
 
+@onready var script_do_botao_ajuda = $HelpLayer/botaoAjuda
+@onready var alvo_chuveiro = $botão1
+
 var botoesPrecionados = []
 var erro = 0
 var qtd = 0
 
+func _ready():
+	# Espera 1 frame para garantir que todos os @onready carregaram
+	await get_tree().process_frame
+	var pos_manual_reserv = Vector2(100, 100) # Use os valores que funcionam
+	var raios_manual_reserv = Vector2(0, 0)
+	var lista_de_passos = [
+		{
+			"tipo": "alvo_manual",
+			"pos_centro_pixels": pos_manual_reserv,
+			"raios_pixels": raios_manual_reserv,
+			"texto": "Escolha 3 itens que gastam agua!"
+		},
+		{
+			"tipo": "alvo_automatico",
+			"alvo": alvo_chuveiro, # O alvo é o botão do chuveiro
+			"texto": "Clique nesses botoes para escolher um."
+		}
+	]
+	script_do_botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
 
 func _on_botão_1_button_down() -> void:
 	botoesPrecionados.append(1)
@@ -19,9 +41,11 @@ func _on_botão_2_button_down() -> void:
 
 func _on_botão_3_button_down() -> void:
 	erro = erro + 1
-	var texto_aviso = "esse item não gasta agua"
-	PopupManager.mostrar(texto_aviso)
-	$botão3.disabled  = true
+	var texto_aviso = "Esse item não gasta água!"
+	var pos_centro_pc = Vector2(300, 75) # Posição (X, Y) do centro do computador
+	var raios_pc = Vector2(55, 55)       # Tamanho do oval (Largura, Altura)
+	PopupManager.mostrar_ajuda_manual(pos_centro_pc, raios_pc, texto_aviso)
+	$botão3.disabled = true
 
 
 func _on_botão_4_button_down() -> void:
@@ -47,8 +71,10 @@ func _on_botão_6_button_down() -> void:
 
 func _on_botão_7_button_down() -> void:
 	erro = erro + 1
-	var texto_aviso = "esse item não gasta agua"
-	PopupManager.mostrar(texto_aviso)
+	var texto_aviso = "Esse item não gasta água!"
+	var pos_centro_bola = Vector2(300, 185) # Posição (X, Y) do centro do computador
+	var raios_bola = Vector2(38, 38)       # Tamanho do oval (Largura, Altura)
+	PopupManager.mostrar_ajuda_manual(pos_centro_bola, raios_bola, texto_aviso)
 	$botão7.disabled = true
 
 

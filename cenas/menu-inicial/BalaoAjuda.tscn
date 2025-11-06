@@ -1,21 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://dna1hricujun3"]
+[gd_scene load_steps=4 format=3 uid="uid://cig0o1e1krtvc"]
 
-[ext_resource type="Script" uid="uid://dy5jlq68exyhy" path="res://scripts/popup.gd" id="1_8rg8x"]
-[ext_resource type="Shader" uid="uid://g11jqf3drdtl" path="res://scripts/popup.gdshader" id="2_n3wty"]
+[ext_resource type="Shader" uid="uid://g11jqf3drdtl" path="res://scripts/popup.gdshader" id="1_xomsi"]
+[ext_resource type="Texture2D" uid="uid://bpq4xn8ac63er" path="res://buttons/x.png" id="2_qdx81"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pwa7c"]
-shader = ExtResource("2_n3wty")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jjvf5"]
+shader = ExtResource("1_xomsi")
 shader_parameter/overlay_color = Color(0, 0, 0, 0.7)
 shader_parameter/ellipse_center_uv = Vector2(0.5, 0.5)
 shader_parameter/ellipse_radius_uv = Vector2(0.1, 0.1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kb6tq"]
-
-[node name="Popup" type="CanvasLayer"]
-script = ExtResource("1_8rg8x")
+[node name="BalaoAjuda" type="Panel"]
 
 [node name="color" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_pwa7c")
+material = SubResource("ShaderMaterial_jjvf5")
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -30,26 +28,37 @@ anchor_left = 0.717
 anchor_top = 0.356
 anchor_right = 1.0
 anchor_bottom = 0.68100005
-offset_left = -16.160004
-offset_top = -40.120003
-offset_right = -40.0
-offset_bottom = -39.87001
+offset_left = 7.8399963
+offset_top = -0.12000275
+offset_bottom = 0.12998962
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_kb6tq")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="color/caixaTexto"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 5.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
 [node name="texto" type="Label" parent="color/caixaTexto/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
 text = "TESTE "
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="botao" type="Button" parent="color/caixaTexto"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_right = 8.0
+offset_bottom = 24.0
+grow_horizontal = 0
+scale = Vector2(0.6, 0.6)
+icon = ExtResource("2_qdx81")
