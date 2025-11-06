@@ -65,7 +65,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "jogar"
 
-[node name="configuracoes" type="Button" parent="VBoxContainer"]
+[node name="relatorio" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "RELATORIO"
@@ -85,4 +85,5 @@ text = "SAIR"
 [node name="HelpLayer" parent="." instance=ExtResource("7_85pyl")]
 
 [connection signal="pressed" from="VBoxContainer/jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="VBoxContainer/creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]
