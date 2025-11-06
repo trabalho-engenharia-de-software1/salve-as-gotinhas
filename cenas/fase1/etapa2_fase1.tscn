@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://h5rcomklnxkh"]
+[gd_scene load_steps=6 format=3 uid="uid://h5rcomklnxkh"]
 
 [ext_resource type="Script" uid="uid://d18uiht3kk45i" path="res://scripts/fase1/etapa2_fase1.gd" id="1_151ce"]
 [ext_resource type="PackedScene" uid="uid://8rnnbuqp0654" path="res://cenas/fase1/botão_fase1.tscn" id="2_7qwee"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_mbmvc"]
 [ext_resource type="Texture2D" uid="uid://c6tn8055qfy1c" path="res://buttons/mais.png" id="4_hdvhq"]
+[ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="5_hdvhq"]
 
 [node name="Etapa2Fase1" type="Node2D"]
 script = ExtResource("1_151ce")
@@ -45,14 +46,14 @@ position = Vector2(90, 90)
 scale = Vector2(0.06, 0.06)
 
 [node name="Sprite2" type="Sprite2D" parent="."]
-position = Vector2(90, 180)
+position = Vector2(192, 88.00001)
 scale = Vector2(0.06, 0.06)
 
 [node name="OpcaoGasto" parent="." instance=ExtResource("2_7qwee")]
-offset_left = 68.0
-offset_top = 189.0
-offset_right = 112.0
-offset_bottom = 213.0
+offset_left = 208.0
+offset_top = 88.0
+offset_right = 252.0
+offset_bottom = 112.0
 custo_e_gotas = 3
 
 [node name="OpcaoGasto2" parent="." instance=ExtResource("2_7qwee")]
@@ -136,10 +137,10 @@ theme_override_font_sizes/font_size = 26
 text = "8"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 85.0
-offset_top = 215.0
-offset_right = 125.0
-offset_bottom = 249.0
+offset_left = 226.0
+offset_top = 113.0
+offset_right = 266.0
+offset_bottom = 147.0
 theme_override_fonts/font = ExtResource("3_mbmvc")
 theme_override_font_sizes/font_size = 26
 text = "3"
@@ -149,8 +150,10 @@ position = Vector2(94, 134)
 texture = ExtResource("4_hdvhq")
 
 [node name="Mais2" type="Sprite2D" parent="."]
-position = Vector2(77, 235)
+position = Vector2(218, 131)
 texture = ExtResource("4_hdvhq")
+
+[node name="HelpLayer" parent="." instance=ExtResource("5_hdvhq")]
 
 [connection signal="button_down" from="resposta" to="." method="_on_resposta_button_down"]
 [connection signal="button_down" from="resposta2" to="." method="_on_resposta_2_button_down"]

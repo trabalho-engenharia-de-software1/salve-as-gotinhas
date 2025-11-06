@@ -28,46 +28,51 @@ icone = SubResource("ImageTexture_n1wqn")
 position = Vector2(-79, 52)
 
 [node name="gotinha" type="Sprite2D" parent="Gotas"]
-position = Vector2(43, -8)
+position = Vector2(130, -12)
 scale = Vector2(0.021, 0.028)
 texture = ExtResource("4_l6fvi")
 
 [node name="gotinha2" type="Sprite2D" parent="Gotas"]
-position = Vector2(56, -8)
+position = Vector2(119, -12)
 scale = Vector2(0.021, 0.029)
 texture = ExtResource("4_l6fvi")
 
 [node name="gotinha3" type="Sprite2D" parent="Gotas"]
-position = Vector2(69, -8)
+position = Vector2(108, -12)
 scale = Vector2(0.021, 0.028)
 texture = ExtResource("4_l6fvi")
 
 [node name="gotinha4" type="Sprite2D" parent="Gotas"]
-position = Vector2(82, -8)
+position = Vector2(96, -12)
 scale = Vector2(0.021, 0.029)
 texture = ExtResource("4_l6fvi")
 
 [node name="gotinha5" type="Sprite2D" parent="Gotas"]
-position = Vector2(95, -8)
+position = Vector2(84, -12)
 scale = Vector2(0.022, 0.03)
 texture = ExtResource("4_l6fvi")
 
 [node name="gotinha6" type="Sprite2D" parent="Gotas"]
-position = Vector2(108, -8)
+position = Vector2(72, -12)
 scale = Vector2(0.021, 0.03)
 texture = ExtResource("4_l6fvi")
 
 [node name="gotinha7" type="Sprite2D" parent="Gotas"]
-position = Vector2(121, -8)
+position = Vector2(60.000004, -12)
 scale = Vector2(0.021023441, 0.030273436)
 texture = ExtResource("4_l6fvi")
 
 [node name="gotinha8" type="Sprite2D" parent="Gotas"]
-position = Vector2(134, -8)
+position = Vector2(48, -12)
 scale = Vector2(0.021023441, 0.030273436)
 texture = ExtResource("4_l6fvi")
 
 [node name="gotinha9" type="Sprite2D" parent="Gotas"]
-position = Vector2(147, -8)
+position = Vector2(36.000008, -12)
+scale = Vector2(0.021023441, 0.030273436)
+texture = ExtResource("4_l6fvi")
+
+[node name="gotinha10" type="Sprite2D" parent="Gotas"]
+position = Vector2(25, -12)
 scale = Vector2(0.021023441, 0.030273436)
 texture = ExtResource("4_l6fvi")
