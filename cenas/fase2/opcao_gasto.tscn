@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://covqtvxxrwmxh" path="res://imagens/caixa-da-agua/gotinha.png" id="3_7xbv1"]
 
 [node name="OpcaoGasto" type="CheckButton" groups=["opcoes_clicaveis"]]
-offset_left = 59.0
+offset_left = 56.0
 offset_top = 16.0
-offset_right = 103.0
+offset_right = 100.0
 offset_bottom = 40.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
@@ -22,58 +22,53 @@ custo_e_gotas = 3
 position = Vector2(-79, 52)
 
 [node name="gotinha" type="Sprite2D" parent="Gotas"]
-position = Vector2(38.39601, -5.936)
+position = Vector2(48.791992, -8.87207)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha2" type="Sprite2D" parent="Gotas"]
-position = Vector2(50.39601, -5.936001)
+position = Vector2(60.791992, -8.87207)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha3" type="Sprite2D" parent="Gotas"]
-position = Vector2(62.39601, -5.936001)
+position = Vector2(72.79199, -8.87207)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha4" type="Sprite2D" parent="Gotas"]
-visible = false
-position = Vector2(80, -4)
+position = Vector2(85.395996, -8.936035)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha5" type="Sprite2D" parent="Gotas"]
-visible = false
-position = Vector2(92, -4)
+position = Vector2(48.395996, 14.063965)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha6" type="Sprite2D" parent="Gotas"]
-visible = false
-position = Vector2(154, -4)
+position = Vector2(60.395996, 14.063965)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha7" type="Sprite2D" parent="Gotas"]
-visible = false
-position = Vector2(141, -4)
+position = Vector2(73.395996, 14.063965)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha8" type="Sprite2D" parent="Gotas"]
-visible = false
-position = Vector2(129, -4)
+position = Vector2(86.395996, 14.063965)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha9" type="Sprite2D" parent="Gotas"]
 visible = false
-position = Vector2(117, -4)
+position = Vector2(116, -4)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha10" type="Sprite2D" parent="Gotas"]
 visible = false
-position = Vector2(105, -4)
+position = Vector2(156, -4)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")

@@ -5,6 +5,7 @@ var agua_atual: float = 100.0
 
 @onready var reservatorio = $Reservatorio
 @onready var botao_ajuda = $HelpLayer/botaoAjuda
+@onready var medidor_total = $MedidorTotal
 
 # --- MUDANÇA 1: Variáveis para guardar as coordenadas manuais ---
 var pos_manual_reserv = Vector2(70, 140) # Use os valores que funcionam
@@ -46,6 +47,7 @@ func _ready():
 	]
 	
 	botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
+	medidor_total.atualizar_medidor(agua_atual, agua_maxima)
 
 # Função chamada quando QUALQUER OpcaoGasto é clicada
 func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
@@ -57,7 +59,7 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 		agua_atual += 10 * custo
 	agua_atual = clamp(agua_atual, -1.0, agua_maxima) 
 	reservatorio.atualizar_nivel(agua_atual, agua_maxima)
-	
+	medidor_total.atualizar_medidor(agua_atual, agua_maxima)
 	
 	# --- MUDANÇA 3: Usando o Círculo MANUAL para Vitória/Derrota ---
 	
