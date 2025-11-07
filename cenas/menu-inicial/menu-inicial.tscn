@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c00dmh5exfxlo"]
+[gd_scene load_steps=9 format=3 uid="uid://c00dmh5exfxlo"]
 
 [ext_resource type="Script" uid="uid://cbgafm2yk41gx" path="res://scripts/menu-inicial/menu_inicial.gd" id="1_jdc8s"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_u4qhn"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="2_uerxx"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_fb2ec"]
 [ext_resource type="PackedScene" uid="uid://biuoqellwps4o" path="res://cenas/menu-inicial/VolumeLabelUI.tscn" id="5_tpqcy"]
+[ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/THEMA BOTAO.tres" id="6_hii50"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="7_85pyl"]
 
 [node name="Node2D" type="Control"]
@@ -62,21 +63,31 @@ alignment = 1
 
 [node name="jogar" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+focus_mode = 0
+theme = ExtResource("6_hii50")
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "jogar"
 
 [node name="relatorio" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+focus_mode = 0
+theme = ExtResource("6_hii50")
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "RELATORIO"
 
 [node name="creditos" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+focus_mode = 0
+mouse_force_pass_scroll_events = false
+theme = ExtResource("6_hii50")
+theme_override_constants/h_separation = 0
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "CREDITOS"
 
 [node name="sair" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+focus_mode = 0
+theme = ExtResource("6_hii50")
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "SAIR"
 
