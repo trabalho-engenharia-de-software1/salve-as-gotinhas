@@ -6,6 +6,8 @@ extends Node2D
 var botoesPrecionados = []
 var erro = 0
 var qtd = 0
+var valor = 0
+var num = []
 
 func _ready():
 	# Espera 1 frame para garantir que todos os @onready carregaram
@@ -30,12 +32,14 @@ func _ready():
 func _on_botão_1_button_down() -> void:
 	botoesPrecionados.append(1)
 	qtd = qtd +1
+	colocar_valor()
 	analizar_qtd()
 	$botão1.disabled =true
 
 func _on_botão_2_button_down() -> void:
 	botoesPrecionados.append(2)
 	qtd = qtd +1
+	colocar_valor()
 	analizar_qtd()
 	$botão2.disabled =true
 
@@ -51,6 +55,7 @@ func _on_botão_3_button_down() -> void:
 func _on_botão_4_button_down() -> void:
 	botoesPrecionados.append(3)
 	qtd = qtd +1
+	colocar_valor()
 	analizar_qtd()
 	$botão4.disabled =true
 
@@ -58,6 +63,7 @@ func _on_botão_4_button_down() -> void:
 func _on_botão_5_button_down() -> void:
 	botoesPrecionados.append(4)
 	qtd = qtd +1
+	colocar_valor()
 	analizar_qtd()
 	$botão5.disabled =true
 
@@ -65,6 +71,7 @@ func _on_botão_5_button_down() -> void:
 func _on_botão_6_button_down() -> void:
 	botoesPrecionados.append(5)
 	qtd = qtd +1
+	colocar_valor()
 	analizar_qtd()
 	$botão6.disabled =true
 
@@ -81,9 +88,21 @@ func _on_botão_7_button_down() -> void:
 func _on_botão_8_button_down() -> void:
 	botoesPrecionados.append(6)
 	qtd = qtd +1
+	colocar_valor()
 	analizar_qtd()
 	$botão8.disabled = true
 
+func colocar_valor() -> void:
+	if qtd == 1:
+		valor = randi()%2 + 3
+		num.append(valor)
+	if qtd == 2:
+		valor = randi()%3 + 4
+		num.append(valor)
+	if qtd == 3:
+		valor = randi()%4 + 7
+		num.append(valor)
+		
 func analizar_qtd() -> void:
 	if qtd == 3:
 		ir_prox_etapa()
@@ -97,7 +116,7 @@ func ir_prox_etapa() -> void:
 	# 1. SALVAR OS DADOS NO AUTOLOAD (DadosDoJogo)
 	# Copia o array de acertos da Fase 1 para a variável global
 	DadosDoJogo.botoes_corretos_fase1 = botoesPrecionados
-	
+	DadosDoJogo.valores = num
 	# Copia o contador de erros da Fase 1 para a variável global
 	DadosDoJogo.erros_acumulados = erro
 	

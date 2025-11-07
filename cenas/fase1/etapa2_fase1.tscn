@@ -1,11 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://h5rcomklnxkh"]
+[gd_scene load_steps=13 format=3 uid="uid://h5rcomklnxkh"]
 
 [ext_resource type="Script" uid="uid://d18uiht3kk45i" path="res://scripts/fase1/etapa2_fase1.gd" id="1_151ce"]
 [ext_resource type="PackedScene" uid="uid://8rnnbuqp0654" path="res://cenas/fase1/botão_fase1.tscn" id="2_7qwee"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_mbmvc"]
+[ext_resource type="Script" uid="uid://b34hhtd0k318a" path="res://scripts/fase1/gotinha2.gd" id="3_u3gwo"]
 [ext_resource type="Texture2D" uid="uid://c6tn8055qfy1c" path="res://buttons/mais.png" id="4_hdvhq"]
+[ext_resource type="Script" uid="uid://dhcqgf4g13e8s" path="res://scripts/fase1/gotinha1.gd" id="4_qj4hp"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="5_hdvhq"]
+[ext_resource type="Script" uid="uid://b8vxc81nne8hu" path="res://scripts/fase1/gotinha4.gd" id="5_vxp76"]
 [ext_resource type="PackedScene" uid="uid://cl04gfo4i5sy8" path="res://cenas/BotaoSair.tscn" id="6_v3rap"]
+[ext_resource type="Script" uid="uid://dc1a62o2700gg" path="res://scripts/fase1/gotinha3.gd" id="6_x4xax"]
+[ext_resource type="Script" uid="uid://deaqffou3f5y8" path="res://scripts/fase1/gotinha5.gd" id="7_4gkps"]
+[ext_resource type="Script" uid="uid://bhjhw1gtpitf7" path="res://scripts/fase1/gotinha6.gd" id="8_b8wj3"]
 
 [node name="Etapa2Fase1" type="Node2D"]
 script = ExtResource("1_151ce")
@@ -55,6 +61,7 @@ offset_left = 200.0
 offset_top = 124.0
 offset_right = 244.0
 offset_bottom = 148.0
+script = ExtResource("3_u3gwo")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto2" parent="." instance=ExtResource("2_7qwee")]
@@ -62,6 +69,7 @@ offset_left = 73.0
 offset_top = 124.0
 offset_right = 117.0
 offset_bottom = 148.0
+script = ExtResource("4_qj4hp")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto3" parent="." instance=ExtResource("2_7qwee")]
@@ -69,6 +77,7 @@ offset_left = 420.0
 offset_top = 173.0
 offset_right = 464.0
 offset_bottom = 197.0
+script = ExtResource("5_vxp76")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto4" parent="." instance=ExtResource("2_7qwee")]
@@ -76,6 +85,7 @@ offset_left = 420.0
 offset_top = 120.0
 offset_right = 464.0
 offset_bottom = 144.0
+script = ExtResource("6_x4xax")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto5" parent="." instance=ExtResource("2_7qwee")]
@@ -83,17 +93,28 @@ offset_left = 420.0
 offset_top = 72.0
 offset_right = 464.0
 offset_bottom = 96.0
+script = ExtResource("7_4gkps")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto6" parent="." instance=ExtResource("2_7qwee")]
 offset_left = 420.0
 offset_right = 464.0
+script = ExtResource("8_b8wj3")
 custo_e_gotas = 10
 
 [node name="Label" type="Label" parent="."]
 offset_left = 79.0
 offset_top = 113.0
 offset_right = 119.0
+offset_bottom = 147.0
+theme_override_fonts/font = ExtResource("3_mbmvc")
+theme_override_font_sizes/font_size = 26
+text = "10"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 183.0
+offset_top = 113.0
+offset_right = 223.0
 offset_bottom = 147.0
 theme_override_fonts/font = ExtResource("3_mbmvc")
 theme_override_font_sizes/font_size = 26
@@ -131,15 +152,6 @@ offset_left = 326.0
 offset_top = 196.0
 offset_right = 366.0
 offset_bottom = 230.0
-theme_override_fonts/font = ExtResource("3_mbmvc")
-theme_override_font_sizes/font_size = 26
-text = "10"
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 183.0
-offset_top = 113.0
-offset_right = 223.0
-offset_bottom = 147.0
 theme_override_fonts/font = ExtResource("3_mbmvc")
 theme_override_font_sizes/font_size = 26
 text = "10"

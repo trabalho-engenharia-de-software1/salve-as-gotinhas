@@ -20,6 +20,12 @@ func _ready():
 	# --- SEU CÓDIGO ORIGINAL (Mantido) ---
 	# 1. Recupera o array de acertos
 	var acertos_fase_anterior = DadosDoJogo.botoes_corretos_fase1
+	$Label.text = str(DadosDoJogo.valores[0])
+	$Label2.text = str(DadosDoJogo.valores[2])
+	$Label3.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[2]-1)
+	$Label4.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[2]-3)
+	$Label6.text = str(DadosDoJogo.valores[0] + DadosDoJogo.valores[2])
+	$Label7.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[2]+1)
 	
 	# 2. Configura o PRIMEIRO Sprite (Posição de índice 0 do array)
 	_configurar_sprite($Sprite1, acertos_fase_anterior[0])
