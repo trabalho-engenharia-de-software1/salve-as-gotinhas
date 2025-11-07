@@ -25,9 +25,9 @@ func _ready():
 	_configurar_sprite($Sprite1, acertos_fase_anterior[0])
 	
 	# 3. Configura o SEGUNDO Sprite (Posição de índice 1 do array)
-	_configurar_sprite($Sprite2, acertos_fase_anterior[1])
+	_configurar_sprite($Sprite2, acertos_fase_anterior[2])
 	# --- FIM DO SEU CÓDIGO ORIGINAL ---
-	
+	_configurar_sprite($Sprite3, acertos_fase_anterior[1])
 	
 	# --- ADIÇÃO 2: Lógica do Tour de Ajuda ---
 	
@@ -132,7 +132,7 @@ func ir_prox_etapa() -> void:
 	DadosDoJogo.erro_etapa2 = erro
 	
 	# 2. TROCA DE CENA
-	var proxima_cena_path = "res://cenas/fase1/etapa3_fase1.tscn" 
+	var proxima_cena_path = "res://cenas/menu-inicial/menu-inicial.tscn" 
 	
 	if ResourceLoader.exists(proxima_cena_path):
 		# Este comando troca a cena atual pela próxima
