@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cd28eta08l73y"
+path="res://.godot/imported/esta nao e a resposta correta.wav-0270e2363bd23e972c2db782648d829e.sample"
+
+[deps]
+
+source_file="res://narracao/fase 1/esta nao e a resposta correta.wav"
+dest_files=["res://.godot/imported/esta nao e a resposta correta.wav-0270e2363bd23e972c2db782648d829e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
