@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="2_uerxx"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_fb2ec"]
 [ext_resource type="PackedScene" uid="uid://biuoqellwps4o" path="res://cenas/menu-inicial/VolumeLabelUI.tscn" id="5_tpqcy"]
-[ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/THEMA BOTAO.tres" id="6_hii50"]
+[ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="6_hii50"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="7_85pyl"]
 
 [node name="Node2D" type="Control"]

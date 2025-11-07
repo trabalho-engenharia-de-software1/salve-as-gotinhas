@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3bvdh6qcah2q"]
+[gd_scene load_steps=6 format=3 uid="uid://b3bvdh6qcah2q"]
 
 [ext_resource type="Script" uid="uid://b83id4ffjr6xo" path="res://cenas/menu-inicial/creditos.gd" id="1_wwioi"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="2_dlmhd"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_ssii2"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_ckb85"]
+[ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="5_dlmhd"]
 
 [node name="credios" type="Control"]
 layout_mode = 3
@@ -77,12 +78,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -77.0
-offset_top = -44.0
-offset_right = 77.0
+offset_left = -50.0
+offset_top = -32.0
+offset_right = 50.0
+offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 0
+focus_mode = 0
+theme = ExtResource("5_dlmhd")
 theme_override_fonts/font = ExtResource("3_ssii2")
+theme_override_font_sizes/font_size = 16
 text = "SAIR"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

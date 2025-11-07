@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="2_4vtvw"]
 [ext_resource type="AudioStream" uid="uid://b21kq6xrhsp47" path="res://sounds/musica-fundo.mp3" id="2_ry13j"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_86dby"]
-[ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/THEMA BOTAO.tres" id="6_u6toy"]
+[ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="6_u6toy"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="6_ulre0"]
 [ext_resource type="Texture2D" uid="uid://b22k8x1vaao04" path="res://imagens/backgrounds/soma-teste-1.png" id="9_emv4m"]
 [ext_resource type="Texture2D" uid="uid://cw30agoty483i" path="res://imagens/backgrounds/subtracao.png" id="10_eyu1c"]
@@ -60,6 +60,7 @@ offset_left = 51.0
 offset_top = 217.0
 offset_right = 221.0
 offset_bottom = 246.0
+focus_mode = 0
 theme = ExtResource("6_u6toy")
 theme_override_fonts/font = ExtResource("3_86dby")
 theme_override_font_sizes/font_size = 16
@@ -78,6 +79,7 @@ offset_right = -53.0
 offset_bottom = -26.0
 grow_horizontal = 0
 grow_vertical = 0
+focus_mode = 0
 theme = ExtResource("6_u6toy")
 theme_override_fonts/font = ExtResource("3_86dby")
 theme_override_font_sizes/font_size = 16

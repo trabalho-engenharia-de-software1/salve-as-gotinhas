@@ -1,16 +1,24 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://4vvlbttduirb"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://4vvlbttduirb"]
 
-[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="1_165y3"]
+[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="1_favu3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hii50"]
 bg_color = Color(0, 0.7059549, 0.523482, 1)
 border_width_bottom = 2
-border_color = Color(0, 0.796504, 0.546103, 1)
+border_color = Color(0, 0.79607844, 0.54509807, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
-shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07wd0"]
+bg_color = Color(0, 0.7059549, 0.523482, 1)
+border_width_left = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [resource]
 Button/colors/font_color = Color(0.9309234, 0.86695325, 0.7568412, 1)
@@ -31,7 +39,7 @@ Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 16
-Button/fonts/font = ExtResource("1_165y3")
+Button/fonts/font = ExtResource("1_favu3")
 Button/styles/hover = SubResource("StyleBoxFlat_hii50")
 Button/styles/normal = SubResource("StyleBoxFlat_hii50")
-Button/styles/pressed = SubResource("StyleBoxFlat_hii50")
+Button/styles/pressed = SubResource("StyleBoxFlat_07wd0")
