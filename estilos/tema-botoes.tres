@@ -25,22 +25,22 @@ shadow_size = 2
 
 [resource]
 Button/colors/font_color = Color(0.9309234, 0.86695325, 0.7568412, 1)
-Button/colors/font_disabled_color = Color(0, 0, 0, 0.5686275)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
 Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 Button/colors/font_outline_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
-Button/colors/icon_disabled_color = Color(0, 0, 0, 0.85882354)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 Button/colors/icon_focus_color = Color(1, 1, 1, 1)
 Button/colors/icon_hover_color = Color(1, 1, 1, 1)
 Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
 Button/colors/icon_normal_color = Color(1, 1, 1, 1)
 Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
 Button/constants/align_to_largest_stylebox = 0
-Button/constants/h_separation = 4
+Button/constants/h_separation = 0
 Button/constants/icon_max_width = 0
-Button/constants/outline_size = 0
+Button/constants/outline_size = 4
 Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_favu3")
 Button/styles/disabled = SubResource("StyleBoxFlat_hii50")
