@@ -14,6 +14,7 @@ offset_right = 87.0
 offset_bottom = 45.0
 focus_mode = 0
 theme = ExtResource("2_0n2yk")
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("1_v2kss")
 text = "SAIR"
 

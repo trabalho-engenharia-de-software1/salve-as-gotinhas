@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dn7kkyjqbv8ot" path="res://buttons/menos.png" id="12_tfabg"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="13_xjsfo"]
 [ext_resource type="PackedScene" uid="uid://d2m5t6uf4xrod" path="res://cenas/fase2/MedidorTotal.tscn" id="14_tfabg"]
-[ext_resource type="PackedScene" path="res://cenas/BotaoSair.tscn" id="15_xjsfo"]
+[ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="15_xjsfo"]
 
 [node name="Fase2Cena" type="Node2D"]
 script = ExtResource("1_8eytn")
@@ -173,85 +173,92 @@ offset_bottom = -4.0
 [node name="HelpLayer" parent="." instance=ExtResource("11_ftsb4")]
 
 [node name="Menos" type="Sprite2D" parent="."]
-position = Vector2(227, 103)
+position = Vector2(229, 104)
 texture = ExtResource("12_tfabg")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 234.0
-offset_top = 83.0
-offset_right = 274.0
-offset_bottom = 117.0
+offset_left = 233.0
+offset_top = 85.0
+offset_right = 273.0
+offset_bottom = 119.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.37254903, 0.6862745, 0.70980394, 1)
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "3"
 
 [node name="Menos2" type="Sprite2D" parent="."]
-position = Vector2(328, 101)
+position = Vector2(338, 105)
 texture = ExtResource("12_tfabg")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 336.0
-offset_top = 82.0
-offset_right = 376.0
-offset_bottom = 116.0
+offset_left = 344.0
+offset_top = 85.0
+offset_right = 384.0
+offset_bottom = 119.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.37254903, 0.6862745, 0.70980394, 1)
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "3"
 
 [node name="Menos3" type="Sprite2D" parent="."]
-position = Vector2(432, 102)
+position = Vector2(446, 105)
 texture = ExtResource("12_tfabg")
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 444.0
-offset_top = 82.0
-offset_right = 484.0
-offset_bottom = 116.0
+offset_left = 453.0
+offset_top = 85.0
+offset_right = 493.0
+offset_bottom = 119.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.37254903, 0.6862745, 0.70980394, 1)
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "2"
 
 [node name="Menos4" type="Sprite2D" parent="."]
-position = Vector2(225, 208)
+position = Vector2(225, 219)
 texture = ExtResource("12_tfabg")
 
 [node name="Label4" type="Label" parent="."]
-offset_left = 233.0
-offset_top = 188.0
-offset_right = 265.0
-offset_bottom = 222.0
+offset_left = 232.0
+offset_top = 198.0
+offset_right = 264.0
+offset_bottom = 232.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1.4439225e-06, 0.5005335, 0.5371052, 1)
+theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "5"
 
 [node name="Menos5" type="Sprite2D" parent="."]
-position = Vector2(335, 207)
+position = Vector2(336, 220)
 texture = ExtResource("12_tfabg")
 
 [node name="Label5" type="Label" parent="."]
-offset_left = 341.0
-offset_top = 186.0
-offset_right = 381.0
-offset_bottom = 220.0
+offset_left = 342.0
+offset_top = 199.0
+offset_right = 382.0
+offset_bottom = 233.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.5019608, 0.5372549, 1)
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "4"
 
 [node name="Menos6" type="Sprite2D" parent="."]
-position = Vector2(442, 215)
+position = Vector2(448, 220)
 texture = ExtResource("12_tfabg")
 
 [node name="Label6" type="Label" parent="."]
-offset_left = 449.0
-offset_top = 195.0
-offset_right = 489.0
-offset_bottom = 229.0
+offset_left = 454.0
+offset_top = 199.0
+offset_right = 494.0
+offset_bottom = 233.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.37254903, 0.6862745, 0.70980394, 1)
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "3"

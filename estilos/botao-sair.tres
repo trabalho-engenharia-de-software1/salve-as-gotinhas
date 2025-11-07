@@ -19,6 +19,7 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3041"]
 bg_color = Color(1, 0.3188713, 0.4287124, 1)
@@ -28,6 +29,7 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 1)
 
 [resource]
 Button/colors/font_color = Color(0.9309234, 0.86695325, 0.7568412, 1)

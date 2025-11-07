@@ -10,6 +10,8 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07wd0"]
 bg_color = Color(0, 0.7059549, 0.523482, 1)
@@ -19,16 +21,17 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+shadow_size = 2
 
 [resource]
 Button/colors/font_color = Color(0.9309234, 0.86695325, 0.7568412, 1)
-Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_disabled_color = Color(0, 0, 0, 0.5686275)
 Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
 Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 Button/colors/font_outline_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
-Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_disabled_color = Color(0, 0, 0, 0.85882354)
 Button/colors/icon_focus_color = Color(1, 1, 1, 1)
 Button/colors/icon_hover_color = Color(1, 1, 1, 1)
 Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
@@ -40,6 +43,13 @@ Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_favu3")
+Button/styles/disabled = SubResource("StyleBoxFlat_hii50")
+Button/styles/disabled_mirrored = SubResource("StyleBoxFlat_hii50")
 Button/styles/hover = SubResource("StyleBoxFlat_hii50")
+Button/styles/hover_mirrored = SubResource("StyleBoxFlat_07wd0")
+Button/styles/hover_pressed = null
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_07wd0")
 Button/styles/normal = SubResource("StyleBoxFlat_hii50")
+Button/styles/normal_mirrored = SubResource("StyleBoxFlat_07wd0")
 Button/styles/pressed = SubResource("StyleBoxFlat_07wd0")
+Button/styles/pressed_mirrored = SubResource("StyleBoxFlat_07wd0")
