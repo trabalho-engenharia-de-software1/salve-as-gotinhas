@@ -16,15 +16,15 @@ func _ready():
 	var raios_manual_reserv = Vector2(0, 0)
 	var lista_de_passos = [
 		{
+			"tipo": "alvo_automatico",
+			"alvo": alvo_chuveiro, # O alvo é o botão do chuveiro
+			"texto": "Clique para escolher uma atividade que gasta agua."
+		},
+		{
 			"tipo": "alvo_manual",
 			"pos_centro_pixels": pos_manual_reserv,
 			"raios_pixels": raios_manual_reserv,
 			"texto": "Escolha 3 itens que gastam agua!"
-		},
-		{
-			"tipo": "alvo_automatico",
-			"alvo": alvo_chuveiro, # O alvo é o botão do chuveiro
-			"texto": "Clique nesses botoes para escolher um."
 		}
 	]
 	script_do_botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
