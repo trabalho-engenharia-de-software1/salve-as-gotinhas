@@ -11,7 +11,7 @@ offset_top = 16.0
 offset_right = 100.0
 offset_bottom = 40.0
 size_flags_horizontal = 8
-size_flags_vertical = 0
+focus_mode = 0
 theme_override_icons/checked = ExtResource("1_1cvmd")
 theme_override_icons/unchecked = ExtResource("2_fn3ub")
 flat = true
@@ -37,26 +37,31 @@ scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha4" type="Sprite2D" parent="Gotas"]
+visible = false
 position = Vector2(85.395996, -8.936035)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha5" type="Sprite2D" parent="Gotas"]
+visible = false
 position = Vector2(48.395996, 14.063965)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha6" type="Sprite2D" parent="Gotas"]
+visible = false
 position = Vector2(60.395996, 14.063965)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha7" type="Sprite2D" parent="Gotas"]
+visible = false
 position = Vector2(73.395996, 14.063965)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
 
 [node name="gotinha8" type="Sprite2D" parent="Gotas"]
+visible = false
 position = Vector2(86.395996, 14.063965)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")
