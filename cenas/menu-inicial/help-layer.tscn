@@ -10,22 +10,25 @@
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -25.0
-offset_top = -2.0
-offset_right = -1.0
-offset_bottom = 22.0
+offset_left = -20.0
+offset_top = 9.0
+offset_right = 4.0
+offset_bottom = 33.0
 grow_horizontal = 0
 theme_type_variation = &"FlatButton"
 icon = ExtResource("1_xfxsx")
 script = ExtResource("2_67qyk")
 
 [node name="ajuda" type="Label" parent="."]
-offset_left = 428.0
-offset_top = 20.0
-offset_right = 477.0
-offset_bottom = 43.0
+offset_left = 411.0
+offset_top = -5.0
+offset_right = 481.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_xfxsx")
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 16
 text = "Ajuda"
 
 [connection signal="pressed" from="botaoAjuda" to="botaoAjuda" method="_on_pressed"]
