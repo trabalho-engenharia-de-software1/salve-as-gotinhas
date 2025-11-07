@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dna1hricujun3"]
+[gd_scene load_steps=6 format=3 uid="uid://dna1hricujun3"]
 
 [ext_resource type="Script" uid="uid://dy5jlq68exyhy" path="res://scripts/popup.gd" id="1_8rg8x"]
 [ext_resource type="Shader" uid="uid://g11jqf3drdtl" path="res://scripts/popup.gdshader" id="2_n3wty"]
+[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_n3wty"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pwa7c"]
 shader = ExtResource("2_n3wty")
@@ -10,6 +11,13 @@ shader_parameter/ellipse_center_uv = Vector2(0.5, 0.5)
 shader_parameter/ellipse_radius_uv = Vector2(0.1, 0.1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kb6tq"]
+bg_color = Color(0.2687284, 0.7064815, 0.25713962, 1)
+border_width_left = 2
+border_color = Color(0.24664268, 0.9597395, 0, 0.5411765)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [node name="Popup" type="CanvasLayer"]
 script = ExtResource("1_8rg8x")
@@ -49,6 +57,8 @@ alignment = 1
 
 [node name="texto" type="Label" parent="color/caixaTexto/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_n3wty")
 theme_override_font_sizes/font_size = 12
 text = "TESTE "
 horizontal_alignment = 1
