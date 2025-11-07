@@ -5,10 +5,11 @@ var agua_atual: float = 100.0
 
 @onready var reservatorio = $Reservatorio
 @onready var botao_ajuda = $HelpLayer/botaoAjuda
+@onready var medidor_total = $MedidorTotal
 
 # --- MUDANÇA 1: Variáveis para guardar as coordenadas manuais ---
-var reservatorio_pos_manual: Vector2
-var reservatorio_raios_manual: Vector2
+var pos_manual_reserv = Vector2(70, 140) # Use os valores que funcionam
+var raios_manual_reserv = Vector2(80, 130)
 
 
 func _ready():
@@ -21,17 +22,8 @@ func _ready():
 		
 	await get_tree().process_frame
 	
-	# --- 1. PEGUE AS REFERÊNCIAS ---
-	
-	# O alvo do reservatório (manual)
-	var pos_manual_reserv = Vector2(70, 140) # Use os valores que funcionam
-	var raios_manual_reserv = Vector2(80, 130)
-	
 	# Alvo 3: O BOTÃO do chuveiro (o primeiro 'OpcaoGasto' na lista do grupo)
 	var alvo_botao_chuveiro = todas_as_opcoes[0]
-	
-	# Alvo 4: As GOTAS do chuveiro (o nó 'Gotas' DENTRO do 'alvo_botao_chuveiro')
-	var alvo_gotas_do_chuveiro = alvo_botao_chuveiro.get_node("Gotas/gotinha3")
 	# --- 2. CRIE A LISTA COMPLETA DE PASSOS ---
 	var lista_de_passos = [
 		{
@@ -46,14 +38,16 @@ func _ready():
 			"texto": "Clique aqui para usar o chuveiro."
 		},
 		{
-			"tipo": "alvo_automatico",
-			"alvo": alvo_gotas_do_chuveiro, # O alvo são as GOTAS do chuveiro
-			"texto": "O chuveiro gasta 3 gotas (30 de água)."
+			"tipo": "alvo_manual",
+			"pos_centro_pixels": Vector2(220, 105),
+			"raios_pixels": Vector2(50, 23),
+			"texto": "O chuveiro gasta 3 gotas de agua."
 		}
 		# (Adicione mais passos para os outros itens)
 	]
 	
 	botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
+	medidor_total.atualizar_medidor(agua_atual, agua_maxima)
 
 # Função chamada quando QUALQUER OpcaoGasto é clicada
 func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
@@ -65,17 +59,13 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 		agua_atual += 10 * custo
 	agua_atual = clamp(agua_atual, -1.0, agua_maxima) 
 	reservatorio.atualizar_nivel(agua_atual, agua_maxima)
-	
+	medidor_total.atualizar_medidor(agua_atual, agua_maxima)
 	
 	# --- MUDANÇA 3: Usando o Círculo MANUAL para Vitória/Derrota ---
 	
 	if is_zero_approx(agua_atual):
 		# 1. MOSTRA o popup de vitória
-		PopupManager.mostrar_ajuda_manual(
-			Vector2(0, 0),  # Use os valores que você ajustou
-			Vector2(0, 0), 
-			"VOCÊ GASTOU COM SABEDORIA!"
-		)
+		PopupManager.mostrar("Voce usou bem a sua agua. Parabens!!")
 		
 		# 2. ESPERA o jogador ler
 		await get_tree().create_timer(3.0).timeout
@@ -92,9 +82,9 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 	elif agua_atual < 0:
 		# 1. MOSTRA o popup de derrota
 		PopupManager.mostrar_ajuda_manual(
-			reservatorio_pos_manual, 
-			reservatorio_raios_manual, 
-			"A ÁGUA ACABOU!"
+			pos_manual_reserv, 
+			raios_manual_reserv, 
+			"Gastou mais agua que tinha. Tente novamente"
 		)
 		
 		# 2. ESPERA o jogador ler
