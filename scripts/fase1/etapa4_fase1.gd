@@ -20,14 +20,19 @@ func _ready():
 	# --- SEU CÓDIGO ORIGINAL (Mantido) ---
 	# 1. Recupera o array de acertos
 	var acertos_fase_anterior = DadosDoJogo.botoes_corretos_fase1
-	
+	$Label.text = str(DadosDoJogo.valores[0])
+	$Label2.text = str(DadosDoJogo.valores[1])
+	$Label5.text = str(DadosDoJogo.valores[2])
+	$Label6.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[2]+DadosDoJogo.valores[1])
+	$Label4.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[2]+DadosDoJogo.valores[1]-3)
+	$Label3.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[2]+DadosDoJogo.valores[1]-1)
 	# 2. Configura o PRIMEIRO Sprite (Posição de índice 0 do array)
 	_configurar_sprite($Sprite1, acertos_fase_anterior[0])
 	
 	# 3. Configura o SEGUNDO Sprite (Posição de índice 1 do array)
-	_configurar_sprite($Sprite2, acertos_fase_anterior[2])
+	_configurar_sprite($Sprite2, acertos_fase_anterior[1])
 	# --- FIM DO SEU CÓDIGO ORIGINAL ---
-	_configurar_sprite($Sprite3, acertos_fase_anterior[1])
+	_configurar_sprite($Sprite3, acertos_fase_anterior[2])
 	
 	# --- ADIÇÃO 2: Lógica do Tour de Ajuda ---
 	
