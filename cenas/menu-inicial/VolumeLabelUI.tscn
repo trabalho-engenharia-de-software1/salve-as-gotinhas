@@ -9,23 +9,23 @@
 [node name="volume-layer" type="CanvasLayer"]
 
 [node name="Volume" type="Sprite2D" parent="."]
-position = Vector2(417, 262.00003)
-scale = Vector2(1, 0.904)
+position = Vector2(415.00003, 258.00003)
+scale = Vector2(1.371, 1.239)
 texture = ExtResource("2_w2v6l")
 
 [node name="volume" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 192.0
-offset_top = 243.0
-offset_right = 234.0
-offset_bottom = 256.0
+offset_left = 185.0
+offset_top = 244.0
+offset_right = 239.0
+offset_bottom = 260.0
 grow_horizontal = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_jw7rm")
-theme_override_font_sizes/font_size = 9
+theme_override_font_sizes/font_size = 12
 text = "volume"
 
 [node name="slidervolume" type="HSlider" parent="."]
