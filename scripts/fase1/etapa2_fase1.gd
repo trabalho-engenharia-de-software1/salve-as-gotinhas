@@ -16,11 +16,17 @@ var qtd = 0 # (Seu código original, mantido)
 @onready var script_do_botao_ajuda = $HelpLayer/botaoAjuda # Verifique o caminho!
 
 
+
 func _ready():
 	# --- SEU CÓDIGO ORIGINAL (Mantido) ---
 	# 1. Recupera o array de acertos
 	var acertos_fase_anterior = DadosDoJogo.botoes_corretos_fase1
-	
+	$Label.text = str(DadosDoJogo.valores[0])
+	$Label2.text = str(DadosDoJogo.valores[1])
+	$Label3.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-1)
+	$Label4.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-3)
+	$Label6.text = str(DadosDoJogo.valores[0] + DadosDoJogo.valores[1])
+	$Label7.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-2)
 	# 2. Configura o PRIMEIRO Sprite (Posição de índice 0 do array)
 	_configurar_sprite($Sprite1, acertos_fase_anterior[0])
 	
