@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="5_inim1"]
 [ext_resource type="Script" uid="uid://cw76uaryqwnhe" path="res://scripts/fase1/gotinha11.gd" id="5_rt210"]
 [ext_resource type="Script" uid="uid://dc7hv83xf633n" path="res://scripts/fase1/gotinha11-.gd" id="6_i00o8"]
-[ext_resource type="PackedScene" uid="uid://cl04gfo4i5sy8" path="res://cenas/BotaoSair.tscn" id="6_ujyti"]
+[ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="6_ujyti"]
 [ext_resource type="Script" uid="uid://dun2etj5yqwdq" path="res://scripts/fase1/gotinha10.gd" id="7_2ysb4"]
 [ext_resource type="Script" uid="uid://dlk5n8j4qpu3j" path="res://scripts/fase1/gotinha10-.gd" id="8_4fptc"]
 [ext_resource type="Script" uid="uid://bvswm4plwbhuw" path="res://scripts/fase1/gotinha9-.gd" id="9_n1422"]
@@ -35,8 +35,8 @@ offset_right = 324.0
 offset_bottom = 224.0
 
 [node name="resposta2" type="Button" parent="."]
-offset_left = 316.0
-offset_top = 162.0
+offset_left = 306.0
+offset_top = 153.0
 offset_right = 324.0
 offset_bottom = 170.0
 

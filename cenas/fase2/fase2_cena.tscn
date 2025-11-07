@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://imagens/backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase2/fase_2.gd" id="1_8eytn"]
-[ext_resource type="Texture2D" uid="uid://mk1shsnnaeia" path="res://imagens/backgrounds/Novo Projeto.png" id="3_cta7g"]
+[ext_resource type="Texture2D" uid="uid://dpm8dyovsvy1p" path="res://imagens/backgrounds/Novo_Projeto-1.png" id="3_cta7g"]
 [ext_resource type="Texture2D" uid="uid://46d3n6ikc0s5" path="res://imagens/backgrounds/pixil-frame-0.png" id="3_ef4v0"]
 [ext_resource type="Texture2D" uid="uid://cw1mpm7kjr3ak" path="res://imagens/sprites-fase1/chuveiro.png" id="3_x1yhp"]
 [ext_resource type="Texture2D" uid="uid://6ib6uipxcy5l" path="res://imagens/backgrounds/1pixel.png" id="4_cta7g"]
@@ -30,8 +30,10 @@ texture = ExtResource("1_5rxyx")
 region_filter_clip_enabled = true
 
 [node name="NovoProjeto" type="Sprite2D" parent="."]
-position = Vector2(239.50002, 239.5)
-scale = Vector2(14.968751, 14.96875)
+modulate = Color(0.45074373, 0.5536953, 0.65627617, 1)
+self_modulate = Color(2.1748757, 1.9545432, 2.1614387, 1)
+position = Vector2(240, 239.5)
+scale = Vector2(15, 14.96875)
 texture = ExtResource("3_cta7g")
 
 [node name="1Pixel7" type="Sprite2D" parent="."]
@@ -45,8 +47,8 @@ scale = Vector2(6.6250005, 5.6874995)
 texture = ExtResource("3_ef4v0")
 
 [node name="PixilFrame6" type="Sprite2D" parent="."]
-position = Vector2(140.5, 21)
-scale = Vector2(2.0625002, 1.6250001)
+position = Vector2(139.5, 21)
+scale = Vector2(2.1875, 1.6250001)
 texture = ExtResource("3_ef4v0")
 
 [node name="1Pixel" type="Sprite2D" parent="."]
