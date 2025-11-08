@@ -53,3 +53,7 @@ func _on_creditos_pressed() -> void:
 
 func _on_configuracoes_pressed() -> void:
 	get_tree().change_scene_to_file("res://cenas/menu-inicial/configuracoes.tscn")
+
+
+func _on_relatorio_pressed() -> void:
+	get_tree().change_scene_to_file("res://cenas/menu-inicial/relatorio/relatorio-selecao.tscn")

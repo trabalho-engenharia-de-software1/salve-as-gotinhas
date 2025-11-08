@@ -1,0 +1,224 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxwf6sutjrj8s"]
+
+[ext_resource type="Script" uid="uid://bcusejw8cdwsv" path="res://scripts/menu-inicial/relatorio_somando.gd" id="1_atbkq"]
+[ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="2_16ols"]
+[ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_6ersq"]
+[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_ig0cu"]
+[ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="5_gs4qd"]
+[ext_resource type="Texture2D" uid="uid://b1ij2a8t4xv6w" path="res://imagens/backgrounds/borda lateral- atualizada - 1.png" id="6_ou351"]
+
+[node name="RelatorioSomando" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_atbkq")
+
+[node name="BackgroundMenuInicial2" type="Sprite2D" parent="."]
+modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
+position = Vector2(239, 124)
+scale = Vector2(0.317, 0.317)
+texture = ExtResource("2_16ols")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -89.0
+offset_top = 8.0
+offset_right = 89.0
+offset_bottom = 41.0
+grow_horizontal = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_6ersq")
+theme_override_font_sizes/font_size = 25
+text = "relatório subtraindo"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_top = 45.0
+offset_right = -171.0
+offset_bottom = 78.0
+grow_horizontal = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("4_ig0cu")
+theme_override_font_sizes/font_size = 16
+text = "nome"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.0
+offset_top = 45.0
+offset_right = -40.0
+offset_bottom = 87.0
+grow_horizontal = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("4_ig0cu")
+theme_override_font_sizes/font_size = 16
+text = "acertos
+"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_top = 46.0
+offset_right = 76.0
+offset_bottom = 79.0
+grow_horizontal = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("4_ig0cu")
+theme_override_font_sizes/font_size = 16
+text = "ERROS"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 98.0
+offset_top = 45.0
+offset_right = 210.0
+offset_bottom = 78.0
+grow_horizontal = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("4_ig0cu")
+theme_override_font_sizes/font_size = 16
+text = "TEMPO"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -237.0
+offset_top = -22.0
+offset_right = -187.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.91, 0.91)
+focus_mode = 0
+theme = ExtResource("5_gs4qd")
+theme_override_fonts/font = ExtResource("3_6ersq")
+theme_override_font_sizes/font_size = 16
+text = "SAIR"
+
+[node name="BordaLateralAtualizada1" type="Sprite2D" parent="."]
+position = Vector2(257.5, 91.999985)
+scale = Vector2(19.406252, 6.25)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada7" type="Sprite2D" parent="."]
+position = Vector2(257.5, 116.99999)
+scale = Vector2(19.406252, 6.25)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada8" type="Sprite2D" parent="."]
+position = Vector2(257.5, 139)
+scale = Vector2(19.406252, 6.25)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada9" type="Sprite2D" parent="."]
+position = Vector2(257.5, 161)
+scale = Vector2(19.406252, 6.25)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada10" type="Sprite2D" parent="."]
+position = Vector2(257.5, 183)
+scale = Vector2(19.406252, 6.25)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada11" type="Sprite2D" parent="."]
+position = Vector2(257.5, 205)
+scale = Vector2(19.406252, 6.25)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada12" type="Sprite2D" parent="."]
+position = Vector2(257.5, 227)
+scale = Vector2(19.406252, 6.25)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada13" type="Sprite2D" parent="."]
+position = Vector2(257.5, 249)
+scale = Vector2(19.406252, 6.25)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada15" type="Sprite2D" parent="."]
+position = Vector2(257.5, 271)
+scale = Vector2(19.406252, 6.25)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada16" type="Sprite2D" parent="."]
+position = Vector2(257.5, 290)
+scale = Vector2(19.406252, 6.25)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada14" type="Sprite2D" parent="."]
+position = Vector2(257.5, 2)
+scale = Vector2(19.406252, 6.25)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada3" type="Sprite2D" parent="."]
+position = Vector2(68.00001, 143.745)
+rotation = 1.5707964
+scale = Vector2(6.533, 2.450393)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada4" type="Sprite2D" parent="."]
+position = Vector2(183, 143.74498)
+rotation = 1.5707964
+scale = Vector2(6.533, 2.450393)
+texture = ExtResource("6_ou351")
+
+[node name="BordaLateralAtualizada5" type="Sprite2D" parent="."]
+position = Vector2(318.00003, 143.74498)
+rotation = 1.5707964
+scale = Vector2(6.533, 2.450393)
+texture = ExtResource("6_ou351")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
