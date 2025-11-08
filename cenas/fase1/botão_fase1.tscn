@@ -73,6 +73,7 @@ scale = Vector2(0.021023441, 0.030273436)
 texture = ExtResource("4_l6fvi")
 
 [node name="gotinha10" type="Sprite2D" parent="Gotas"]
+visible = false
 position = Vector2(25, -12)
 scale = Vector2(0.021023441, 0.030273436)
 texture = ExtResource("4_l6fvi")

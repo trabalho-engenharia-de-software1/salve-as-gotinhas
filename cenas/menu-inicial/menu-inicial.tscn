@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c00dmh5exfxlo"]
+[gd_scene load_steps=10 format=3 uid="uid://c00dmh5exfxlo"]
 
 [ext_resource type="Script" uid="uid://cbgafm2yk41gx" path="res://scripts/menu-inicial/menu_inicial.gd" id="1_jdc8s"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_u4qhn"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://biuoqellwps4o" path="res://cenas/menu-inicial/VolumeLabelUI.tscn" id="5_tpqcy"]
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="6_hii50"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="7_85pyl"]
+[ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="7_jersn"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -100,7 +101,7 @@ text = "CREDITOS"
 [node name="sair" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
-theme = ExtResource("6_hii50")
+theme = ExtResource("7_jersn")
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "SAIR"
 
@@ -109,5 +110,6 @@ text = "SAIR"
 [node name="HelpLayer" parent="." instance=ExtResource("7_85pyl")]
 
 [connection signal="pressed" from="VBoxContainer/jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="VBoxContainer/configuracoes" to="." method="_on_configuracoes_pressed"]
 [connection signal="pressed" from="VBoxContainer/creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]

@@ -1,21 +1,28 @@
-[gd_scene load_steps=17 format=3 uid="uid://bj2nwopjum1pu"]
+[gd_scene load_steps=23 format=3 uid="uid://bj2nwopjum1pu"]
 
 [ext_resource type="Script" uid="uid://b82joiecg7g3d" path="res://scripts/fase1/etapa3_fase1.gd" id="1_lepym"]
 [ext_resource type="PackedScene" uid="uid://8rnnbuqp0654" path="res://cenas/fase1/botão_fase1.tscn" id="2_oaxcc"]
+[ext_resource type="Texture2D" uid="uid://dpm8dyovsvy1p" path="res://imagens/backgrounds/Novo_Projeto-1.png" id="2_y2w6m"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_k2pn3"]
+[ext_resource type="Texture2D" uid="uid://dnyqoarbjqiyw" path="res://imagens/backgrounds/background_branco-substituir.jpg" id="3_qtk0i"]
 [ext_resource type="Script" uid="uid://c0k1fog5xven" path="res://scripts/fase1/gotinha7.gd" id="3_uo7g0"]
 [ext_resource type="Script" uid="uid://dhcqgf4g13e8s" path="res://scripts/fase1/gotinha1.gd" id="4_inim1"]
+[ext_resource type="Texture2D" uid="uid://6ib6uipxcy5l" path="res://imagens/backgrounds/1pixel.png" id="4_rjl7c"]
 [ext_resource type="Texture2D" uid="uid://c6tn8055qfy1c" path="res://buttons/mais.png" id="4_uo7g0"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="5_inim1"]
 [ext_resource type="Script" uid="uid://cw76uaryqwnhe" path="res://scripts/fase1/gotinha11.gd" id="5_rt210"]
+[ext_resource type="Texture2D" uid="uid://87382dpdaxm6" path="res://imagens/backgrounds/frame-subsituir.png" id="6_by7un"]
 [ext_resource type="Script" uid="uid://dc7hv83xf633n" path="res://scripts/fase1/gotinha11-.gd" id="6_i00o8"]
-[ext_resource type="PackedScene" uid="uid://cl04gfo4i5sy8" path="res://cenas/BotaoSair.tscn" id="6_ujyti"]
+[ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="6_ujyti"]
 [ext_resource type="Script" uid="uid://dun2etj5yqwdq" path="res://scripts/fase1/gotinha10.gd" id="7_2ysb4"]
+[ext_resource type="StyleBox" uid="uid://csn6rc2gqn8k0" path="res://estilos/estilo-botao.tres" id="7_kovwm"]
 [ext_resource type="Script" uid="uid://dlk5n8j4qpu3j" path="res://scripts/fase1/gotinha10-.gd" id="8_4fptc"]
 [ext_resource type="Script" uid="uid://bvswm4plwbhuw" path="res://scripts/fase1/gotinha9-.gd" id="9_n1422"]
 [ext_resource type="Script" uid="uid://buewu7h65gj4r" path="res://scripts/fase1/gotinha9.gd" id="10_y2w6m"]
 [ext_resource type="Script" uid="uid://dobflbc281ep0" path="res://scripts/fase1/gotinha8.gd" id="11_qtk0i"]
 [ext_resource type="Script" uid="uid://si7swi5m6gdd" path="res://scripts/fase1/gotinha8-.gd" id="12_rjl7c"]
+
+[sub_resource type="Theme" id="Theme_le2qj"]
 
 [node name="Etapa3Fase1" type="Node2D"]
 script = ExtResource("1_lepym")
@@ -28,29 +35,86 @@ offset_right = 483.0
 offset_bottom = 276.0
 color = Color(0.3019608, 0.8235294, 0.81960785, 1)
 
+[node name="NovoProjeto" type="Sprite2D" parent="."]
+modulate = Color(0.45074373, 0.5536953, 0.65627617, 1)
+self_modulate = Color(2.1748757, 1.9545432, 2.1614387, 1)
+position = Vector2(241, 239)
+scale = Vector2(15.062499, 14.96875)
+texture = ExtResource("2_y2w6m")
+
+[node name="BackgroundBrancoSubstituir2" type="Sprite2D" parent="."]
+position = Vector2(73.999985, 102.56252)
+scale = Vector2(0.019333333, 0.02721874)
+texture = ExtResource("3_qtk0i")
+
+[node name="1Pixel2" type="Sprite2D" parent="."]
+modulate = Color(0.24477637, 0.2447764, 0.24477637, 1)
+position = Vector2(73.999985, 163.2015)
+rotation = -3.1415925
+scale = Vector2(115.76545, -24.056335)
+texture = ExtResource("4_rjl7c")
+
+[node name="Mais2" type="Sprite2D" parent="."]
+position = Vector2(24.999985, 142)
+texture = ExtResource("4_uo7g0")
+
+[node name="PixilFrame1" type="Sprite2D" parent="."]
+position = Vector2(74, 111)
+scale = Vector2(8.249998, 9)
+texture = ExtResource("6_by7un")
+
+[node name="BackgroundBrancoSubstituir3" type="Sprite2D" parent="."]
+position = Vector2(210.99998, 102.56252)
+scale = Vector2(0.019333333, 0.02721874)
+texture = ExtResource("3_qtk0i")
+
+[node name="1Pixel3" type="Sprite2D" parent="."]
+modulate = Color(0.24477637, 0.2447764, 0.24477637, 1)
+position = Vector2(210.99998, 163.2015)
+rotation = -3.1415925
+scale = Vector2(115.76545, -24.056335)
+texture = ExtResource("4_rjl7c")
+
+[node name="Mais3" type="Sprite2D" parent="."]
+position = Vector2(161.99998, 142)
+texture = ExtResource("4_uo7g0")
+
+[node name="PixilFrame2" type="Sprite2D" parent="."]
+position = Vector2(210.99998, 111)
+scale = Vector2(8.249998, 9)
+texture = ExtResource("6_by7un")
+
 [node name="resposta" type="Button" parent="."]
-offset_left = 316.0
-offset_top = 216.0
-offset_right = 324.0
-offset_bottom = 224.0
+offset_left = 441.0
+offset_top = 203.0
+offset_right = 465.0
+offset_bottom = 227.0
+theme_override_styles/normal = ExtResource("7_kovwm")
+theme_override_styles/hover = ExtResource("7_kovwm")
 
 [node name="resposta2" type="Button" parent="."]
-offset_left = 316.0
-offset_top = 162.0
-offset_right = 324.0
-offset_bottom = 170.0
+offset_left = 442.0
+offset_top = 148.0
+offset_right = 466.0
+offset_bottom = 172.0
+theme_override_styles/normal = ExtResource("7_kovwm")
+theme_override_styles/hover = ExtResource("7_kovwm")
 
 [node name="resposta3" type="Button" parent="."]
-offset_left = 316.0
-offset_top = 108.0
-offset_right = 324.0
-offset_bottom = 116.0
+offset_left = 443.0
+offset_top = 103.0
+offset_right = 467.0
+offset_bottom = 127.0
+theme_override_styles/normal = ExtResource("7_kovwm")
+theme_override_styles/hover = ExtResource("7_kovwm")
 
 [node name="resposta4" type="Button" parent="."]
-offset_left = 316.0
-offset_top = 54.0
-offset_right = 324.0
-offset_bottom = 62.0
+offset_left = 442.0
+offset_top = 49.0
+offset_right = 466.0
+offset_bottom = 73.0
+theme_override_styles/normal = ExtResource("7_kovwm")
+theme_override_styles/hover = ExtResource("7_kovwm")
 
 [node name="Sprite1" type="Sprite2D" parent="."]
 position = Vector2(90, 90)
@@ -61,9 +125,9 @@ position = Vector2(192, 88.00001)
 scale = Vector2(0.06, 0.06)
 
 [node name="OpcaoGasto" parent="." instance=ExtResource("2_oaxcc")]
-offset_left = 200.0
+offset_left = 212.0
 offset_top = 124.0
-offset_right = 244.0
+offset_right = 256.0
 offset_bottom = 148.0
 script = ExtResource("3_uo7g0")
 custo_e_gotas = 10
@@ -77,126 +141,148 @@ script = ExtResource("4_inim1")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto3" parent="." instance=ExtResource("2_oaxcc")]
-offset_left = 420.0
+offset_left = 342.0
 offset_top = 168.0
-offset_right = 464.0
+offset_right = 386.0
 offset_bottom = 192.0
 script = ExtResource("5_rt210")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto10" parent="." instance=ExtResource("2_oaxcc")]
-offset_left = 420.0
+offset_left = 342.0
 offset_top = 191.0
-offset_right = 464.0
+offset_right = 386.0
 offset_bottom = 215.0
 script = ExtResource("6_i00o8")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto4" parent="." instance=ExtResource("2_oaxcc")]
-offset_left = 421.0
+offset_left = 343.0
 offset_top = 112.0
-offset_right = 465.0
+offset_right = 387.0
 offset_bottom = 136.0
 script = ExtResource("7_2ysb4")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto9" parent="." instance=ExtResource("2_oaxcc")]
-offset_left = 422.0
+offset_left = 344.0
 offset_top = 135.0
-offset_right = 466.0
+offset_right = 388.0
 offset_bottom = 159.0
 script = ExtResource("8_4fptc")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto5" parent="." instance=ExtResource("2_oaxcc")]
-offset_left = 421.0
+offset_left = 343.0
 offset_top = 86.0
-offset_right = 465.0
+offset_right = 387.0
 offset_bottom = 110.0
 script = ExtResource("9_n1422")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto8" parent="." instance=ExtResource("2_oaxcc")]
-offset_left = 422.0
+offset_left = 344.0
 offset_top = 62.0
-offset_right = 466.0
+offset_right = 388.0
 offset_bottom = 86.0
 script = ExtResource("10_y2w6m")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto6" parent="." instance=ExtResource("2_oaxcc")]
-offset_left = 422.0
+offset_left = 344.0
 offset_top = 9.0
-offset_right = 466.0
+offset_right = 388.0
 offset_bottom = 33.0
 script = ExtResource("11_qtk0i")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto7" parent="." instance=ExtResource("2_oaxcc")]
-offset_left = 422.0
+offset_left = 344.0
 offset_top = 32.0
-offset_right = 466.0
+offset_right = 388.0
 offset_bottom = 56.0
 script = ExtResource("12_rjl7c")
 custo_e_gotas = 10
 
 [node name="Label" type="Label" parent="."]
-offset_left = 79.0
-offset_top = 113.0
-offset_right = 119.0
-offset_bottom = 147.0
+offset_left = 33.0
+offset_top = 122.0
+offset_right = 73.0
+offset_bottom = 156.0
+theme_override_colors/font_shadow_color = Color(0, 0.15686275, 0.2901961, 0)
+theme_override_colors/font_outline_color = Color(0.039215688, 0.16862746, 0.27058825, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 326.0
-offset_top = 40.0
-offset_right = 366.0
-offset_bottom = 74.0
+offset_left = 404.0
+offset_top = 41.0
+offset_right = 444.0
+offset_bottom = 75.0
+theme_override_colors/font_outline_color = Color(0.039215688, 0.16862746, 0.27058825, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
 
 [node name="Label4" type="Label" parent="."]
-offset_left = 326.0
-offset_top = 96.0
-offset_right = 366.0
-offset_bottom = 130.0
+offset_left = 404.0
+offset_top = 97.0
+offset_right = 444.0
+offset_bottom = 131.0
+theme_override_colors/font_outline_color = Color(0.039215688, 0.16862746, 0.27058825, 1)
+theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
 
 [node name="Label6" type="Label" parent="."]
-offset_left = 326.0
-offset_top = 140.0
-offset_right = 366.0
-offset_bottom = 174.0
+offset_left = 404.0
+offset_top = 141.0
+offset_right = 444.0
+offset_bottom = 175.0
+theme_override_colors/font_outline_color = Color(0.039215688, 0.16862746, 0.27058825, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
 
 [node name="Label7" type="Label" parent="."]
-offset_left = 326.0
-offset_top = 196.0
-offset_right = 366.0
-offset_bottom = 230.0
+offset_left = 404.0
+offset_top = 197.0
+offset_right = 444.0
+offset_bottom = 231.0
+theme_override_colors/font_outline_color = Color(0.039215688, 0.16862746, 0.27058825, 1)
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 183.0
-offset_top = 113.0
-offset_right = 223.0
-offset_bottom = 147.0
+offset_left = 170.0
+offset_top = 122.0
+offset_right = 210.0
+offset_bottom = 156.0
+theme = SubResource("Theme_le2qj")
+theme_override_colors/font_shadow_color = Color(0.039215688, 0.16862746, 0.27058825, 1)
+theme_override_colors/font_outline_color = Color(0.039215688, 0.16862746, 0.27058825, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
-
-[node name="Mais" type="Sprite2D" parent="."]
-position = Vector2(138, 128)
-texture = ExtResource("4_uo7g0")
 
 [node name="HelpLayer" parent="." instance=ExtResource("5_inim1")]
 

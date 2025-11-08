@@ -23,8 +23,8 @@ func _ready():
 	var acertos_fase_anterior = DadosDoJogo.botoes_corretos_fase1
 	$Label.text = str(DadosDoJogo.valores[0])
 	$Label2.text = str(DadosDoJogo.valores[1])
-	$Label3.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-1)
-	$Label4.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-3)
+	$Label3.text = ' ' + str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-1)
+	$Label4.text =str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-3)
 	$Label6.text = str(DadosDoJogo.valores[0] + DadosDoJogo.valores[1])
 	$Label7.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-2)
 	# 2. Configura o PRIMEIRO Sprite (Posição de índice 0 do array)
@@ -71,7 +71,7 @@ func _ready():
 			"tipo": "alvo_manual",
 			"pos_centro_pixels": Vector2(320, 140), 
 			"raios_pixels": Vector2(15, 110),      
-			"texto": "Para escolher uma resposta, clique em algum desses botoes"
+			"texto": "Escolha a resposta clicando no botao correto!"
 		}
 	]
 	

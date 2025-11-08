@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://xw2idtynsrvx"
+path="res://.godot/imported/escolha 3 itens que gastam agua.wav-07631d214abc33f7350f1367de58f297.sample"
+
+[deps]
+
+source_file="res://narracao/fase 1/escolha 3 itens que gastam agua.wav"
+dest_files=["res://.godot/imported/escolha 3 itens que gastam agua.wav-07631d214abc33f7350f1367de58f297.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
