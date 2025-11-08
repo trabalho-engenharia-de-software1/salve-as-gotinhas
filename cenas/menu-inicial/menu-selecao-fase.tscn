@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dybiibrlqhty5"]
+[gd_scene load_steps=12 format=3 uid="uid://dybiibrlqhty5"]
 
 [ext_resource type="Script" uid="uid://da85m5tgo2pci" path="res://scripts/menu-inicial/menu_selecao_fase.gd" id="1_30tso"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_uxpq5"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b22k8x1vaao04" path="res://imagens/backgrounds/soma-teste-1.png" id="9_emv4m"]
 [ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="10_b6xtr"]
 [ext_resource type="Texture2D" uid="uid://cw30agoty483i" path="res://imagens/backgrounds/subtracao.png" id="10_eyu1c"]
+[ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="11_u6toy"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -106,10 +107,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -236.0
-offset_top = -26.0
-offset_right = -186.0
-offset_bottom = -3.0
+offset_left = -237.0
+offset_top = -24.0
+offset_right = -164.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
 focus_mode = 0
@@ -138,6 +139,11 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("2_4vtvw")
 theme_override_font_sizes/font_size = 25
 text = "SELECIONE A FASE"
+
+[node name="Sair" type="Sprite2D" parent="."]
+position = Vector2(9, 258)
+scale = Vector2(0.43218744, 0.4321874)
+texture = ExtResource("11_u6toy")
 
 [connection signal="pressed" from="iniciarfase1" to="." method="_on_iniciarfase_1_pressed"]
 [connection signal="pressed" from="iniciarfase2" to="." method="_on_iniciarfase_2_pressed"]
