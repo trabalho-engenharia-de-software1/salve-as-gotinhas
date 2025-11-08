@@ -33,18 +33,21 @@ func _ready():
 			"tipo": "alvo_manual",
 			"pos_centro_pixels": pos_manual_reserv,
 			"raios_pixels": raios_manual_reserv,
-			"texto": "Este é o seu reservatório. O objetivo é deixá-lo em 0!"
+			"texto": "Este é o seu reservatório. O objetivo é deixá-lo em 0!",
+			"audio":preload("res://narracao/fase2/esteeoseureservatoriooobjetivoedeixaloem0.wav")
 		},
 		{
 			"tipo": "alvo_automatico",
 			"alvo": alvo_botao_chuveiro, # O alvo é o chuveiro
-			"texto": "Clique aqui para usar o chuveiro."
+			"texto": "Clique aqui para usar o chuveiro.",
+			"audio":preload("res://narracao/fase2/cliqueaquiparausarochuveiro.wav")
 		},
 		{
 			"tipo": "alvo_manual",
 			"pos_centro_pixels": Vector2(220, 105),
 			"raios_pixels": Vector2(50, 23),
-			"texto": "O chuveiro gasta 3 gotas de agua."
+			"texto": "O chuveiro gasta 3 gotas de agua.",
+			"audio":preload("res://narracao/fase2/ochuveirogasta3gotasdeagua.wav")
 		}
 		# (Adicione mais passos para os outros itens)
 	]

@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@onready var som_hover: AudioStreamPlayer = $AudioStreamPlayer
+@onready var som_hover: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var area: Area2D = $Area2D
 
 func _ready():

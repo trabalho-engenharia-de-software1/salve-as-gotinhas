@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://b83rhs5pm0s7u"]
+[gd_scene load_steps=6 format=3 uid="uid://b83rhs5pm0s7u"]
 
 [ext_resource type="Texture2D" uid="uid://0hwnbwdcg0fr" path="res://buttons/interrogacao.png" id="1_xfxsx"]
 [ext_resource type="Script" uid="uid://dmatjc27ul14h" path="res://scripts/botao_ajuda.gd" id="2_67qyk"]
+[ext_resource type="AudioStream" uid="uid://pnvbiyat4feh" path="res://narracao/menu/ajuda.wav" id="3_x3ont"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_xfxsx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acrrd"]
 
 [node name="HelpLayer" type="CanvasLayer"]
 
@@ -20,10 +23,20 @@ theme_type_variation = &"FlatButton"
 icon = ExtResource("1_xfxsx")
 script = ExtResource("2_67qyk")
 
+[node name="Area2D" type="Area2D" parent="botaoAjuda"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botaoAjuda/Area2D"]
+position = Vector2(-13, 5)
+scale = Vector2(3.2, 1.4)
+shape = SubResource("RectangleShape2D_acrrd")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="botaoAjuda"]
+stream = ExtResource("3_x3ont")
+
 [node name="ajuda" type="Label" parent="."]
-offset_left = 409.0
+offset_left = 409.115
 offset_top = -5.0
-offset_right = 479.0
+offset_right = 479.115
 offset_bottom = 18.0
 theme_override_colors/font_color = Color(0, 1, 1, 1)
 theme_override_constants/outline_size = 4

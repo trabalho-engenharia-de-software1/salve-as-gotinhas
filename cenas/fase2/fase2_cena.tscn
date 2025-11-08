@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dypx0nd08saj3"]
+[gd_scene load_steps=47 format=3 uid="uid://dypx0nd08saj3"]
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://imagens/backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase2/fase_2.gd" id="1_8eytn"]
@@ -15,14 +15,49 @@
 [ext_resource type="Texture2D" uid="uid://dc3xdsperrqp0" path="res://imagens/sprites-fase1/torneira.png" id="7_kk3tn"]
 [ext_resource type="Script" uid="uid://bw8vg15k0fh7r" path="res://cenas/fase2/sprite_opcao_1.gd" id="7_leshm"]
 [ext_resource type="Texture2D" uid="uid://ckmo7ru1h660j" path="res://imagens/sprites-fase1/sanitario.png" id="8_tfabg"]
+[ext_resource type="AudioStream" uid="uid://dmk3ee1ft67ig" path="res://narracao/objetos/mangueira .wav" id="10_x2blo"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="11_ftsb4"]
+[ext_resource type="AudioStream" uid="uid://cv2bif3j7kg6w" path="res://narracao/objetos/regador.wav" id="12_0fepj"]
 [ext_resource type="Texture2D" uid="uid://dn7kkyjqbv8ot" path="res://buttons/menos.png" id="12_tfabg"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="13_xjsfo"]
+[ext_resource type="AudioStream" uid="uid://b4h217kxvom1v" path="res://narracao/objetos/vazamento .wav" id="14_nkx4k"]
 [ext_resource type="PackedScene" uid="uid://d2m5t6uf4xrod" path="res://cenas/fase2/MedidorTotal.tscn" id="14_tfabg"]
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="15_xjsfo"]
+[ext_resource type="AudioStream" uid="uid://5d1dnvr158ww" path="res://narracao/objetos/torneira.wav" id="16_d56le"]
+[ext_resource type="AudioStream" uid="uid://bvfthlab6w7e8" path="res://narracao/objetos/descarga.wav" id="18_k3wk8"]
 [ext_resource type="Texture2D" uid="uid://b1ij2a8t4xv6w" path="res://imagens/backgrounds/borda lateral- atualizada - 1.png" id="19_yg1uh"]
+[ext_resource type="Script" uid="uid://ccupdfvc1sw4g" path="res://cenas/fase2/labelsom.gd" id="24_brcbt"]
+[ext_resource type="AudioStream" uid="uid://cu0sfbgy5y18t" path="res://narracao/gotinhas/negativo/-1.wav" id="24_k3wk8"]
+[ext_resource type="AudioStream" uid="uid://brln7eqw8jerb" path="res://narracao/gotinhas/negativo/-2.wav" id="25_brcbt"]
+[ext_resource type="AudioStream" uid="uid://dqaxjamqlydym" path="res://narracao/gotinhas/negativo/-5.wav" id="26_5af04"]
+[ext_resource type="AudioStream" uid="uid://cgglhauxaudbl" path="res://narracao/gotinhas/negativo/-4.wav" id="27_nt3yd"]
+[ext_resource type="AudioStream" uid="uid://yl053g2o5kjq" path="res://narracao/fase2/esteeoseureservatoriooobjetivoedeixaloem0.wav" id="32_weuwx"]
+[ext_resource type="AudioStream" uid="uid://dk8veb27tmwlh" path="res://narracao/fase2/cliqueaquiparausarochuveiro.wav" id="33_tmyn1"]
+[ext_resource type="AudioStream" uid="uid://sps6h132bgpx" path="res://narracao/fase2/ochuveirogasta3gotasdeagua.wav" id="34_kdbqf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_leshm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2blo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fepj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkx4k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d56le"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3wk8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_weuwx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmyn1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdbqf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjfh2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_084ib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81gph"]
 
 [node name="Fase2Cena" type="Node2D"]
 script = ExtResource("1_8eytn")
@@ -119,8 +154,8 @@ position = Vector2(-2181.4058, -1324.1637)
 scale = Vector2(11.727988, 20.690058)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BoxOpcoes/SpriteOpcao1/Area2D"]
-position = Vector2(186, 64)
-scale = Vector2(0.08526611, 0.048332393)
+position = Vector2(190, 66)
+scale = Vector2(3.717, 2.1)
 shape = SubResource("RectangleShape2D_leshm")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BoxOpcoes/SpriteOpcao1"]
@@ -131,27 +166,78 @@ stream = ExtResource("7_jnu11")
 position = Vector2(407.00003, 169)
 scale = Vector2(0.061572216, 0.045377605)
 texture = ExtResource("4_i511i")
+script = ExtResource("7_leshm")
+
+[node name="Area2D" type="Area2D" parent="BoxOpcoes/SpriteOpcao2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxOpcoes/SpriteOpcao2/Area2D"]
+scale = Vector2(50, 50)
+shape = SubResource("RectangleShape2D_x2blo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BoxOpcoes/SpriteOpcao2"]
+stream = ExtResource("10_x2blo")
 
 [node name="SpriteOpcao3" type="Sprite2D" parent="BoxOpcoes"]
 position = Vector2(306, 61.999996)
 scale = Vector2(0.064331114, 0.062078107)
 texture = ExtResource("5_ftsb4")
+script = ExtResource("7_leshm")
+
+[node name="Area2D" type="Area2D" parent="BoxOpcoes/SpriteOpcao3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxOpcoes/SpriteOpcao3/Area2D"]
+scale = Vector2(50, 50)
+shape = SubResource("RectangleShape2D_0fepj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BoxOpcoes/SpriteOpcao3"]
+stream = ExtResource("12_0fepj")
 
 [node name="SpriteOpcao4" type="Sprite2D" parent="BoxOpcoes"]
 position = Vector2(179, 164)
 scale = Vector2(0.047900382, 0.04477605)
 texture = ExtResource("6_irxvy")
+script = ExtResource("7_leshm")
+
+[node name="Area2D" type="Area2D" parent="BoxOpcoes/SpriteOpcao4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxOpcoes/SpriteOpcao4/Area2D"]
+scale = Vector2(40, 40)
+shape = SubResource("RectangleShape2D_nkx4k")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BoxOpcoes/SpriteOpcao4"]
+stream = ExtResource("14_nkx4k")
 
 [node name="SpriteOpcao5" type="Sprite2D" parent="BoxOpcoes"]
 position = Vector2(405.00003, 73.00001)
 scale = Vector2(0.071191445, 0.06761068)
 texture = ExtResource("7_kk3tn")
 region_rect = Rect2(316, 709, 547, 9)
+script = ExtResource("7_leshm")
+
+[node name="Area2D" type="Area2D" parent="BoxOpcoes/SpriteOpcao5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxOpcoes/SpriteOpcao5/Area2D"]
+position = Vector2(40, -95)
+scale = Vector2(35, 35)
+shape = SubResource("RectangleShape2D_d56le")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BoxOpcoes/SpriteOpcao5"]
+stream = ExtResource("16_d56le")
 
 [node name="SpriteOpcao6" type="Sprite2D" parent="BoxOpcoes"]
 position = Vector2(299.1, 173.275)
 scale = Vector2(0.058398426, 0.04391276)
 texture = ExtResource("8_tfabg")
+script = ExtResource("7_leshm")
+
+[node name="Area2D" type="Area2D" parent="BoxOpcoes/SpriteOpcao6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxOpcoes/SpriteOpcao6/Area2D"]
+scale = Vector2(50, 50)
+shape = SubResource("RectangleShape2D_k3wk8")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BoxOpcoes/SpriteOpcao6"]
+stream = ExtResource("18_k3wk8")
 
 [node name="OpcaoGasto" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
 offset_left = 216.0
@@ -190,6 +276,7 @@ offset_left = 5.0
 offset_top = -4.0
 offset_right = 5.0
 offset_bottom = -4.0
+metadata/_edit_use_anchors_ = true
 
 [node name="HelpLayer" parent="." instance=ExtResource("11_ftsb4")]
 
@@ -207,6 +294,16 @@ theme_override_colors/font_shadow_color = Color(0.37254903, 0.6862745, 0.7098039
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "3"
+script = ExtResource("24_brcbt")
+
+[node name="Area2D" type="Area2D" parent="Label"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Area2D"]
+position = Vector2(10, 20)
+shape = SubResource("RectangleShape2D_weuwx")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label"]
+stream = ExtResource("24_k3wk8")
 
 [node name="Menos2" type="Sprite2D" parent="."]
 position = Vector2(338, 105)
@@ -222,6 +319,16 @@ theme_override_colors/font_shadow_color = Color(0.37254903, 0.6862745, 0.7098039
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "3"
+script = ExtResource("24_brcbt")
+
+[node name="Area2D" type="Area2D" parent="Label2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label2/Area2D"]
+position = Vector2(10, 20)
+shape = SubResource("RectangleShape2D_tmyn1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label2"]
+stream = ExtResource("24_k3wk8")
 
 [node name="Menos3" type="Sprite2D" parent="."]
 position = Vector2(446, 105)
@@ -237,6 +344,16 @@ theme_override_colors/font_shadow_color = Color(0.37254903, 0.6862745, 0.7098039
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "2"
+script = ExtResource("24_brcbt")
+
+[node name="Area2D" type="Area2D" parent="Label3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label3/Area2D"]
+position = Vector2(10, 20)
+shape = SubResource("RectangleShape2D_kdbqf")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label3"]
+stream = ExtResource("25_brcbt")
 
 [node name="Menos4" type="Sprite2D" parent="."]
 position = Vector2(224, 219.00002)
@@ -253,6 +370,16 @@ theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "5"
+script = ExtResource("24_brcbt")
+
+[node name="Area2D" type="Area2D" parent="Label4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label4/Area2D"]
+position = Vector2(10, 20)
+shape = SubResource("RectangleShape2D_rjfh2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label4"]
+stream = ExtResource("26_5af04")
 
 [node name="Menos5" type="Sprite2D" parent="."]
 position = Vector2(336, 220)
@@ -268,6 +395,16 @@ theme_override_colors/font_shadow_color = Color(0, 0.5019608, 0.5372549, 1)
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "4"
+script = ExtResource("24_brcbt")
+
+[node name="Area2D" type="Area2D" parent="Label5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label5/Area2D"]
+position = Vector2(10, 20)
+shape = SubResource("RectangleShape2D_084ib")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label5"]
+stream = ExtResource("27_nt3yd")
 
 [node name="Menos6" type="Sprite2D" parent="."]
 position = Vector2(448, 220)
@@ -283,6 +420,16 @@ theme_override_colors/font_shadow_color = Color(0.37254903, 0.6862745, 0.7098039
 theme_override_fonts/font = ExtResource("13_xjsfo")
 theme_override_font_sizes/font_size = 26
 text = "3"
+script = ExtResource("24_brcbt")
+
+[node name="Area2D" type="Area2D" parent="Label6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label6/Area2D"]
+position = Vector2(10, 20)
+shape = SubResource("RectangleShape2D_81gph")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label6"]
+stream = ExtResource("24_k3wk8")
 
 [node name="OpcaoGasto2" parent="." instance=ExtResource("4_eap3x")]
 offset_left = 196.0
@@ -319,4 +466,18 @@ position = Vector2(80.5, 15)
 scale = Vector2(4.9687495, 1)
 texture = ExtResource("19_yg1uh")
 
+[node name="Esteeoseureservatório" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("32_weuwx")
+
+[node name="Cliqueaquiparausarochuveiro" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("33_tmyn1")
+
+[node name="Ochuveirogasta3gotasdagua" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("34_kdbqf")
+
 [connection signal="mouse_entered" from="BoxOpcoes/SpriteOpcao1/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="BoxOpcoes/SpriteOpcao2/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="BoxOpcoes/SpriteOpcao3/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="BoxOpcoes/SpriteOpcao4/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="BoxOpcoes/SpriteOpcao5/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="BoxOpcoes/SpriteOpcao6/Area2D" to="." method="_on_area_2d_mouse_entered"]
