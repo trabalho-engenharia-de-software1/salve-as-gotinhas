@@ -135,7 +135,7 @@ func ir_prox_etapa() -> void:
 	
 	# 1. SALVAR OS DADOS NO AUTOLOAD (DadosDoJogo)
 	# Copia o array de acertos da Fase 1 para a variável global
-	DadosDoJogo.erro_etapa2 = erro
+	DadosDoJogo.erro_etapa3 = erro
 	
 	# 2. TROCA DE CENA
 	var proxima_cena_path = "res://cenas/fase1/etapa4_fase1.tscn" 
