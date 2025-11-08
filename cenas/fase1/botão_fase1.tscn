@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://8rnnbuqp0654"]
+[gd_scene load_steps=6 format=3 uid="uid://clqx6060femee"]
 
 [ext_resource type="Script" uid="uid://dlp22w2uog2kk" path="res://scripts/fase2/opcao_gasto.gd" id="3_yw3b6"]
 [ext_resource type="Texture2D" uid="uid://covqtvxxrwmxh" path="res://imagens/caixa-da-agua/gotinha.png" id="4_l6fvi"]
@@ -21,7 +21,7 @@ theme_override_icons/unchecked = SubResource("ImageTexture_nysl5")
 icon = SubResource("ImageTexture_n1wqn")
 flat = true
 script = ExtResource("3_yw3b6")
-custo_e_gotas = 9
+custo_e_gotas = 20
 icone = SubResource("ImageTexture_n1wqn")
 
 [node name="Gotas" type="Node2D" parent="."]
@@ -73,7 +73,56 @@ scale = Vector2(0.021023441, 0.030273436)
 texture = ExtResource("4_l6fvi")
 
 [node name="gotinha10" type="Sprite2D" parent="Gotas"]
-visible = false
 position = Vector2(25, -12)
+scale = Vector2(0.021023441, 0.030273436)
+texture = ExtResource("4_l6fvi")
+
+[node name="gotinha11" type="Sprite2D" parent="Gotas"]
+position = Vector2(130.764, 9.500002)
+scale = Vector2(0.021, 0.028)
+texture = ExtResource("4_l6fvi")
+
+[node name="gotinha12" type="Sprite2D" parent="Gotas"]
+position = Vector2(119.764, 9.499998)
+scale = Vector2(0.021, 0.029)
+texture = ExtResource("4_l6fvi")
+
+[node name="gotinha13" type="Sprite2D" parent="Gotas"]
+position = Vector2(108.764, 9.500002)
+scale = Vector2(0.021, 0.028)
+texture = ExtResource("4_l6fvi")
+
+[node name="gotinha14" type="Sprite2D" parent="Gotas"]
+position = Vector2(96.764, 9.499998)
+scale = Vector2(0.021, 0.029)
+texture = ExtResource("4_l6fvi")
+
+[node name="gotinha15" type="Sprite2D" parent="Gotas"]
+position = Vector2(84.764, 9.5)
+scale = Vector2(0.022, 0.03)
+texture = ExtResource("4_l6fvi")
+
+[node name="gotinha16" type="Sprite2D" parent="Gotas"]
+position = Vector2(72.764, 9.499998)
+scale = Vector2(0.021, 0.03)
+texture = ExtResource("4_l6fvi")
+
+[node name="gotinha17" type="Sprite2D" parent="Gotas"]
+position = Vector2(60.764008, 9.499998)
+scale = Vector2(0.021023441, 0.030273436)
+texture = ExtResource("4_l6fvi")
+
+[node name="gotinha18" type="Sprite2D" parent="Gotas"]
+position = Vector2(48.764004, 9.499998)
+scale = Vector2(0.021023441, 0.030273436)
+texture = ExtResource("4_l6fvi")
+
+[node name="gotinha19" type="Sprite2D" parent="Gotas"]
+position = Vector2(36.76401, 9.499998)
+scale = Vector2(0.021023441, 0.030273436)
+texture = ExtResource("4_l6fvi")
+
+[node name="gotinha20" type="Sprite2D" parent="Gotas"]
+position = Vector2(25.764002, 9.499998)
 scale = Vector2(0.021023441, 0.030273436)
 texture = ExtResource("4_l6fvi")

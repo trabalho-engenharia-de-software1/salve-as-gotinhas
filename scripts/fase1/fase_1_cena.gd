@@ -116,6 +116,7 @@ func ir_prox_etapa() -> void:
 	# 1. SALVAR OS DADOS NO AUTOLOAD (DadosDoJogo)
 	# Copia o array de acertos da Fase 1 para a variável global
 	DadosDoJogo.botoes_corretos_fase1 = botoesPrecionados
+	
 	DadosDoJogo.valores = num
 	# Copia o contador de erros da Fase 1 para a variável global
 	DadosDoJogo.erros_acumulados = erro

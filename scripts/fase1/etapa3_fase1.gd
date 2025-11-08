@@ -120,7 +120,7 @@ func _on_resposta_3_button_down() -> void:
 
 
 func _on_resposta_2_button_down() -> void:
-	DadosDoJogo.erro_etapa2 = erro
+	DadosDoJogo.erro_etapa3 = erro
 	var texto_aviso = "parabens, você acertou"
 	PopupManager.mostrar(texto_aviso)
 	ir_prox_etapa()

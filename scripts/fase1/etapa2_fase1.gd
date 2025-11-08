@@ -24,7 +24,7 @@ func _ready():
 	$Label.text = str(DadosDoJogo.valores[0])
 	$Label2.text = str(DadosDoJogo.valores[1])
 	$Label3.text = ' ' + str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-1)
-	$Label4.text =str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-3)
+	$Label4.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-3)
 	$Label6.text = str(DadosDoJogo.valores[0] + DadosDoJogo.valores[1])
 	$Label7.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-2)
 	# 2. Configura o PRIMEIRO Sprite (Posição de índice 0 do array)

@@ -17,7 +17,7 @@ extends CheckButton
 
 func _ready():
 	# Garante que os visuais estejam corretos quando o jogo começa
-	custo_e_gotas=DadosDoJogo.valores[0]+DadosDoJogo.valores[2]+DadosDoJogo.valores[1]-13
+	custo_e_gotas=DadosDoJogo.valores[0]+DadosDoJogo.valores[2]+DadosDoJogo.valores[1]-3
 	_atualizar_visual_gotas()
 	self.icon = icone
 

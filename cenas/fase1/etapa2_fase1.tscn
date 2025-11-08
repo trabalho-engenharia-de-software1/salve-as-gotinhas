@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://h5rcomklnxkh"]
 
 [ext_resource type="Script" uid="uid://d18uiht3kk45i" path="res://scripts/fase1/etapa2_fase1.gd" id="1_151ce"]
-[ext_resource type="PackedScene" uid="uid://8rnnbuqp0654" path="res://cenas/fase1/botão_fase1.tscn" id="2_7qwee"]
+[ext_resource type="PackedScene" uid="uid://clqx6060femee" path="res://cenas/fase1/botão_fase1.tscn" id="2_7qwee"]
 [ext_resource type="Texture2D" uid="uid://dpm8dyovsvy1p" path="res://imagens/backgrounds/Novo_Projeto-1.png" id="2_b8wj3"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_mbmvc"]
 [ext_resource type="Texture2D" uid="uid://dnyqoarbjqiyw" path="res://imagens/backgrounds/background_branco-substituir.jpg" id="3_o5p43"]
@@ -116,7 +116,6 @@ offset_top = 123.0
 offset_right = 261.0
 offset_bottom = 147.0
 script = ExtResource("3_u3gwo")
-custo_e_gotas = 10
 
 [node name="OpcaoGasto2" parent="." instance=ExtResource("2_7qwee")]
 offset_left = 76.0
@@ -124,7 +123,6 @@ offset_top = 123.0
 offset_right = 120.0
 offset_bottom = 147.0
 script = ExtResource("4_qj4hp")
-custo_e_gotas = 10
 
 [node name="OpcaoGasto3" parent="." instance=ExtResource("2_7qwee")]
 offset_left = 342.0
@@ -132,7 +130,6 @@ offset_top = 184.0
 offset_right = 386.0
 offset_bottom = 208.0
 script = ExtResource("5_vxp76")
-custo_e_gotas = 10
 
 [node name="OpcaoGasto4" parent="." instance=ExtResource("2_7qwee")]
 offset_left = 342.0
@@ -140,7 +137,6 @@ offset_top = 131.0
 offset_right = 386.0
 offset_bottom = 155.0
 script = ExtResource("6_x4xax")
-custo_e_gotas = 10
 
 [node name="OpcaoGasto5" parent="." instance=ExtResource("2_7qwee")]
 offset_left = 342.0
@@ -148,7 +144,6 @@ offset_top = 83.0
 offset_right = 386.0
 offset_bottom = 107.0
 script = ExtResource("7_4gkps")
-custo_e_gotas = 10
 
 [node name="OpcaoGasto6" parent="." instance=ExtResource("2_7qwee")]
 offset_left = 342.0
@@ -156,7 +151,6 @@ offset_top = 27.0
 offset_right = 386.0
 offset_bottom = 51.0
 script = ExtResource("8_b8wj3")
-custo_e_gotas = 10
 
 [node name="Label" type="Label" parent="."]
 offset_left = 34.0

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d36j15tnhn7ua" path="res://scripts/fase1/etapa4_fase1.gd" id="1_qc65o"]
 [ext_resource type="Texture2D" uid="uid://dpm8dyovsvy1p" path="res://imagens/backgrounds/Novo_Projeto-1.png" id="2_ax7j2"]
-[ext_resource type="PackedScene" uid="uid://8rnnbuqp0654" path="res://cenas/fase1/botão_fase1.tscn" id="2_u0fa6"]
+[ext_resource type="PackedScene" uid="uid://clqx6060femee" path="res://cenas/fase1/botão_fase1.tscn" id="2_u0fa6"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_4qsjq"]
 [ext_resource type="Texture2D" uid="uid://dnyqoarbjqiyw" path="res://imagens/backgrounds/background_branco-substituir.jpg" id="3_o2jgw"]
 [ext_resource type="Script" uid="uid://b34hhtd0k318a" path="res://scripts/fase1/gotinha2.gd" id="3_wwssh"]
@@ -154,48 +154,27 @@ offset_bottom = 126.0
 script = ExtResource("5_y38o5")
 custo_e_gotas = 10
 
-[node name="OpcaoGasto4" parent="." instance=ExtResource("2_u0fa6")]
-offset_left = 395.0
-offset_top = 160.0
-offset_right = 439.0
-offset_bottom = 184.0
-custo_e_gotas = 10
-
 [node name="OpcaoGasto9" parent="." instance=ExtResource("2_u0fa6")]
 offset_left = 383.0
-offset_top = 183.0
-offset_right = 427.0
-offset_bottom = 207.0
-script = ExtResource("6_3qjrw")
-custo_e_gotas = 10
-
-[node name="OpcaoGasto5" parent="." instance=ExtResource("2_u0fa6")]
-offset_left = 241.0
 offset_top = 160.0
-offset_right = 285.0
+offset_right = 427.0
 offset_bottom = 184.0
-custo_e_gotas = 10
+script = ExtResource("6_3qjrw")
+custo_e_gotas = 11
 
 [node name="OpcaoGasto7" parent="." instance=ExtResource("2_u0fa6")]
 offset_left = 230.0
-offset_top = 183.0
-offset_right = 274.0
-offset_bottom = 207.0
-script = ExtResource("7_gq33g")
-custo_e_gotas = 10
-
-[node name="OpcaoGasto6" parent="." instance=ExtResource("2_u0fa6")]
-offset_left = 100.0
 offset_top = 160.0
-offset_right = 144.0
+offset_right = 274.0
 offset_bottom = 184.0
-custo_e_gotas = 10
+script = ExtResource("7_gq33g")
+custo_e_gotas = 11
 
 [node name="OpcaoGasto8" parent="." instance=ExtResource("2_u0fa6")]
 offset_left = 89.0
-offset_top = 183.0
+offset_top = 160.0
 offset_right = 133.0
-offset_bottom = 207.0
+offset_bottom = 184.0
 script = ExtResource("8_3cut0")
 custo_e_gotas = 10
 

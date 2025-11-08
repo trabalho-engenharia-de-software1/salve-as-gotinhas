@@ -2,6 +2,7 @@ extends Node2D
 
 var agua_maxima: float = 100.0
 var agua_atual: float = 100.0
+var pontos = 0
 
 @onready var reservatorio = $Reservatorio
 @onready var botao_ajuda = $HelpLayer/botaoAjuda
@@ -55,8 +56,10 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 	var custo = opcao_clicada.custo_e_gotas
 	if foi_marcado:
 		agua_atual -= 10 * custo
+		pontos += 1
 	else:
 		agua_atual += 10 * custo
+		pontos -= 1
 	agua_atual = clamp(agua_atual, -1.0, agua_maxima) 
 	reservatorio.atualizar_nivel(agua_atual, agua_maxima)
 	medidor_total.atualizar_medidor(agua_atual, agua_maxima)
@@ -77,7 +80,8 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 		await get_tree().process_frame
 		
 		# 5. VOLTA AO MENU
-		get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-inicial.tscn")
+		DadosDoJogo.pontos_fase2 = pontos
+		get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-selecao-fase.tscn")
 	
 	elif agua_atual < 0:
 		# 1. MOSTRA o popup de derrota
@@ -87,6 +91,7 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 			"Gastou mais agua que tinha. Tente novamente"
 		)
 		
+		DadosDoJogo.erro_fase2 = DadosDoJogo.erro_fase2 + 1
 		# 2. ESPERA o jogador ler
 		await get_tree().create_timer(3.0).timeout
 		

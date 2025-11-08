@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dybiibrlqhty5"]
+[gd_scene load_steps=11 format=3 uid="uid://dybiibrlqhty5"]
 
 [ext_resource type="Script" uid="uid://da85m5tgo2pci" path="res://scripts/menu-inicial/menu_selecao_fase.gd" id="1_30tso"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_uxpq5"]
@@ -8,6 +8,7 @@
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="6_u6toy"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="6_ulre0"]
 [ext_resource type="Texture2D" uid="uid://b22k8x1vaao04" path="res://imagens/backgrounds/soma-teste-1.png" id="9_emv4m"]
+[ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="10_b6xtr"]
 [ext_resource type="Texture2D" uid="uid://cw30agoty483i" path="res://imagens/backgrounds/subtracao.png" id="10_eyu1c"]
 
 [node name="Control" type="Control"]
@@ -97,6 +98,9 @@ texture = ExtResource("9_emv4m")
 position = Vector2(342.5, 132.5)
 scale = Vector2(10.5625, 10.5625)
 texture = ExtResource("10_eyu1c")
+
+[node name="BotaoSair" parent="." instance=ExtResource("10_b6xtr")]
+position = Vector2(-8, 225)
 
 [connection signal="pressed" from="iniciarfase1" to="." method="_on_iniciarfase_1_pressed"]
 [connection signal="pressed" from="iniciarfase2" to="." method="_on_iniciarfase_2_pressed"]
