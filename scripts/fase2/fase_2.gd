@@ -7,7 +7,6 @@ var pontos = 0
 @onready var reservatorio = $Reservatorio
 @onready var botao_ajuda = $HelpLayer/botaoAjuda
 @onready var medidor_total = $MedidorTotal
-@onready var som_hover = $Sons/SomHover
 
 # --- MUDANÇA 1: Variáveis para guardar as coordenadas manuais ---
 var pos_manual_reserv = Vector2(70, 140) # Use os valores que funcionam
@@ -19,8 +18,7 @@ func _ready():
 	
 	var todas_as_opcoes = get_tree().get_nodes_in_group("opcoes_clicaveis")
 	
-	connect("mouse_entered", Callable(self, "_on_mouse_entered"))
-	connect("mouse_exited", Callable(self, "_on_mouse_exited"))
+	
 	
 	for opcao in todas_as_opcoes:
 		opcao.toggled.connect(_on_opcao_toggled.bind(opcao))
@@ -107,8 +105,3 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 		
 		# 5. REINICIA A FASE
 		get_tree().change_scene_to_file("res://cenas/fase2/fase2_cena.tscn")
-
-
-func _on_area_2d_mouse_entered() -> void:
-	if not som_hover.playing:
-		som_hover.play()

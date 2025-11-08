@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dypx0nd08saj3"]
+[gd_scene load_steps=23 format=3 uid="uid://dypx0nd08saj3"]
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://imagens/backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase2/fase_2.gd" id="1_8eytn"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ckklu65iouvfa" path="res://imagens/sprites-fase1/vazamento.png" id="6_irxvy"]
 [ext_resource type="AudioStream" uid="uid://c804hcd0pjgkr" path="res://narracao/objetos/chuveiro.wav" id="7_jnu11"]
 [ext_resource type="Texture2D" uid="uid://dc3xdsperrqp0" path="res://imagens/sprites-fase1/torneira.png" id="7_kk3tn"]
+[ext_resource type="Script" uid="uid://bw8vg15k0fh7r" path="res://cenas/fase2/sprite_opcao_1.gd" id="7_leshm"]
 [ext_resource type="Texture2D" uid="uid://ckmo7ru1h660j" path="res://imagens/sprites-fase1/sanitario.png" id="8_tfabg"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="11_ftsb4"]
 [ext_resource type="Texture2D" uid="uid://dn7kkyjqbv8ot" path="res://buttons/menos.png" id="12_tfabg"]
@@ -111,6 +112,7 @@ texture = ExtResource("4_cta7g")
 position = Vector2(186, 64)
 scale = Vector2(0.08526611, 0.048332393)
 texture = ExtResource("3_x1yhp")
+script = ExtResource("7_leshm")
 
 [node name="Area2D" type="Area2D" parent="BoxOpcoes/SpriteOpcao1"]
 position = Vector2(-2181.4058, -1324.1637)
