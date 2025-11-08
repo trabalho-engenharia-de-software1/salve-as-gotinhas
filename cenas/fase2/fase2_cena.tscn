@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dypx0nd08saj3"]
+[gd_scene load_steps=22 format=3 uid="uid://dypx0nd08saj3"]
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://imagens/backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase2/fase_2.gd" id="1_8eytn"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bnpy5m36en3sk" path="res://cenas/fase2/reservatorio.tscn" id="5_8eytn"]
 [ext_resource type="Texture2D" uid="uid://bb6o2q0mgtrvo" path="res://imagens/sprites-fase1/regador.png" id="5_ftsb4"]
 [ext_resource type="Texture2D" uid="uid://ckklu65iouvfa" path="res://imagens/sprites-fase1/vazamento.png" id="6_irxvy"]
+[ext_resource type="AudioStream" uid="uid://c804hcd0pjgkr" path="res://narracao/objetos/chuveiro.wav" id="7_jnu11"]
 [ext_resource type="Texture2D" uid="uid://dc3xdsperrqp0" path="res://imagens/sprites-fase1/torneira.png" id="7_kk3tn"]
 [ext_resource type="Texture2D" uid="uid://ckmo7ru1h660j" path="res://imagens/sprites-fase1/sanitario.png" id="8_tfabg"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="11_ftsb4"]
@@ -19,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://d2m5t6uf4xrod" path="res://cenas/fase2/MedidorTotal.tscn" id="14_tfabg"]
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="15_xjsfo"]
 [ext_resource type="Texture2D" uid="uid://b1ij2a8t4xv6w" path="res://imagens/backgrounds/borda lateral- atualizada - 1.png" id="19_yg1uh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_leshm"]
 
 [node name="Fase2Cena" type="Node2D"]
 script = ExtResource("1_8eytn")
@@ -108,6 +111,19 @@ texture = ExtResource("4_cta7g")
 position = Vector2(186, 64)
 scale = Vector2(0.08526611, 0.048332393)
 texture = ExtResource("3_x1yhp")
+
+[node name="Area2D" type="Area2D" parent="BoxOpcoes/SpriteOpcao1"]
+position = Vector2(-2181.4058, -1324.1637)
+scale = Vector2(11.727988, 20.690058)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxOpcoes/SpriteOpcao1/Area2D"]
+position = Vector2(186, 64)
+scale = Vector2(0.08526611, 0.048332393)
+shape = SubResource("RectangleShape2D_leshm")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BoxOpcoes/SpriteOpcao1"]
+position = Vector2(0.00024414063, 0)
+stream = ExtResource("7_jnu11")
 
 [node name="SpriteOpcao2" type="Sprite2D" parent="BoxOpcoes"]
 position = Vector2(407.00003, 169)
@@ -300,3 +316,5 @@ texture = ExtResource("19_yg1uh")
 position = Vector2(80.5, 15)
 scale = Vector2(4.9687495, 1)
 texture = ExtResource("19_yg1uh")
+
+[connection signal="mouse_entered" from="BoxOpcoes/SpriteOpcao1/Area2D" to="." method="_on_area_2d_mouse_entered"]
