@@ -87,7 +87,7 @@ layout_mode = 2
 focus_mode = 0
 theme = ExtResource("6_hii50")
 theme_override_fonts/font = ExtResource("3_fb2ec")
-text = "RELATORIO"
+text = "relatório "
 
 [node name="creditos" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -111,5 +111,6 @@ text = "SAIR"
 
 [connection signal="pressed" from="VBoxContainer/jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="VBoxContainer/configuracoes" to="." method="_on_configuracoes_pressed"]
+[connection signal="pressed" from="VBoxContainer/relatorio" to="." method="_on_relatorio_pressed"]
 [connection signal="pressed" from="VBoxContainer/creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]
