@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dypx0nd08saj3"]
+[gd_scene load_steps=20 format=3 uid="uid://dypx0nd08saj3"]
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://imagens/backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase2/fase_2.gd" id="1_8eytn"]
@@ -18,6 +18,7 @@
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="13_xjsfo"]
 [ext_resource type="PackedScene" uid="uid://d2m5t6uf4xrod" path="res://cenas/fase2/MedidorTotal.tscn" id="14_tfabg"]
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="15_xjsfo"]
+[ext_resource type="Texture2D" uid="uid://b1ij2a8t4xv6w" path="res://imagens/backgrounds/borda lateral- atualizada - 1.png" id="19_yg1uh"]
 
 [node name="Fase2Cena" type="Node2D"]
 script = ExtResource("1_8eytn")
@@ -37,18 +38,13 @@ scale = Vector2(15, 14.96875)
 texture = ExtResource("3_cta7g")
 
 [node name="1Pixel7" type="Sprite2D" parent="."]
-position = Vector2(81.5, 20.5)
-scale = Vector2(146.99998, 23.000002)
+position = Vector2(80.5, 20)
+scale = Vector2(148.99998, 24.000002)
 texture = ExtResource("4_cta7g")
 
 [node name="PixilFrame0" type="Sprite2D" parent="."]
 position = Vector2(205, 74.50001)
 scale = Vector2(6.6250005, 5.6874995)
-texture = ExtResource("3_ef4v0")
-
-[node name="PixilFrame6" type="Sprite2D" parent="."]
-position = Vector2(139.5, 21)
-scale = Vector2(2.1875, 1.6250001)
 texture = ExtResource("3_ef4v0")
 
 [node name="1Pixel" type="Sprite2D" parent="."]
@@ -282,3 +278,25 @@ position = Vector2(66, -20)
 
 [node name="BotaoSair" parent="." instance=ExtResource("15_xjsfo")]
 position = Vector2(-4, 220)
+
+[node name="BordaLateralAtualizada1" type="Sprite2D" parent="."]
+position = Vector2(80.5, 40)
+scale = Vector2(4.96875, 1)
+texture = ExtResource("19_yg1uh")
+
+[node name="BordaLateralAtualizada3" type="Sprite2D" parent="."]
+position = Vector2(-1.9999999, 20.197075)
+rotation = 1.5707964
+scale = Vector2(0.8116828, 1)
+texture = ExtResource("19_yg1uh")
+
+[node name="BordaLateralAtualizada4" type="Sprite2D" parent="."]
+position = Vector2(148, 20)
+rotation = 1.5707964
+scale = Vector2(0.8116828, 1)
+texture = ExtResource("19_yg1uh")
+
+[node name="BordaLateralAtualizada2" type="Sprite2D" parent="."]
+position = Vector2(80.5, 15)
+scale = Vector2(4.9687495, 1)
+texture = ExtResource("19_yg1uh")
