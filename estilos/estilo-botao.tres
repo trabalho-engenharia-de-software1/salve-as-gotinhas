@@ -1,0 +1,6 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://csn6rc2gqn8k0"]
+
+[ext_resource type="Texture2D" uid="uid://bw3n6dwddli6k" path="res://buttons/botao-check/botao-vazio.png" id="1_2opec"]
+
+[resource]
+texture = ExtResource("1_2opec")

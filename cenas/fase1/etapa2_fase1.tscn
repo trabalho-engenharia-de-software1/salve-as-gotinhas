@@ -1,15 +1,15 @@
-[gd_scene load_steps=20 format=3 uid="uid://h5rcomklnxkh"]
+[gd_scene load_steps=19 format=3 uid="uid://h5rcomklnxkh"]
 
 [ext_resource type="Script" uid="uid://d18uiht3kk45i" path="res://scripts/fase1/etapa2_fase1.gd" id="1_151ce"]
 [ext_resource type="PackedScene" uid="uid://8rnnbuqp0654" path="res://cenas/fase1/botão_fase1.tscn" id="2_7qwee"]
-[ext_resource type="Texture2D" uid="uid://qem8glv2r6gi" path="res://imagens/backgrounds/fundo-fase-1.png" id="2_b8wj3"]
-[ext_resource type="Texture2D" uid="uid://mk1shsnnaeia" path="res://imagens/backgrounds/Novo Projeto.png" id="2_vxp76"]
+[ext_resource type="Texture2D" uid="uid://dpm8dyovsvy1p" path="res://imagens/backgrounds/Novo_Projeto-1.png" id="2_b8wj3"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_mbmvc"]
+[ext_resource type="Texture2D" uid="uid://dnyqoarbjqiyw" path="res://imagens/backgrounds/background_branco-substituir.jpg" id="3_o5p43"]
 [ext_resource type="Script" uid="uid://b34hhtd0k318a" path="res://scripts/fase1/gotinha2.gd" id="3_u3gwo"]
 [ext_resource type="Texture2D" uid="uid://6ib6uipxcy5l" path="res://imagens/backgrounds/1pixel.png" id="3_x4xax"]
-[ext_resource type="Texture2D" uid="uid://bw3n6dwddli6k" path="res://buttons/botao-check/botao-vazio.png" id="4_4gkps"]
 [ext_resource type="Texture2D" uid="uid://c6tn8055qfy1c" path="res://buttons/mais.png" id="4_hdvhq"]
 [ext_resource type="Script" uid="uid://dhcqgf4g13e8s" path="res://scripts/fase1/gotinha1.gd" id="4_qj4hp"]
+[ext_resource type="StyleBox" uid="uid://csn6rc2gqn8k0" path="res://estilos/estilo-botao.tres" id="5_b8wj3"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="5_hdvhq"]
 [ext_resource type="Script" uid="uid://b8vxc81nne8hu" path="res://scripts/fase1/gotinha4.gd" id="5_vxp76"]
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="6_v3rap"]
@@ -17,9 +17,6 @@
 [ext_resource type="Script" uid="uid://deaqffou3f5y8" path="res://scripts/fase1/gotinha5.gd" id="7_4gkps"]
 [ext_resource type="Script" uid="uid://bhjhw1gtpitf7" path="res://scripts/fase1/gotinha6.gd" id="8_b8wj3"]
 [ext_resource type="Texture2D" uid="uid://87382dpdaxm6" path="res://imagens/backgrounds/frame-subsituir.png" id="16_4gkps"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o5p43"]
-texture = ExtResource("4_4gkps")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vvjxr"]
 
@@ -35,37 +32,34 @@ offset_bottom = 276.0
 color = Color(0.3019608, 0.8235294, 0.81960785, 1)
 
 [node name="NovoProjeto" type="Sprite2D" parent="."]
-position = Vector2(241.99998, 158)
-scale = Vector2(30.734375, 20.421875)
+modulate = Color(0.45074373, 0.5536953, 0.65627617, 1)
+self_modulate = Color(2.1748757, 1.9545432, 2.1614387, 1)
+position = Vector2(241, 239)
+scale = Vector2(15.062499, 14.96875)
 texture = ExtResource("2_b8wj3")
 
-[node name="FundoFase1" type="Sprite2D" parent="."]
-position = Vector2(71.5, 100.5)
-scale = Vector2(3.59375, 3.28125)
-texture = ExtResource("2_vxp76")
+[node name="BackgroundBrancoSubstituir" type="Sprite2D" parent="."]
+position = Vector2(71.5, 102.56252)
+scale = Vector2(0.020500004, 0.02721874)
+texture = ExtResource("3_o5p43")
 
-[node name="FundoFase2" type="Sprite2D" parent="."]
-position = Vector2(198, 100.5)
-scale = Vector2(7.2499986, 6.5625)
-texture = ExtResource("2_b8wj3")
-
-[node name="NovoProjeto2" type="Sprite2D" parent="."]
-position = Vector2(198, 103)
-scale = Vector2(3.625, 3.3125)
-texture = ExtResource("2_vxp76")
+[node name="BackgroundBrancoSubstituir2" type="Sprite2D" parent="."]
+position = Vector2(213.49998, 102.56252)
+scale = Vector2(0.020166667, 0.02721874)
+texture = ExtResource("3_o5p43")
 
 [node name="1Pixel2" type="Sprite2D" parent="."]
 modulate = Color(0.24477637, 0.2447764, 0.24477637, 1)
-position = Vector2(198, 164.2015)
+position = Vector2(213.60349, 162.50255)
 rotation = 3.1415927
-scale = Vector2(115.76545, -24.056335)
+scale = Vector2(120.214615, -23.051239)
 texture = ExtResource("3_x4xax")
 
 [node name="1Pixel" type="Sprite2D" parent="."]
 modulate = Color(0.24313726, 0.24313726, 0.24313726, 1)
-position = Vector2(71.36117, 163.0269)
+position = Vector2(72.252365, 162.38522)
 rotation = -3.1415925
-scale = Vector2(115.76545, -24.381628)
+scale = Vector2(123.81773, -23.098274)
 texture = ExtResource("3_x4xax")
 
 [node name="resposta" type="Button" parent="."]
@@ -74,7 +68,7 @@ offset_top = 213.0
 offset_right = 462.0
 offset_bottom = 237.0
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_o5p43")
+theme_override_styles/normal = ExtResource("5_b8wj3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_vvjxr")
 
 [node name="resposta2" type="Button" parent="."]
@@ -83,7 +77,7 @@ offset_top = 158.0
 offset_right = 462.0
 offset_bottom = 182.0
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_o5p43")
+theme_override_styles/normal = ExtResource("5_b8wj3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_vvjxr")
 
 [node name="resposta3" type="Button" parent="."]
@@ -92,7 +86,7 @@ offset_top = 110.0
 offset_right = 462.0
 offset_bottom = 134.0
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_o5p43")
+theme_override_styles/normal = ExtResource("5_b8wj3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_vvjxr")
 
 [node name="resposta4" type="Button" parent="."]
@@ -101,29 +95,29 @@ offset_top = 56.0
 offset_right = 462.0
 offset_bottom = 80.0
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_o5p43")
+theme_override_styles/normal = ExtResource("5_b8wj3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_vvjxr")
 
 [node name="Sprite1" type="Sprite2D" parent="."]
-position = Vector2(70.00001, 103)
+position = Vector2(67.00001, 103.00001)
 scale = Vector2(0.06, 0.06)
 
 [node name="Sprite2" type="Sprite2D" parent="."]
-position = Vector2(192, 103)
+position = Vector2(210.00002, 103)
 scale = Vector2(0.06, 0.06)
 
 [node name="OpcaoGasto" parent="." instance=ExtResource("2_7qwee")]
-offset_left = 200.0
-offset_top = 124.0
-offset_right = 244.0
-offset_bottom = 148.0
+offset_left = 217.0
+offset_top = 123.0
+offset_right = 261.0
+offset_bottom = 147.0
 script = ExtResource("3_u3gwo")
 custo_e_gotas = 10
 
 [node name="OpcaoGasto2" parent="." instance=ExtResource("2_7qwee")]
-offset_left = 73.0
+offset_left = 76.0
 offset_top = 123.0
-offset_right = 117.0
+offset_right = 120.0
 offset_bottom = 147.0
 script = ExtResource("4_qj4hp")
 custo_e_gotas = 10
@@ -166,19 +160,19 @@ offset_top = 123.0
 offset_right = 74.0
 offset_bottom = 157.0
 theme_override_colors/font_outline_color = Color(0, 0.15567914, 0.2893558, 1)
-theme_override_constants/outline_size = 7
+theme_override_constants/outline_size = 9
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_mbmvc")
 theme_override_font_sizes/font_size = 24
 text = "10"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 160.0
-offset_top = 125.0
-offset_right = 196.0
-offset_bottom = 159.0
+offset_left = 172.99998
+offset_top = 123.00001
+offset_right = 208.99998
+offset_bottom = 157.0
 theme_override_colors/font_outline_color = Color(0, 0.15567914, 0.2893558, 1)
-theme_override_constants/outline_size = 7
+theme_override_constants/outline_size = 9
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_mbmvc")
 theme_override_font_sizes/font_size = 24
@@ -190,7 +184,7 @@ offset_top = 51.0
 offset_right = 444.0
 offset_bottom = 85.0
 theme_override_colors/font_outline_color = Color(0, 0.15567914, 0.2893558, 1)
-theme_override_constants/outline_size = 7
+theme_override_constants/outline_size = 9
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_mbmvc")
 theme_override_font_sizes/font_size = 24
@@ -202,7 +196,7 @@ offset_top = 107.0
 offset_right = 444.0
 offset_bottom = 141.0
 theme_override_colors/font_outline_color = Color(0, 0.15567914, 0.2893558, 1)
-theme_override_constants/outline_size = 7
+theme_override_constants/outline_size = 9
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_mbmvc")
 theme_override_font_sizes/font_size = 24
@@ -214,7 +208,7 @@ offset_top = 151.0
 offset_right = 444.0
 offset_bottom = 185.0
 theme_override_colors/font_outline_color = Color(0, 0.15567914, 0.2893558, 1)
-theme_override_constants/outline_size = 7
+theme_override_constants/outline_size = 9
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_mbmvc")
 theme_override_font_sizes/font_size = 24
@@ -226,14 +220,14 @@ offset_top = 207.0
 offset_right = 444.0
 offset_bottom = 241.0
 theme_override_colors/font_outline_color = Color(0, 0.15567914, 0.2893558, 1)
-theme_override_constants/outline_size = 7
+theme_override_constants/outline_size = 9
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_mbmvc")
 theme_override_font_sizes/font_size = 24
 text = "10"
 
 [node name="Mais" type="Sprite2D" parent="."]
-position = Vector2(149, 144)
+position = Vector2(161.99998, 142)
 texture = ExtResource("4_hdvhq")
 
 [node name="Mais2" type="Sprite2D" parent="."]
@@ -246,13 +240,13 @@ texture = ExtResource("4_hdvhq")
 position = Vector2(-5, 221)
 
 [node name="PixilFrame0" type="Sprite2D" parent="."]
-position = Vector2(71.50001, 111)
-scale = Vector2(8.1875, 9.000001)
+position = Vector2(71.5, 111)
+scale = Vector2(8.687499, 9.000001)
 texture = ExtResource("16_4gkps")
 
 [node name="PixilFrame1" type="Sprite2D" parent="."]
-position = Vector2(198, 113.5)
-scale = Vector2(8.249998, 8.937501)
+position = Vector2(213.5, 111)
+scale = Vector2(8.5625, 9)
 texture = ExtResource("16_4gkps")
 
 [connection signal="button_down" from="resposta" to="." method="_on_resposta_button_down"]
