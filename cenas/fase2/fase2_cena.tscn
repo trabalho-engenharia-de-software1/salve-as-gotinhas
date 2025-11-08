@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dypx0nd08saj3"]
+[gd_scene load_steps=21 format=3 uid="uid://dypx0nd08saj3"]
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://imagens/backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase2/fase_2.gd" id="1_8eytn"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://d2m5t6uf4xrod" path="res://cenas/fase2/MedidorTotal.tscn" id="14_tfabg"]
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="15_xjsfo"]
 [ext_resource type="Texture2D" uid="uid://b1ij2a8t4xv6w" path="res://imagens/backgrounds/borda lateral- atualizada - 1.png" id="19_yg1uh"]
+[ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="20_jnu11"]
 
 [node name="Fase2Cena" type="Node2D"]
 script = ExtResource("1_8eytn")
@@ -300,3 +301,8 @@ texture = ExtResource("19_yg1uh")
 position = Vector2(80.5, 15)
 scale = Vector2(4.9687495, 1)
 texture = ExtResource("19_yg1uh")
+
+[node name="Sair" type="Sprite2D" parent="."]
+position = Vector2(13.999999, 251)
+scale = Vector2(0.61437494, 0.61437404)
+texture = ExtResource("20_jnu11")

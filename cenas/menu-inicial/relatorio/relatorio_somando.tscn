@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bna6cgtjyrl3"]
+[gd_scene load_steps=9 format=3 uid="uid://bna6cgtjyrl3"]
 
 [ext_resource type="Script" uid="uid://bcusejw8cdwsv" path="res://scripts/menu-inicial/relatorio_somando.gd" id="1_d2a46"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="2_4rbjr"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_xq13t"]
 [ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="5_gjb63"]
 [ext_resource type="Texture2D" uid="uid://b1ij2a8t4xv6w" path="res://imagens/backgrounds/borda lateral- atualizada - 1.png" id="6_p8jqa"]
+[ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="8_gbqnv"]
 
 [node name="RelatorioSomando" type="Control"]
 layout_mode = 3
@@ -248,9 +249,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -237.0
+offset_left = -216.0
 offset_top = -22.0
-offset_right = -187.0
+offset_right = -166.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -382,5 +383,10 @@ position = Vector2(361.00006, 143.745)
 rotation = 1.5707964
 scale = Vector2(6.533, 2.450393)
 texture = ExtResource("6_p8jqa")
+
+[node name="Sair" type="Sprite2D" parent="."]
+position = Vector2(12, 259.00003)
+scale = Vector2(0.895, 0.895)
+texture = ExtResource("8_gbqnv")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
