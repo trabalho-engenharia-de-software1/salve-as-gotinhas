@@ -87,7 +87,7 @@ layout_mode = 2
 focus_mode = 0
 theme = ExtResource("6_hii50")
 theme_override_fonts/font = ExtResource("3_fb2ec")
-text = "RELATORIO"
+text = "relatório "
 
 [node name="creditos" type="Button" parent="VBoxContainer"]
 layout_mode = 2
