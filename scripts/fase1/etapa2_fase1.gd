@@ -16,7 +16,14 @@ const AUDIO_4 =preload("res://narracao/objetos/descarga.wav")
 const AUDIO_5 = preload("res://narracao/objetos/torneira.wav")
 const AUDIO_6 = preload("res://narracao/objetos/bebedouro.wav")
 const AUDIO_DEFAULT =preload("res://narracao/objetos/vazamento .wav")
-
+const AUDIO3 = preload("res://narracao/gotinhas/positivo/3.wav")
+const AUDIO4 = preload("res://narracao/gotinhas/positivo/4.wav")
+const AUDIO5 = preload("res://narracao/gotinhas/positivo/5.wav")
+const AUDIO6 = preload("res://narracao/gotinhas/positivo/6.wav")
+const AUDIO7 = preload("res://narracao/gotinhas/positivo/7.wav")
+const AUDIO8 = preload("res://narracao/gotinhas/positivo/8.wav")
+const AUDIO9 = preload("res://narracao/gotinhas/positivo/9.wav")
+const AUDIO10 = preload("res://narracao/gotinhas/positivo/10.wav")
 var erro = 0
 var qtd = 0 # (Seu código original, mantido)
 
@@ -31,12 +38,12 @@ func _ready():
 	# 1. Recupera o array de acertos
 	await get_tree().process_frame
 	var acertos_fase_anterior = DadosDoJogo.botoes_corretos_fase1
-	$Label.text = str(DadosDoJogo.valores[0])
-	$Label2.text = str(DadosDoJogo.valores[1])
-	$Label3.text = ' ' + str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-1)
-	$Label4.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-3)
-	$Label6.text = str(DadosDoJogo.valores[0] + DadosDoJogo.valores[1])
-	$Label7.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-2)
+	_configurar_label($Label, DadosDoJogo.valores[0], $Label/AudioStreamPlayer2D)
+	_configurar_label($Label2, DadosDoJogo.valores[1], $Label2/AudioStreamPlayer2D)
+	_configurar_label($Label3, DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-1, $Label3/AudioStreamPlayer2D)
+	_configurar_label($Label4, DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-3, $Label4/AudioStreamPlayer2D)
+	_configurar_label($Label6, DadosDoJogo.valores[0] + DadosDoJogo.valores[1], $Label6/AudioStreamPlayer2D)
+	_configurar_label($Label7, DadosDoJogo.valores[0]+DadosDoJogo.valores[1]-2, $Label7/AudioStreamPlayer2D)
 	# 2. Configura o PRIMEIRO Sprite (Posição de índice 0 do array)
 	_configurar_sprite($Sprite1, acertos_fase_anterior[0],$Sprite1/AudioStreamPlayer2D)
 	
@@ -88,7 +95,44 @@ func _ready():
 	# Entrega a lista de passos para o script do botão de ajuda
 	script_do_botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
 # --- FIM DA ADIÇÃO 2 ---
+func _configurar_label(label_alvo: Label, valor_do_botao: int, audio_alvo: AudioStreamPlayer2D):
 	
+	var novo_texto: String = "nada"
+	var novo_audio: AudioStream = AUDIO_DEFAULT
+	# Define qual textura deve ser carregada com base no valor.
+	match valor_do_botao:
+		3:
+			novo_texto = " 3"
+			novo_audio = AUDIO3
+		4:
+			novo_texto = " 4"
+			novo_audio = AUDIO4
+		5:
+			novo_texto = " 5"
+			novo_audio = AUDIO5
+		6:
+			novo_texto = " 6"
+			novo_audio = AUDIO6
+		7:
+			novo_texto = " 7"
+			novo_audio = AUDIO7
+		8:
+			novo_texto = " 8"
+			novo_audio = AUDIO8
+		9:
+			novo_texto = " 9"
+			novo_audio = AUDIO9
+		10:
+			novo_texto = "10"
+			novo_audio = AUDIO10
+		_:
+			push_error("Valor de botão inesperado no array: " + str(valor_do_botao))
+			pass 
+	
+	if label_alvo:
+		label_alvo.text = novo_texto
+		audio_alvo.stream = novo_audio
+		print("🔊 Áudio atribuído a", label_alvo.name, "→", novo_audio.resource_path)
 	
 # ----- O RESTO DO SEU CÓDIGO CONTINUA 100% IGUAL -----
 
