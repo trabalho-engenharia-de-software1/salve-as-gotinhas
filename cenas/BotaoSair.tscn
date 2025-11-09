@@ -27,7 +27,7 @@ collision_priority = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(40, 14.5)
-scale = Vector2(4.1, 1.5)
+scale = Vector2(4.2, 1.6)
 shape = SubResource("RectangleShape2D_jgs2l")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

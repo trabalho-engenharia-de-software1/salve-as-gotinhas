@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=24 format=3 uid="uid://bj2nwopjum1pu"]
-
+[gd_scene load_steps=20 format=3 uid="uid://bj2nwopjum1pu"]
 
 [ext_resource type="Script" uid="uid://b82joiecg7g3d" path="res://scripts/fase1/etapa3_fase1.gd" id="1_lepym"]
 [ext_resource type="PackedScene" uid="uid://clqx6060femee" path="res://cenas/fase1/botão_fase1.tscn" id="2_oaxcc"]
@@ -19,11 +17,7 @@
 [ext_resource type="StyleBox" uid="uid://csn6rc2gqn8k0" path="res://estilos/estilo-botao.tres" id="7_kovwm"]
 [ext_resource type="Script" uid="uid://buewu7h65gj4r" path="res://scripts/fase1/gotinha9.gd" id="10_y2w6m"]
 [ext_resource type="Script" uid="uid://dobflbc281ep0" path="res://scripts/fase1/gotinha8.gd" id="11_qtk0i"]
-<<<<<<< HEAD
-=======
-[ext_resource type="Script" uid="uid://si7swi5m6gdd" path="res://scripts/fase1/gotinha8-.gd" id="12_rjl7c"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="22_qtk0i"]
->>>>>>> main
 
 [sub_resource type="Theme" id="Theme_le2qj"]
 
@@ -253,11 +247,9 @@ theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
 
-<<<<<<< HEAD
-=======
-[node name="HelpLayer" parent="." instance=ExtResource("5_inim1")]
+[node name="HelpLayer2" parent="." instance=ExtResource("5_inim1")]
 
-[node name="BotaoSair" parent="." instance=ExtResource("6_ujyti")]
+[node name="BotaoSair2" parent="." instance=ExtResource("6_ujyti")]
 position = Vector2(-5, 221)
 
 [node name="Sair" type="Sprite2D" parent="."]
@@ -265,7 +257,6 @@ position = Vector2(11, 251.99998)
 scale = Vector2(0.61437494, 0.61437404)
 texture = ExtResource("22_qtk0i")
 
->>>>>>> main
 [connection signal="button_down" from="resposta" to="." method="_on_resposta_button_down"]
 [connection signal="button_down" from="resposta2" to="." method="_on_resposta_2_button_down"]
 [connection signal="button_down" from="resposta3" to="." method="_on_resposta_3_button_down"]
