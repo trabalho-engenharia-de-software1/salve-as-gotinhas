@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bj2nwopjum1pu"]
+[gd_scene load_steps=30 format=3 uid="uid://bj2nwopjum1pu"]
 
 [ext_resource type="Script" uid="uid://b82joiecg7g3d" path="res://scripts/fase1/etapa3_fase1.gd" id="1_lepym"]
 [ext_resource type="PackedScene" uid="uid://clqx6060femee" path="res://cenas/fase1/botão_fase1.tscn" id="2_oaxcc"]
@@ -18,13 +18,26 @@
 [ext_resource type="Script" uid="uid://bw8vg15k0fh7r" path="res://cenas/fase2/sprite_opcao_1.gd" id="10_4fptc"]
 [ext_resource type="Script" uid="uid://buewu7h65gj4r" path="res://scripts/fase1/gotinha9.gd" id="10_y2w6m"]
 [ext_resource type="Script" uid="uid://dobflbc281ep0" path="res://scripts/fase1/gotinha8.gd" id="11_qtk0i"]
+[ext_resource type="Script" uid="uid://ccupdfvc1sw4g" path="res://cenas/fase2/labelsom.gd" id="19_n1422"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="22_qtk0i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ysb4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4fptc"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2w6m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtk0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjl7c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_by7un"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kovwm"]
+
 [sub_resource type="Theme" id="Theme_le2qj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_le2qj"]
 
 [node name="Etapa3Fase1" type="Node2D"]
 script = ExtResource("1_lepym")
@@ -207,6 +220,16 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
+script = ExtResource("19_n1422")
+
+[node name="Area2D" type="Area2D" parent="Label"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Area2D"]
+position = Vector2(38, 30)
+scale = Vector2(6, 2.2)
+shape = SubResource("RectangleShape2D_y2w6m")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label"]
 
 [node name="Label3" type="Label" parent="."]
 offset_left = 404.0
@@ -220,6 +243,16 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
+script = ExtResource("19_n1422")
+
+[node name="Area2D" type="Area2D" parent="Label3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label3/Area2D"]
+position = Vector2(-42, 20)
+scale = Vector2(7.6, 2.2)
+shape = SubResource("RectangleShape2D_qtk0i")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label3"]
 
 [node name="Label4" type="Label" parent="."]
 offset_left = 404.0
@@ -231,6 +264,16 @@ theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
+script = ExtResource("19_n1422")
+
+[node name="Area2D" type="Area2D" parent="Label4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label4/Area2D"]
+position = Vector2(-42, 15)
+scale = Vector2(7.6, 2.2)
+shape = SubResource("RectangleShape2D_rjl7c")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label4"]
 
 [node name="Label6" type="Label" parent="."]
 offset_left = 404.0
@@ -243,6 +286,16 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
+script = ExtResource("19_n1422")
+
+[node name="Area2D" type="Area2D" parent="Label6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label6/Area2D"]
+position = Vector2(-42, 22)
+scale = Vector2(7.6, 2.2)
+shape = SubResource("RectangleShape2D_by7un")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label6"]
 
 [node name="Label7" type="Label" parent="."]
 offset_left = 404.0
@@ -255,6 +308,16 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
+script = ExtResource("19_n1422")
+
+[node name="Area2D" type="Area2D" parent="Label7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label7/Area2D"]
+position = Vector2(-43, 20)
+scale = Vector2(7.6, 2.2)
+shape = SubResource("RectangleShape2D_kovwm")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label7"]
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 170.0
@@ -271,6 +334,16 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("3_k2pn3")
 theme_override_font_sizes/font_size = 26
 text = "10"
+script = ExtResource("19_n1422")
+
+[node name="Area2D" type="Area2D" parent="Label2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label2/Area2D"]
+position = Vector2(38, 30)
+scale = Vector2(6, 2.2)
+shape = SubResource("RectangleShape2D_le2qj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Label2"]
 
 [node name="HelpLayer2" parent="." instance=ExtResource("5_inim1")]
 
@@ -288,3 +361,9 @@ texture = ExtResource("22_qtk0i")
 [connection signal="button_down" from="resposta4" to="." method="_on_resposta_4_button_down"]
 [connection signal="mouse_entered" from="Sprite1/Area2D" to="." method="_on_area_mouse_entered"]
 [connection signal="mouse_entered" from="Sprite2/Area2D" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_entered" from="Label/Area2D" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_entered" from="Label3/Area2D" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_entered" from="Label4/Area2D" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_entered" from="Label6/Area2D" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_entered" from="Label7/Area2D" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_entered" from="Label2/Area2D" to="." method="_on_area_mouse_entered"]
