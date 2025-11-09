@@ -11,6 +11,7 @@ var audio_player: AudioStreamPlayer
 
 
 func _ready():
+	area.input_pickable = true
 	if area:
 		area.mouse_entered.connect(_on_area_mouse_entered)
 	else:

@@ -25,13 +25,11 @@ texture = ExtResource("7_h2hoi")
 [node name="Etapa2Fase1" type="Node2D"]
 script = ExtResource("1_qc65o")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(485, 280)
-offset_left = -2.0
-offset_top = -4.0
-offset_right = 483.0
-offset_bottom = 276.0
-color = Color(0.3019608, 0.8235294, 0.81960785, 1)
+[node name="HelpLayer" parent="." instance=ExtResource("5_2a2rl")]
+
+[node name="BotaoSair" parent="." instance=ExtResource("6_y38o5")]
+top_level = true
+position = Vector2(-5, 221)
 
 [node name="NovoProjeto" type="Sprite2D" parent="."]
 modulate = Color(0.45074373, 0.5536953, 0.65627617, 1)
@@ -255,11 +253,6 @@ texture = ExtResource("4_wwssh")
 [node name="Mais3" type="Sprite2D" parent="."]
 position = Vector2(174, 121)
 texture = ExtResource("4_wwssh")
-
-[node name="HelpLayer" parent="." instance=ExtResource("5_2a2rl")]
-
-[node name="BotaoSair" parent="." instance=ExtResource("6_y38o5")]
-position = Vector2(-5, 221)
 
 [connection signal="button_down" from="resposta2" to="." method="_on_resposta_2_button_down"]
 [connection signal="button_down" from="resposta3" to="." method="_on_resposta_3_button_down"]

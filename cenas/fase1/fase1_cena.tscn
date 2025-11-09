@@ -19,17 +19,17 @@
 [node name="Fase1Cena" type="Node2D"]
 script = ExtResource("1_ep0u1")
 
-[node name="fundo da cena" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(485, 270)
-offset_left = -5.0
-offset_right = 480.0
-offset_bottom = 270.0
-color = Color(0, 0.6156863, 0.61960787, 1)
+[node name="HelpLayer" parent="." instance=ExtResource("10_jt2rn")]
+
+[node name="BotaoSair" parent="." instance=ExtResource("11_7eouo")]
+top_level = true
+position = Vector2(-7, 220)
 
 [node name="NovoProjeto" type="Sprite2D" parent="."]
 position = Vector2(239.50002, 239.5)
 scale = Vector2(14.968751, 14.96875)
 texture = ExtResource("2_y8q6a")
+region_rect = Rect2(0, 0, 32, 32)
 
 [node name="PixilFrame0" type="Sprite2D" parent="."]
 position = Vector2(54.749996, 70.75)
@@ -233,11 +233,6 @@ texture = ExtResource("8_jt2rn")
 position = Vector2(293.00003, 61)
 scale = Vector2(0.06625001, 0.065104164)
 texture = ExtResource("9_7eouo")
-
-[node name="HelpLayer" parent="." instance=ExtResource("10_jt2rn")]
-
-[node name="BotaoSair" parent="." instance=ExtResource("11_7eouo")]
-position = Vector2(-7, 220)
 
 [connection signal="button_down" from="botão1" to="." method="_on_botão_1_button_down"]
 [connection signal="button_down" from="botão2" to="." method="_on_botão_2_button_down"]

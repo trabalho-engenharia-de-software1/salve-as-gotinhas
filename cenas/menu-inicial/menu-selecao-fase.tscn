@@ -8,9 +8,7 @@
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="6_u6toy"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="6_ulre0"]
 [ext_resource type="Texture2D" uid="uid://b22k8x1vaao04" path="res://imagens/backgrounds/soma-teste-1.png" id="9_emv4m"]
-
 [ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="10_b6xtr"]
-
 [ext_resource type="Texture2D" uid="uid://cw30agoty483i" path="res://imagens/backgrounds/subtracao.png" id="10_eyu1c"]
 
 [node name="Control" type="Control"]
@@ -21,6 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
+mouse_filter = 2
 script = ExtResource("1_30tso")
 
 [node name="MusicaFundo" type="AudioStreamPlayer" parent="."]
@@ -100,7 +99,6 @@ texture = ExtResource("9_emv4m")
 position = Vector2(342.5, 129.5)
 scale = Vector2(10.5625, 10.5625)
 texture = ExtResource("10_eyu1c")
-
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
