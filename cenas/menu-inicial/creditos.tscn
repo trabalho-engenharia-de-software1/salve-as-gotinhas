@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3bvdh6qcah2q"]
+[gd_scene load_steps=7 format=3 uid="uid://b3bvdh6qcah2q"]
 
 [ext_resource type="Script" uid="uid://b83id4ffjr6xo" path="res://cenas/menu-inicial/creditos.gd" id="1_wwioi"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="2_dlmhd"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_ssii2"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_ckb85"]
 [ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="5_dlmhd"]
+[ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="6_ssii2"]
 
 [node name="credios" type="Control"]
 layout_mode = 3
@@ -96,5 +97,10 @@ theme = ExtResource("5_dlmhd")
 theme_override_fonts/font = ExtResource("3_ssii2")
 theme_override_font_sizes/font_size = 16
 text = "SAIR"
+
+[node name="Sair" type="Sprite2D" parent="."]
+position = Vector2(200, 250)
+scale = Vector2(0.61437494, 0.61437404)
+texture = ExtResource("6_ssii2")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

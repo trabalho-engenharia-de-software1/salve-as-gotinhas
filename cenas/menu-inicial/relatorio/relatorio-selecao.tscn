@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://blak8guq6x5jy"]
+[gd_scene load_steps=11 format=3 uid="uid://blak8guq6x5jy"]
 
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_p6qw6"]
 [ext_resource type="Script" uid="uid://7hh22cagyaua" path="res://scripts/menu-inicial/relatorio_selecao.gd" id="1_vhoy2"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b22k8x1vaao04" path="res://imagens/backgrounds/soma-teste-1.png" id="5_cv0od"]
 [ext_resource type="Texture2D" uid="uid://cw30agoty483i" path="res://imagens/backgrounds/subtracao.png" id="6_ddhdm"]
 [ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="7_gaaor"]
+[ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="9_cv0od"]
+[ext_resource type="Texture2D" uid="uid://c0c3x11uy7kwj" path="res://buttons/botoes-menu/play.png" id="10_ddhdm"]
 
 [node name="RelatorioSelecao" type="Control"]
 layout_mode = 3
@@ -105,9 +107,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -237.0
+offset_left = -215.0
 offset_top = -25.0
-offset_right = -187.0
+offset_right = -165.0
 offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -116,6 +118,22 @@ theme = ExtResource("7_gaaor")
 theme_override_fonts/font = ExtResource("2_gaaor")
 theme_override_font_sizes/font_size = 16
 text = "SAIR"
+
+[node name="Sair" type="Sprite2D" parent="."]
+position = Vector2(12, 257)
+scale = Vector2(0.895, 0.895)
+texture = ExtResource("9_cv0od")
+metadata/_edit_lock_ = true
+
+[node name="95f1477088a542CaB6259Bbb4Ab21f0f2" type="Sprite2D" parent="."]
+position = Vector2(272, 226)
+scale = Vector2(0.95312417, 1.0624998)
+texture = ExtResource("10_ddhdm")
+
+[node name="95f1477088a542CaB6259Bbb4Ab21f0f3" type="Sprite2D" parent="."]
+position = Vector2(65, 227)
+scale = Vector2(0.95312417, 1.0624998)
+texture = ExtResource("10_ddhdm")
 
 [connection signal="pressed" from="somando" to="." method="_on_somando_pressed"]
 [connection signal="pressed" from="sub" to="." method="_on_sub_pressed"]

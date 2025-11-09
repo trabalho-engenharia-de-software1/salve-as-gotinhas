@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dc021kjash2l2"]
+[gd_scene load_steps=21 format=3 uid="uid://dc021kjash2l2"]
 
 [ext_resource type="Script" uid="uid://d36j15tnhn7ua" path="res://scripts/fase1/etapa4_fase1.gd" id="1_qc65o"]
 [ext_resource type="Texture2D" uid="uid://dpm8dyovsvy1p" path="res://imagens/backgrounds/Novo_Projeto-1.png" id="2_ax7j2"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://bqcau08d7pjsr" path="res://scripts/fase1/gotinha13.gd" id="7_gq33g"]
 [ext_resource type="Texture2D" uid="uid://dxwtfv5atsmou" path="res://buttons/botao-check/botao-check.png" id="7_h2hoi"]
 [ext_resource type="Script" uid="uid://d0qxyrnl54uto" path="res://scripts/fase1/gotinha12.gd" id="8_3cut0"]
+[ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="19_h2hoi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4t2e7"]
 texture = ExtResource("7_h2hoi")
@@ -253,6 +254,17 @@ texture = ExtResource("4_wwssh")
 [node name="Mais3" type="Sprite2D" parent="."]
 position = Vector2(174, 121)
 texture = ExtResource("4_wwssh")
+
+
+[node name="HelpLayer" parent="." instance=ExtResource("5_2a2rl")]
+
+[node name="BotaoSair" parent="." instance=ExtResource("6_y38o5")]
+position = Vector2(-5, 221)
+
+[node name="Sair" type="Sprite2D" parent="."]
+position = Vector2(11, 251.99998)
+scale = Vector2(0.61437494, 0.61437404)
+texture = ExtResource("19_h2hoi")
 
 [connection signal="button_down" from="resposta2" to="." method="_on_resposta_2_button_down"]
 [connection signal="button_down" from="resposta3" to="." method="_on_resposta_3_button_down"]

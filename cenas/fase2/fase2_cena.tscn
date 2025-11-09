@@ -1,4 +1,6 @@
-[gd_scene load_steps=47 format=3 uid="uid://dypx0nd08saj3"]
+
+[gd_scene load_steps=21 format=3 uid="uid://dypx0nd08saj3"]
+
 
 [ext_resource type="Texture2D" uid="uid://bayahoy3dxj17" path="res://imagens/backgrounds/background_branco.jpg" id="1_5rxyx"]
 [ext_resource type="Script" uid="uid://d1dpiv0f36tmu" path="res://scripts/fase2/fase_2.gd" id="1_8eytn"]
@@ -26,6 +28,7 @@
 [ext_resource type="AudioStream" uid="uid://5d1dnvr158ww" path="res://narracao/objetos/torneira.wav" id="16_d56le"]
 [ext_resource type="AudioStream" uid="uid://bvfthlab6w7e8" path="res://narracao/objetos/descarga.wav" id="18_k3wk8"]
 [ext_resource type="Texture2D" uid="uid://b1ij2a8t4xv6w" path="res://imagens/backgrounds/borda lateral- atualizada - 1.png" id="19_yg1uh"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://ccupdfvc1sw4g" path="res://cenas/fase2/labelsom.gd" id="24_brcbt"]
 [ext_resource type="AudioStream" uid="uid://cu0sfbgy5y18t" path="res://narracao/gotinhas/negativo/-1.wav" id="24_k3wk8"]
 [ext_resource type="AudioStream" uid="uid://brln7eqw8jerb" path="res://narracao/gotinhas/negativo/-2.wav" id="25_brcbt"]
@@ -58,6 +61,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_084ib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81gph"]
+=======
+[ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="20_jnu11"]
+>>>>>>> main
 
 [node name="Fase2Cena" type="Node2D"]
 script = ExtResource("1_8eytn")

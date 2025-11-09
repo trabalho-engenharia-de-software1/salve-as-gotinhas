@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c00dmh5exfxlo"]
+[gd_scene load_steps=15 format=3 uid="uid://c00dmh5exfxlo"]
 
 [ext_resource type="Script" uid="uid://cbgafm2yk41gx" path="res://scripts/menu-inicial/menu_inicial.gd" id="1_jdc8s"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_u4qhn"]
@@ -9,6 +9,11 @@
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="6_hii50"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="7_85pyl"]
 [ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="7_jersn"]
+[ext_resource type="Texture2D" uid="uid://dcknidabae5qo" path="res://buttons/botoes-menu/config.png" id="10_mks5s"]
+[ext_resource type="Texture2D" uid="uid://c0c3x11uy7kwj" path="res://buttons/botoes-menu/play.png" id="11_j4cae"]
+[ext_resource type="Texture2D" uid="uid://b7yiet0mwpjb" path="res://buttons/botoes-menu/relatorio.png" id="12_nanbn"]
+[ext_resource type="Texture2D" uid="uid://d30jj8wua448p" path="res://buttons/botoes-menu/creditos.png" id="13_ixv2t"]
+[ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="14_0q5x1"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -109,6 +114,31 @@ text = "SAIR"
 [node name="volume-layer" parent="." instance=ExtResource("5_tpqcy")]
 
 [node name="HelpLayer" parent="." instance=ExtResource("7_85pyl")]
+
+[node name="1b7Ed77fC68440989b66F03b01a38204" type="Sprite2D" parent="."]
+position = Vector2(149, 126)
+scale = Vector2(0.6601566, 0.65335065)
+texture = ExtResource("10_mks5s")
+
+[node name="95f1477088a542CaB6259Bbb4Ab21f0f" type="Sprite2D" parent="."]
+position = Vector2(150, 96.999985)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("11_j4cae")
+
+[node name="Relatorio" type="Sprite2D" parent="."]
+position = Vector2(149, 154)
+scale = Vector2(0.895, 0.895)
+texture = ExtResource("12_nanbn")
+
+[node name="Creditos" type="Sprite2D" parent="."]
+position = Vector2(149, 185)
+scale = Vector2(0.895, 0.895)
+texture = ExtResource("13_ixv2t")
+
+[node name="Sair" type="Sprite2D" parent="."]
+position = Vector2(149.00002, 212.00002)
+scale = Vector2(0.895, 0.895)
+texture = ExtResource("14_0q5x1")
 
 [connection signal="pressed" from="VBoxContainer/jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="VBoxContainer/configuracoes" to="." method="_on_configuracoes_pressed"]
