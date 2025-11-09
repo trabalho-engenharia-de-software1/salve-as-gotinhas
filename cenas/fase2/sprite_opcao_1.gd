@@ -8,8 +8,11 @@ func _ready():
 		area.mouse_entered.connect(_on_area_mouse_entered)
 	else:
 		push_error("⚠️ Area2D não encontrada! Verifique a hierarquia.")
-	
+
+
+
 func _on_area_mouse_entered() -> void:
 	print("Mouse entrou em:", name)
+	print("🔍 Som atual:", som_hover.stream)
 	if som_hover and not som_hover.playing:
 		som_hover.play()

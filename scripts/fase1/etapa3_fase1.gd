@@ -8,6 +8,15 @@ const TEXTURA_4 = preload("res:///imagens/sprites-fase1/sanitario.png")
 const TEXTURA_5 = preload("res:///imagens/sprites-fase1/torneira.png")
 const TEXTURA_6 = preload("res:///imagens/sprites-fase1/bebedouro.png")
 const TEXTURA_DEFAULT = preload("res:///imagens/sprites-fase1/vazamento.png") 
+
+const AUDIO_1 = preload("res://narracao/objetos/chuveiro.wav")
+const AUDIO_2 = preload("res://narracao/objetos/mangueira .wav")
+const AUDIO_3 = preload("res://narracao/objetos/regador.wav")
+const AUDIO_4 =preload("res://narracao/objetos/descarga.wav")
+const AUDIO_5 = preload("res://narracao/objetos/torneira.wav")
+const AUDIO_6 = preload("res://narracao/objetos/bebedouro.wav")
+const AUDIO_DEFAULT =preload("res://narracao/objetos/vazamento .wav")
+
 var erro = 0
 var qtd = 0 # (Seu código original, mantido)
 
@@ -16,22 +25,23 @@ var qtd = 0 # (Seu código original, mantido)
 @onready var script_do_botao_ajuda = $HelpLayer/botaoAjuda # Verifique o caminho!
 
 
+
 func _ready():
 	# --- SEU CÓDIGO ORIGINAL (Mantido) ---
 	# 1. Recupera o array de acertos
+	await get_tree().process_frame
 	var acertos_fase_anterior = DadosDoJogo.botoes_corretos_fase1
 	$Label.text = str(DadosDoJogo.valores[0])
 	$Label2.text = str(DadosDoJogo.valores[2])
 	$Label3.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[2]-1)
 	$Label4.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[2]-3)
 	$Label6.text = str(DadosDoJogo.valores[0] + DadosDoJogo.valores[2])
-	$Label7.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[2]+1)
-	
+	$Label7.text = str(DadosDoJogo.valores[0]+DadosDoJogo.valores[2]-2)
 	# 2. Configura o PRIMEIRO Sprite (Posição de índice 0 do array)
-	_configurar_sprite($Sprite1, acertos_fase_anterior[0])
+	_configurar_sprite($Sprite1, acertos_fase_anterior[0],$Sprite1/AudioStreamPlayer2D)
 	
 	# 3. Configura o SEGUNDO Sprite (Posição de índice 1 do array)
-	_configurar_sprite($Sprite2, acertos_fase_anterior[2])
+	_configurar_sprite($Sprite2, acertos_fase_anterior[2],$Sprite2/AudioStreamPlayer2D)
 	# --- FIM DO SEU CÓDIGO ORIGINAL ---
 	
 	
@@ -71,7 +81,7 @@ func _ready():
 			"tipo": "alvo_manual",
 			"pos_centro_pixels": Vector2(320, 140), 
 			"raios_pixels": Vector2(15, 110),      
-			"texto": "Para escolher uma resposta, clique em algum desses botoes"
+			"texto": "Escolha a resposta clicando no botao correto!"
 		}
 	]
 	
@@ -82,30 +92,38 @@ func _ready():
 	
 # ----- O RESTO DO SEU CÓDIGO CONTINUA 100% IGUAL -----
 
-func _configurar_sprite(sprite_alvo: Sprite2D, valor_do_botao: int):
+func _configurar_sprite(sprite_alvo: Sprite2D, valor_do_botao: int, audio_alvo: AudioStreamPlayer2D):
 	
 	var nova_textura: Texture2D = TEXTURA_DEFAULT
-	
+	var novo_audio: AudioStream = AUDIO_DEFAULT
 	# Define qual textura deve ser carregada com base no valor.
 	match valor_do_botao:
 		1:
 			nova_textura = TEXTURA_1
+			novo_audio = AUDIO_1
 		2:
 			nova_textura = TEXTURA_2
+			novo_audio = AUDIO_2
 		3:
 			nova_textura = TEXTURA_3
+			novo_audio = AUDIO_3
 		4:
 			nova_textura = TEXTURA_4
+			novo_audio = AUDIO_4
 		5:
 			nova_textura = TEXTURA_5
+			novo_audio = AUDIO_5
 		6:
 			nova_textura = TEXTURA_6
+			novo_audio = AUDIO_6
 		_:
 			push_error("Valor de botão inesperado no array: " + str(valor_do_botao))
 			pass 
 	
 	if sprite_alvo:
 		sprite_alvo.texture = nova_textura
+		audio_alvo.stream = novo_audio
+		print("🔊 Áudio atribuído a", sprite_alvo.name, "→", novo_audio.resource_path)
 
 func _on_resposta_4_button_down() -> void:
 	erro += 1
@@ -120,7 +138,7 @@ func _on_resposta_3_button_down() -> void:
 
 
 func _on_resposta_2_button_down() -> void:
-	DadosDoJogo.erro_etapa3 = erro
+	DadosDoJogo.erro_etapa2 = erro
 	var texto_aviso = "parabens, você acertou"
 	PopupManager.mostrar(texto_aviso)
 	ir_prox_etapa()

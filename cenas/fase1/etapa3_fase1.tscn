@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bj2nwopjum1pu"]
+[gd_scene load_steps=23 format=3 uid="uid://bj2nwopjum1pu"]
 
 [ext_resource type="Script" uid="uid://b82joiecg7g3d" path="res://scripts/fase1/etapa3_fase1.gd" id="1_lepym"]
 [ext_resource type="PackedScene" uid="uid://clqx6060femee" path="res://cenas/fase1/botão_fase1.tscn" id="2_oaxcc"]
@@ -15,9 +15,14 @@
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="6_ujyti"]
 [ext_resource type="Script" uid="uid://dun2etj5yqwdq" path="res://scripts/fase1/gotinha10.gd" id="7_2ysb4"]
 [ext_resource type="StyleBox" uid="uid://csn6rc2gqn8k0" path="res://estilos/estilo-botao.tres" id="7_kovwm"]
+[ext_resource type="Script" uid="uid://bw8vg15k0fh7r" path="res://cenas/fase2/sprite_opcao_1.gd" id="10_4fptc"]
 [ext_resource type="Script" uid="uid://buewu7h65gj4r" path="res://scripts/fase1/gotinha9.gd" id="10_y2w6m"]
 [ext_resource type="Script" uid="uid://dobflbc281ep0" path="res://scripts/fase1/gotinha8.gd" id="11_qtk0i"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="22_qtk0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ysb4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fptc"]
 
 [sub_resource type="Theme" id="Theme_le2qj"]
 
@@ -114,10 +119,30 @@ theme_override_styles/hover = ExtResource("7_kovwm")
 [node name="Sprite1" type="Sprite2D" parent="."]
 position = Vector2(90, 90)
 scale = Vector2(0.06, 0.06)
+script = ExtResource("10_4fptc")
+
+[node name="Area2D" type="Area2D" parent="Sprite1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite1/Area2D"]
+position = Vector2(-280, 0)
+scale = Vector2(100, 65)
+shape = SubResource("RectangleShape2D_2ysb4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite1"]
 
 [node name="Sprite2" type="Sprite2D" parent="."]
 position = Vector2(192, 88.00001)
 scale = Vector2(0.06, 0.06)
+script = ExtResource("10_4fptc")
+
+[node name="Area2D" type="Area2D" parent="Sprite2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/Area2D"]
+position = Vector2(300, 0)
+scale = Vector2(100, 65)
+shape = SubResource("RectangleShape2D_4fptc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2"]
 
 [node name="OpcaoGasto" parent="." instance=ExtResource("2_oaxcc")]
 offset_left = 212.0
@@ -261,3 +286,5 @@ texture = ExtResource("22_qtk0i")
 [connection signal="button_down" from="resposta2" to="." method="_on_resposta_2_button_down"]
 [connection signal="button_down" from="resposta3" to="." method="_on_resposta_3_button_down"]
 [connection signal="button_down" from="resposta4" to="." method="_on_resposta_4_button_down"]
+[connection signal="mouse_entered" from="Sprite1/Area2D" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_entered" from="Sprite2/Area2D" to="." method="_on_area_mouse_entered"]
