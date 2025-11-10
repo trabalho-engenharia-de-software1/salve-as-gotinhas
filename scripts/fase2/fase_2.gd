@@ -4,6 +4,10 @@ var agua_maxima: float = 100.0
 var agua_atual: float = 100.0
 var pontos = 0
 
+var inicio_fase: float
+var fim_fase: float
+var duracao: float
+
 @onready var reservatorio = $Reservatorio
 @onready var botao_ajuda = $HelpLayer/botaoAjuda
 @onready var medidor_total = $MedidorTotal
@@ -14,6 +18,7 @@ var raios_manual_reserv = Vector2(80, 130)
 
 
 func _ready():
+	inicio_fase = Time.get_unix_time_from_system()
 	reservatorio.atualizar_nivel(agua_atual, agua_maxima)	
 	
 	var todas_as_opcoes = get_tree().get_nodes_in_group("opcoes_clicaveis")
@@ -87,6 +92,10 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 		# 5. VOLTA AO MENU
 		DadosDoJogo.pontos_fase2 = pontos
 		DadosDoJogo.flag2 = 1
+		fim_fase = Time.get_unix_time_from_system()
+		duracao = fim_fase - inicio_fase
+		print("Duração total:", duracao, "s")
+		DadosDoJogo.tempo5 = DadosDoJogo.tempo5 + duracao
 		get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-selecao-fase.tscn")
 	
 	elif agua_atual < 0:
@@ -96,8 +105,11 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 			raios_manual_reserv, 
 			"Gastou mais agua que tinha. Tente novamente"
 		)
-		
+		fim_fase = Time.get_unix_time_from_system()
+		duracao = fim_fase - inicio_fase
+		print("Duração total:", duracao, "s")
 		DadosDoJogo.erro_fase2 = DadosDoJogo.erro_fase2 + 1
+		DadosDoJogo.tempo5 = DadosDoJogo.tempo5 + duracao
 		# 2. ESPERA o jogador ler
 		await get_tree().create_timer(3.0).timeout
 		

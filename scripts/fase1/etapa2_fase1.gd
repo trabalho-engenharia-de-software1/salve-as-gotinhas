@@ -24,9 +24,13 @@ const AUDIO7 = preload("res://narracao/gotinhas/positivo/7.wav")
 const AUDIO8 = preload("res://narracao/gotinhas/positivo/8.wav")
 const AUDIO9 = preload("res://narracao/gotinhas/positivo/9.wav")
 const AUDIO10 = preload("res://narracao/gotinhas/positivo/10.wav")
+
 var erro = 0
 var qtd = 0 # (Seu código original, mantido)
 
+var inicio_fase: float
+var fim_fase: float
+var duracao: float
 # --- ADIÇÃO 1: Referência para o Botão de Ajuda ---
 # (Assumindo que você arrastou o HelpLayer.tscn para esta cena)
 @onready var script_do_botao_ajuda = $HelpLayer/botaoAjuda # Verifique o caminho!
@@ -37,6 +41,7 @@ func _ready():
 	# --- SEU CÓDIGO ORIGINAL (Mantido) ---
 	# 1. Recupera o array de acertos
 	await get_tree().process_frame
+	inicio_fase = Time.get_unix_time_from_system()
 	var acertos_fase_anterior = DadosDoJogo.botoes_corretos_fase1
 	_configurar_label($Label, DadosDoJogo.valores[0], $Label/AudioStreamPlayer2D)
 	_configurar_label($Label2, DadosDoJogo.valores[1], $Label2/AudioStreamPlayer2D)
@@ -197,8 +202,11 @@ func ir_prox_etapa() -> void:
 	
 	# 1. SALVAR OS DADOS NO AUTOLOAD (DadosDoJogo)
 	# Copia o array de acertos da Fase 1 para a variável global
+	fim_fase = Time.get_unix_time_from_system()
+	duracao = fim_fase - inicio_fase
+	print("Duração total:", duracao, "s")
 	DadosDoJogo.erro_etapa2 = erro
-	
+	DadosDoJogo.tempo2 = duracao
 	# 2. TROCA DE CENA
 	var proxima_cena_path = "res://cenas/fase1/etapa3_fase1.tscn" 
 	

@@ -8,10 +8,14 @@ var erro = 0
 var qtd = 0
 var valor = 0
 var num = []
+var inicio_fase: float
+var fim_fase: float
+var duracao: float
 
 func _ready():
 	# Espera 1 frame para garantir que todos os @onready carregaram
 	await get_tree().process_frame
+	inicio_fase = Time.get_unix_time_from_system()
 	var pos_manual_reserv = Vector2(100, 100) # Use os valores que funcionam
 	var raios_manual_reserv = Vector2(0, 0)
 	var lista_de_passos = [
@@ -117,6 +121,10 @@ func ir_prox_etapa() -> void:
 	# Copia o array de acertos da Fase 1 para a variável global
 	DadosDoJogo.botoes_corretos_fase1 = botoesPrecionados
 	
+	fim_fase = Time.get_unix_time_from_system()
+	duracao = fim_fase - inicio_fase
+	print("Duração total:", duracao, "s")
+	DadosDoJogo.tempo1 =duracao
 	DadosDoJogo.valores = num
 	# Copia o contador de erros da Fase 1 para a variável global
 	DadosDoJogo.erros_acumulados = erro
