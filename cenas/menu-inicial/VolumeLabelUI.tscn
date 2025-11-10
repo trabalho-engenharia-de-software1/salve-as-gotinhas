@@ -1,41 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://biuoqellwps4o"]
+[gd_scene load_steps=4 format=3 uid="uid://biuoqellwps4o"]
 
 [ext_resource type="Script" uid="uid://db6stpq7wraxh" path="res://scripts/menu-inicial/label_volume.gd" id="1_egnbc"]
 [ext_resource type="Texture2D" uid="uid://mftyq74pt3m0" path="res://buttons/volume.png" id="2_w2v6l"]
-[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_jw7rm"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_egnbc"]
 
 [node name="volume-layer" type="CanvasLayer"]
 
 [node name="Volume" type="Sprite2D" parent="."]
-position = Vector2(415.00003, 258.00003)
-scale = Vector2(1.371, 1.239)
+position = Vector2(278.48404, 101.04399)
+scale = Vector2(1.6855018, 1.3694997)
 texture = ExtResource("2_w2v6l")
 
-[node name="volume" type="Label" parent="."]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 185.0
-offset_top = 244.0
-offset_right = 239.0
-offset_bottom = 260.0
-grow_horizontal = 2
-size_flags_vertical = 8
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/shadow_offset_x = 1
-theme_override_constants/shadow_offset_y = 1
-theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("3_jw7rm")
-theme_override_font_sizes/font_size = 12
-text = "volume"
-
 [node name="slidervolume" type="HSlider" parent="."]
-offset_left = 427.0
-offset_top = 257.0
-offset_right = 498.4286
-offset_bottom = 273.0
+anchors_preset = -1
+offset_left = 296.0
+offset_top = 89.0
+offset_right = 387.4286
+offset_bottom = 123.2857
+grow_horizontal = 0
 scale = Vector2(0.7, 0.7)
 theme_override_icons/grabber = SubResource("ViewportTexture_egnbc")
 script = ExtResource("1_egnbc")

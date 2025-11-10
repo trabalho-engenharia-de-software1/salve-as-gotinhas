@@ -6,6 +6,7 @@ extends Control
 
 # Pega a referência para o NÓ que você quer destacar
 @onready var botao_jogar = $VBoxContainer/jogar
+@onready var botao_config = $VBoxContainer/configuracoes
 @onready var botao_creditos = $VBoxContainer/creditos
 @onready var botao_sair = $VBoxContainer/sair
 
@@ -19,6 +20,12 @@ func _ready() -> void:
 			"tipo": "alvo_automatico",
 			"alvo": botao_jogar, 
 			"texto": "Clique em JOGAR para começar a aventura!",
+			
+		},
+		{
+			"tipo": "alvo_automatico",
+			"alvo": botao_config, 
+			"texto": "Clique em CONFIGURACOES para ajustar a narracao!",
 		},
 		{
 			"tipo": "alvo_automatico",

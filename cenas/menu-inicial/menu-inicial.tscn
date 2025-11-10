@@ -1,11 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://c00dmh5exfxlo"]
+[gd_scene load_steps=24 format=3 uid="uid://c00dmh5exfxlo"]
 
 [ext_resource type="Script" uid="uid://cbgafm2yk41gx" path="res://scripts/menu-inicial/menu_inicial.gd" id="1_jdc8s"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_u4qhn"]
-[ext_resource type="AudioStream" uid="uid://b21kq6xrhsp47" path="res://sounds/musica-fundo.mp3" id="2_q6nbj"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="2_uerxx"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_fb2ec"]
-[ext_resource type="PackedScene" uid="uid://biuoqellwps4o" path="res://cenas/menu-inicial/VolumeLabelUI.tscn" id="5_tpqcy"]
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="6_hii50"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="7_85pyl"]
 [ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="7_jersn"]
@@ -46,10 +44,6 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_jdc8s")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_q6nbj")
-autoplay = true
-
 [node name="BackgroundMenuInicial" type="Sprite2D" parent="."]
 modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
 position = Vector2(239, 124)
@@ -76,8 +70,6 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("2_uerxx")
 theme_override_font_sizes/font_size = 25
 text = "salve as gotinhas"
-
-[node name="volume-layer" parent="." instance=ExtResource("5_tpqcy")]
 
 [node name="HelpLayer" parent="." instance=ExtResource("7_85pyl")]
 
@@ -128,10 +120,12 @@ alignment = 1
 [node name="jogar" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("6_hii50")
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "jogar"
 script = ExtResource("7_w434a")
+meu_som_de_narracao = ExtResource("8_ihywm")
 
 [node name="Area2D" type="Area2D" parent="VBoxContainer/jogar"]
 
@@ -140,16 +134,15 @@ position = Vector2(77.750015, 11.75)
 scale = Vector2(7.7, 1.2)
 shape = SubResource("RectangleShape2D_d65yk")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/jogar"]
-stream = ExtResource("8_ihywm")
-
 [node name="configuracoes" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("6_hii50")
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "configurações"
 script = ExtResource("7_w434a")
+meu_som_de_narracao = ExtResource("9_tfj0h")
 
 [node name="Area2D" type="Area2D" parent="VBoxContainer/configuracoes"]
 
@@ -158,16 +151,15 @@ position = Vector2(78.25, 12.5)
 scale = Vector2(7.7, 1.2)
 shape = SubResource("RectangleShape2D_lhbuh")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/configuracoes"]
-stream = ExtResource("9_tfj0h")
-
 [node name="relatorio" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("6_hii50")
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "relatório "
 script = ExtResource("7_w434a")
+meu_som_de_narracao = ExtResource("10_5peui")
 
 [node name="Area2D" type="Area2D" parent="VBoxContainer/relatorio"]
 
@@ -176,18 +168,17 @@ position = Vector2(78.000015, 11.5)
 scale = Vector2(7.7, 1.2)
 shape = SubResource("RectangleShape2D_qhk56")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/relatorio"]
-stream = ExtResource("10_5peui")
-
 [node name="creditos" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
+mouse_filter = 1
 mouse_force_pass_scroll_events = false
 theme = ExtResource("6_hii50")
 theme_override_constants/h_separation = 0
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "CREDITOS"
 script = ExtResource("7_w434a")
+meu_som_de_narracao = ExtResource("11_w434a")
 
 [node name="Area2D" type="Area2D" parent="VBoxContainer/creditos"]
 
@@ -196,16 +187,15 @@ position = Vector2(78, 11.5)
 scale = Vector2(7.7, 1.2)
 shape = SubResource("RectangleShape2D_tj8x2")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/creditos"]
-stream = ExtResource("11_w434a")
-
 [node name="sair" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("7_jersn")
 theme_override_fonts/font = ExtResource("3_fb2ec")
 text = "SAIR"
 script = ExtResource("7_w434a")
+meu_som_de_narracao = ExtResource("13_t6afo")
 
 [node name="Area2D" type="Area2D" parent="VBoxContainer/sair"]
 
@@ -213,9 +203,6 @@ script = ExtResource("7_w434a")
 position = Vector2(78, 12.5)
 scale = Vector2(7.7, 1.2)
 shape = SubResource("RectangleShape2D_onw5h")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/sair"]
-stream = ExtResource("13_t6afo")
 
 [connection signal="pressed" from="VBoxContainer/jogar" to="." method="_on_jogar_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/jogar/Area2D" to="." method="_on_area_mouse_entered"]

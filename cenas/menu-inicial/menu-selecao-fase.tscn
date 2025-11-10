@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://da85m5tgo2pci" path="res://scripts/menu-inicial/menu_selecao_fase.gd" id="1_30tso"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_uxpq5"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="2_4vtvw"]
-[ext_resource type="AudioStream" uid="uid://b21kq6xrhsp47" path="res://sounds/musica-fundo.mp3" id="2_ry13j"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_86dby"]
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="6_u6toy"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="6_ulre0"]
@@ -16,10 +15,13 @@
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="11_u6toy"]
 [ext_resource type="Script" uid="uid://yvlt17h37wvx" path="res://cenas/menu-inicial/botaosom.gd" id="14_ef25g"]
 [ext_resource type="AudioStream" uid="uid://bc3nle126udc7" path="res://narracao/menu/sair.wav" id="15_t06b1"]
+[ext_resource type="Texture2D" uid="uid://c0c3x11uy7kwj" path="res://buttons/botoes-menu/play.png" id="16_ef25g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4h3qw"]
+size = Vector2(20.23256, 20.8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef25g"]
+size = Vector2(20.11628, 20.8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcr1x"]
 
@@ -39,9 +41,6 @@ modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
 position = Vector2(239, 124)
 scale = Vector2(0.317, 0.317)
 texture = ExtResource("1_uxpq5")
-
-[node name="MusicaFundo" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_ry13j")
 
 [node name="SomaTeste1" type="Sprite2D" parent="."]
 position = Vector2(136.5, 129.5)
@@ -65,16 +64,14 @@ theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_4vtvw")
 text = "SOMANDO"
 script = ExtResource("7_cergd")
+meu_som_de_narracao = ExtResource("7_eyu1c")
 
 [node name="Area2D" type="Area2D" parent="fase1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fase1/Area2D"]
-position = Vector2(52, 100)
+position = Vector2(51, 110)
 scale = Vector2(8.6, 10)
 shape = SubResource("RectangleShape2D_4h3qw")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="fase1"]
-stream = ExtResource("7_eyu1c")
 
 [node name="fase2" type="Label" parent="."]
 layout_mode = 0
@@ -89,21 +86,19 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("2_4vtvw")
 text = "SUBTRAINDO"
 script = ExtResource("7_cergd")
+meu_som_de_narracao = ExtResource("8_cergd")
 
 [node name="Area2D" type="Area2D" parent="fase2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fase2/Area2D"]
-position = Vector2(65, 100)
+position = Vector2(64.5, 111)
 scale = Vector2(8.6, 10)
 shape = SubResource("RectangleShape2D_ef25g")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="fase2"]
-stream = ExtResource("8_cergd")
-
 [node name="iniciarfase1" type="Button" parent="."]
 layout_mode = 0
-offset_left = 51.0
-offset_top = 214.0
+offset_left = 48.0
+offset_top = 208.0
 offset_right = 221.0
 offset_bottom = 243.0
 focus_mode = 0
@@ -119,8 +114,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -223.0
-offset_top = -58.0
+offset_left = -224.0
+offset_top = -62.0
 offset_right = -53.0
 offset_bottom = -29.0
 grow_horizontal = 0
@@ -157,23 +152,25 @@ text = "SELECIONE A FASE"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -237.0
-offset_top = -24.0
-offset_right = -164.00002
-offset_bottom = -1.0
+anchors_preset = -1
+anchor_left = 0.082
+anchor_top = 0.9480001
+anchor_right = 0.082
+anchor_bottom = 0.9480001
+offset_left = -36.36
+offset_top = -9.960022
+offset_right = 36.639984
+offset_bottom = 13.039978
 grow_horizontal = 2
 grow_vertical = 0
 focus_mode = 0
+mouse_filter = 2
 theme = ExtResource("10_b6xtr")
 theme_override_fonts/font = ExtResource("2_4vtvw")
 theme_override_font_sizes/font_size = 16
 text = "SAIR"
 script = ExtResource("14_ef25g")
+meu_som_de_narracao = ExtResource("15_t06b1")
 
 [node name="Area2D" type="Area2D" parent="Button"]
 
@@ -182,13 +179,20 @@ position = Vector2(36, 12)
 scale = Vector2(3.7, 1.2)
 shape = SubResource("RectangleShape2D_tcr1x")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button"]
-stream = ExtResource("15_t06b1")
-
 [node name="Sair" type="Sprite2D" parent="."]
 position = Vector2(9, 258)
 scale = Vector2(0.43218744, 0.4321874)
 texture = ExtResource("11_u6toy")
+
+[node name="95f1477088a542CaB6259Bbb4Ab21f0f3" type="Sprite2D" parent="."]
+position = Vector2(56.000004, 223.99998)
+scale = Vector2(0.6132809, 0.64062405)
+texture = ExtResource("16_ef25g")
+
+[node name="95f1477088a542CaB6259Bbb4Ab21f0f4" type="Sprite2D" parent="."]
+position = Vector2(264, 223.99998)
+scale = Vector2(0.6132807, 0.64062405)
+texture = ExtResource("16_ef25g")
 
 [connection signal="mouse_entered" from="fase1/Area2D" to="." method="_on_area_mouse_entered"]
 [connection signal="mouse_entered" from="fase2/Area2D" to="." method="_on_area_mouse_entered"]
