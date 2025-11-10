@@ -18,7 +18,7 @@ func _ready() -> void:
 		{
 			"tipo": "alvo_automatico",
 			"alvo": botao_jogar, 
-			"texto": "Clique em JOGAR para começar a aventura!"
+			"texto": "Clique em JOGAR para começar a aventura!",
 		},
 		{
 			"tipo": "alvo_automatico",
@@ -57,3 +57,7 @@ func _on_configuracoes_pressed() -> void:
 
 func _on_relatorio_pressed() -> void:
 	get_tree().change_scene_to_file("res://cenas/menu-inicial/relatorio/relatorio-selecao.tscn")
+
+
+func _on_area_mouse_entered() -> void:
+	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c00dmh5exfxlo"]
+[gd_scene load_steps=26 format=3 uid="uid://c00dmh5exfxlo"]
 
 [ext_resource type="Script" uid="uid://cbgafm2yk41gx" path="res://scripts/menu-inicial/menu_inicial.gd" id="1_jdc8s"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_u4qhn"]
@@ -9,11 +9,32 @@
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="6_hii50"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="7_85pyl"]
 [ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="7_jersn"]
+[ext_resource type="Script" uid="uid://yvlt17h37wvx" path="res://cenas/menu-inicial/botaosom.gd" id="7_w434a"]
+[ext_resource type="AudioStream" uid="uid://c1w04lul3jgr6" path="res://narracao/menu/jogar.wav" id="8_ihywm"]
+[ext_resource type="AudioStream" uid="uid://6pu77m5v6bte" path="res://narracao/menu/configuracoes.wav" id="9_tfj0h"]
+[ext_resource type="AudioStream" uid="uid://dq2us2f07b623" path="res://narracao/menu/relatorio.wav" id="10_5peui"]
 [ext_resource type="Texture2D" uid="uid://dcknidabae5qo" path="res://buttons/botoes-menu/config.png" id="10_mks5s"]
 [ext_resource type="Texture2D" uid="uid://c0c3x11uy7kwj" path="res://buttons/botoes-menu/play.png" id="11_j4cae"]
+[ext_resource type="AudioStream" uid="uid://dw654w7gybm77" path="res://narracao/menu/creditos_audio.wav" id="11_w434a"]
 [ext_resource type="Texture2D" uid="uid://b7yiet0mwpjb" path="res://buttons/botoes-menu/relatorio.png" id="12_nanbn"]
 [ext_resource type="Texture2D" uid="uid://d30jj8wua448p" path="res://buttons/botoes-menu/creditos.png" id="13_ixv2t"]
+[ext_resource type="AudioStream" uid="uid://bc3nle126udc7" path="res://narracao/menu/sair.wav" id="13_t6afo"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="14_0q5x1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d65yk"]
+size = Vector2(20.584417, 23.749998)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhbuh"]
+size = Vector2(20.714285, 23.333336)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhk56"]
+size = Vector2(20.519484, 21.666656)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tj8x2"]
+size = Vector2(20.519482, 22.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onw5h"]
+size = Vector2(20.38961, 21.666672)
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -56,61 +77,6 @@ theme_override_fonts/font = ExtResource("2_uerxx")
 theme_override_font_sizes/font_size = 25
 text = "salve as gotinhas"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -78.0
-offset_top = -50.5
-offset_right = 78.0
-offset_bottom = 88.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme_override_constants/separation = 6
-alignment = 1
-
-[node name="jogar" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-focus_mode = 0
-theme = ExtResource("6_hii50")
-theme_override_fonts/font = ExtResource("3_fb2ec")
-text = "jogar"
-
-[node name="configuracoes" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-focus_mode = 0
-theme = ExtResource("6_hii50")
-theme_override_fonts/font = ExtResource("3_fb2ec")
-text = "configurações"
-
-[node name="relatorio" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-focus_mode = 0
-theme = ExtResource("6_hii50")
-theme_override_fonts/font = ExtResource("3_fb2ec")
-text = "relatório "
-
-[node name="creditos" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-focus_mode = 0
-mouse_force_pass_scroll_events = false
-theme = ExtResource("6_hii50")
-theme_override_constants/h_separation = 0
-theme_override_fonts/font = ExtResource("3_fb2ec")
-text = "CREDITOS"
-
-[node name="sair" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-focus_mode = 0
-theme = ExtResource("7_jersn")
-theme_override_fonts/font = ExtResource("3_fb2ec")
-text = "SAIR"
-
 [node name="volume-layer" parent="." instance=ExtResource("5_tpqcy")]
 
 [node name="HelpLayer" parent="." instance=ExtResource("7_85pyl")]
@@ -140,8 +106,124 @@ position = Vector2(149.00002, 212.00002)
 scale = Vector2(0.895, 0.895)
 texture = ExtResource("14_0q5x1")
 
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -50.5
+offset_right = 78.0
+offset_bottom = 88.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="jogar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("6_hii50")
+theme_override_fonts/font = ExtResource("3_fb2ec")
+text = "jogar"
+script = ExtResource("7_w434a")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/jogar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/jogar/Area2D"]
+position = Vector2(77.750015, 11.75)
+scale = Vector2(7.7, 1.2)
+shape = SubResource("RectangleShape2D_d65yk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/jogar"]
+stream = ExtResource("8_ihywm")
+
+[node name="configuracoes" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("6_hii50")
+theme_override_fonts/font = ExtResource("3_fb2ec")
+text = "configurações"
+script = ExtResource("7_w434a")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/configuracoes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/configuracoes/Area2D"]
+position = Vector2(78.25, 12.5)
+scale = Vector2(7.7, 1.2)
+shape = SubResource("RectangleShape2D_lhbuh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/configuracoes"]
+stream = ExtResource("9_tfj0h")
+
+[node name="relatorio" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("6_hii50")
+theme_override_fonts/font = ExtResource("3_fb2ec")
+text = "relatório "
+script = ExtResource("7_w434a")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/relatorio"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/relatorio/Area2D"]
+position = Vector2(78.000015, 11.5)
+scale = Vector2(7.7, 1.2)
+shape = SubResource("RectangleShape2D_qhk56")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/relatorio"]
+stream = ExtResource("10_5peui")
+
+[node name="creditos" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_force_pass_scroll_events = false
+theme = ExtResource("6_hii50")
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_fb2ec")
+text = "CREDITOS"
+script = ExtResource("7_w434a")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/creditos"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/creditos/Area2D"]
+position = Vector2(78, 11.5)
+scale = Vector2(7.7, 1.2)
+shape = SubResource("RectangleShape2D_tj8x2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/creditos"]
+stream = ExtResource("11_w434a")
+
+[node name="sair" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("7_jersn")
+theme_override_fonts/font = ExtResource("3_fb2ec")
+text = "SAIR"
+script = ExtResource("7_w434a")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/sair"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/sair/Area2D"]
+position = Vector2(78, 12.5)
+scale = Vector2(7.7, 1.2)
+shape = SubResource("RectangleShape2D_onw5h")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/sair"]
+stream = ExtResource("13_t6afo")
+
 [connection signal="pressed" from="VBoxContainer/jogar" to="." method="_on_jogar_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/jogar/Area2D" to="." method="_on_area_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/configuracoes" to="." method="_on_configuracoes_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/configuracoes/Area2D" to="." method="_on_area_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/relatorio" to="." method="_on_relatorio_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/relatorio/Area2D" to="." method="_on_area_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/creditos" to="." method="_on_creditos_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/creditos/Area2D" to="." method="_on_area_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/sair/Area2D" to="." method="_on_area_mouse_entered"]

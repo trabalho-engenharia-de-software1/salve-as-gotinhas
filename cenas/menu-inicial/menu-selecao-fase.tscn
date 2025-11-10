@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dybiibrlqhty5"]
+[gd_scene load_steps=17 format=3 uid="uid://dybiibrlqhty5"]
 
 [ext_resource type="Script" uid="uid://da85m5tgo2pci" path="res://scripts/menu-inicial/menu_selecao_fase.gd" id="1_30tso"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_uxpq5"]
@@ -7,10 +7,17 @@
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_86dby"]
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="6_u6toy"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="6_ulre0"]
+[ext_resource type="Script" uid="uid://ccupdfvc1sw4g" path="res://cenas/fase2/labelsom.gd" id="7_cergd"]
+[ext_resource type="AudioStream" uid="uid://cxp242pp3knj6" path="res://narracao/menu/somando.wav" id="7_eyu1c"]
+[ext_resource type="AudioStream" uid="uid://dpptpuwbjmx2n" path="res://narracao/menu/subtraindo.wav" id="8_cergd"]
 [ext_resource type="Texture2D" uid="uid://b22k8x1vaao04" path="res://imagens/backgrounds/soma-teste-1.png" id="9_emv4m"]
 [ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="10_b6xtr"]
 [ext_resource type="Texture2D" uid="uid://cw30agoty483i" path="res://imagens/backgrounds/subtracao.png" id="10_eyu1c"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="11_u6toy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4h3qw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ef25g"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -32,6 +39,16 @@ position = Vector2(239, 124)
 scale = Vector2(0.317, 0.317)
 texture = ExtResource("1_uxpq5")
 
+[node name="SomaTeste1" type="Sprite2D" parent="."]
+position = Vector2(136.5, 129.5)
+scale = Vector2(10.5625, 10.5625)
+texture = ExtResource("9_emv4m")
+
+[node name="SomaTeste2" type="Sprite2D" parent="."]
+position = Vector2(342.5, 129.5)
+scale = Vector2(10.5625, 10.5625)
+texture = ExtResource("10_eyu1c")
+
 [node name="fase1" type="Label" parent="."]
 layout_mode = 0
 offset_left = 84.0
@@ -43,6 +60,17 @@ size_flags_vertical = 0
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_4vtvw")
 text = "SOMANDO"
+script = ExtResource("7_cergd")
+
+[node name="Area2D" type="Area2D" parent="fase1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fase1/Area2D"]
+position = Vector2(52, 100)
+scale = Vector2(8.6, 10)
+shape = SubResource("RectangleShape2D_4h3qw")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="fase1"]
+stream = ExtResource("7_eyu1c")
 
 [node name="fase2" type="Label" parent="."]
 layout_mode = 0
@@ -56,6 +84,17 @@ theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("2_4vtvw")
 text = "SUBTRAINDO"
+script = ExtResource("7_cergd")
+
+[node name="Area2D" type="Area2D" parent="fase2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fase2/Area2D"]
+position = Vector2(65, 100)
+scale = Vector2(8.6, 10)
+shape = SubResource("RectangleShape2D_ef25g")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="fase2"]
+stream = ExtResource("8_cergd")
 
 [node name="iniciarfase1" type="Button" parent="."]
 layout_mode = 0
@@ -90,16 +129,6 @@ text = "iniciar fase 2
 "
 
 [node name="HelpLayer" parent="." instance=ExtResource("6_ulre0")]
-
-[node name="SomaTeste1" type="Sprite2D" parent="."]
-position = Vector2(136.5, 129.5)
-scale = Vector2(10.5625, 10.5625)
-texture = ExtResource("9_emv4m")
-
-[node name="SomaTeste2" type="Sprite2D" parent="."]
-position = Vector2(342.5, 129.5)
-scale = Vector2(10.5625, 10.5625)
-texture = ExtResource("10_eyu1c")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -146,6 +175,8 @@ position = Vector2(9, 258)
 scale = Vector2(0.43218744, 0.4321874)
 texture = ExtResource("11_u6toy")
 
+[connection signal="mouse_entered" from="fase1/Area2D" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_entered" from="fase2/Area2D" to="." method="_on_area_mouse_entered"]
 [connection signal="pressed" from="iniciarfase1" to="." method="_on_iniciarfase_1_pressed"]
 [connection signal="pressed" from="iniciarfase2" to="." method="_on_iniciarfase_2_pressed"]
 [connection signal="pressed" from="Button" to="." method="sair"]
