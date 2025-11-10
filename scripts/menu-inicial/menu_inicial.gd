@@ -41,7 +41,7 @@ func _ready() -> void:
 
 func _on_jogar_pressed() -> void:
 	print("botao jogar pressionado")
-	get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-selecao-fase.tscn")
+	get_tree().change_scene_to_file("res://cenas/menu-inicial/cadastro.tscn")
 
 func _on_sair_pressed() -> void:
 	get_tree().quit()

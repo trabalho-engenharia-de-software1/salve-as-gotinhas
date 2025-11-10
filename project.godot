@@ -26,6 +26,7 @@ VolumeLabel="*res://cenas/menu-inicial/VolumeLabelUI.tscn"
 PopupManager="*res://scripts/popupManager.gd"
 HelpLayer="*res://cenas/menu-inicial/help-layer.tscn"
 DadosDoJogo="*res://scripts/GameData.gd"
+RelatorioDados="*res://scripts/relatorio_dados.gd"
 
 [display]
 

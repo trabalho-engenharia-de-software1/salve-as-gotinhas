@@ -25,7 +25,7 @@ const AUDIO8 = preload("res://narracao/gotinhas/positivo/8.wav")
 const AUDIO9 = preload("res://narracao/gotinhas/positivo/9.wav")
 const AUDIO10 = preload("res://narracao/gotinhas/positivo/10.wav")
 const AUDIO11 = preload("res://narracao/gotinhas/positivo/11.wav")
-const AUDIO11 = preload("res://narracao/gotinhas/positivo/12.wav")
+const AUDIO12 = preload("res://narracao/gotinhas/positivo/12.wav")
 const AUDIO13 = preload("res://narracao/gotinhas/positivo/13.wav")
 const AUDIO14 = preload("res://narracao/gotinhas/positivo/14.wav")
 const AUDIO15 = preload("res://narracao/gotinhas/positivo/15.wav")
@@ -237,7 +237,7 @@ func ir_prox_etapa() -> void:
 	# 1. SALVAR OS DADOS NO AUTOLOAD (DadosDoJogo)
 	# Copia o array de acertos da Fase 1 para a variável global
 	DadosDoJogo.erro_etapa4 = erro
-	
+	DadosDoJogo.flag1 = 1
 	# 2. TROCA DE CENA
 	var proxima_cena_path = "res://cenas/menu-inicial/menu-selecao-fase.tscn"
 	

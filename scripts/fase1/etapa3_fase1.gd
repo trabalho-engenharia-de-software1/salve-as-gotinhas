@@ -24,6 +24,8 @@ const AUDIO7 = preload("res://narracao/gotinhas/positivo/7.wav")
 const AUDIO8 = preload("res://narracao/gotinhas/positivo/8.wav")
 const AUDIO9 = preload("res://narracao/gotinhas/positivo/9.wav")
 const AUDIO10 = preload("res://narracao/gotinhas/positivo/10.wav")
+const AUDIO11 = preload("res://narracao/gotinhas/positivo/11.wav")
+const AUDIO12 = preload("res://narracao/gotinhas/positivo/12.wav")
 const AUDIO13 = preload("res://narracao/gotinhas/positivo/13.wav")
 const AUDIO14 = preload("res://narracao/gotinhas/positivo/14.wav")
 const AUDIO15 = preload("res://narracao/gotinhas/positivo/15.wav")
@@ -135,6 +137,12 @@ func _configurar_label(label_alvo: Label, valor_do_botao: int, audio_alvo: Audio
 		10:
 			novo_texto = "10"
 			novo_audio = AUDIO10
+		11:
+			novo_texto = "11"
+			novo_audio = AUDIO11
+		12:
+			novo_texto = "12"
+			novo_audio = AUDIO12
 		13:
 			novo_texto = "13"
 			novo_audio = AUDIO13

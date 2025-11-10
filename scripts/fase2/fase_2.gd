@@ -86,6 +86,7 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 		
 		# 5. VOLTA AO MENU
 		DadosDoJogo.pontos_fase2 = pontos
+		DadosDoJogo.flag2 = 1
 		get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-selecao-fase.tscn")
 	
 	elif agua_atual < 0:
