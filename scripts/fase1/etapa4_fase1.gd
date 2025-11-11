@@ -93,7 +93,7 @@ func _ready():
 			"pos_centro_pixels": Vector2(370, 70),
 			"raios_pixels": Vector2(50, 40),     
 			"texto": "Este é o terceiro objeto.",
-			"audio": preload("res://narracao/fase 1/este-é-o-terceiro-objeto.wav")
+			"audio": preload("res://narracao/fase 1/esteo3objeto.wav")
 		},
 		{
 			"tipo": "alvo_manual",
@@ -239,7 +239,7 @@ func _on_resposta_3_button_down() -> void:
 
 func _on_resposta_2_button_down() -> void:
 	DadosDoJogo.erro_etapa2 = erro
-	var audio = preload("res://narracao/fase2/você-usou-bem-a-sua-água.-Parabéns.wav")
+	var audio = preload("res://narracao/fase2/voceusoubemsuaagua.wav")
 	var texto_aviso = "você usou bem a sua água. Parabéns"
 	PopupManager.mostrar(texto_aviso)
 	NarradorGlobal.tocar_narracao(audio)

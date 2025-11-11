@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://crqlpdyfvf84q"
-path="res://.godot/imported/este-é-o-terceiro-objeto.wav-6169028e9cfd097a26c51c805f5e6a91.sample"
+path="res://.godot/imported/esteo3objeto.wav-ce1ad1ccbde2487540b2169112a32c44.sample"
 
 [deps]
 
-source_file="res://narracao/fase 1/este-é-o-terceiro-objeto.wav"
-dest_files=["res://.godot/imported/este-é-o-terceiro-objeto.wav-6169028e9cfd097a26c51c805f5e6a91.sample"]
+source_file="res://narracao/fase 1/esteo3objeto.wav"
+dest_files=["res://.godot/imported/esteo3objeto.wav-ce1ad1ccbde2487540b2169112a32c44.sample"]
 
 [params]
 
