@@ -6,7 +6,6 @@ extends Button
 @onready var area: Area2D = $Area2D
 var hover_timer: Timer
 
-# Define o tempo de "delay". 0.2 segundos é um bom começo.
 const HOVER_DELAY = 0.5
 
 func _ready():

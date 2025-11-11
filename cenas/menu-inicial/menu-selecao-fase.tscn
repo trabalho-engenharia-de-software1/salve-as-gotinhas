@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dybiibrlqhty5"]
+[gd_scene load_steps=17 format=3 uid="uid://dybiibrlqhty5"]
 
 [ext_resource type="Script" uid="uid://da85m5tgo2pci" path="res://scripts/menu-inicial/menu_selecao_fase.gd" id="1_30tso"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_uxpq5"]
@@ -10,15 +10,10 @@
 [ext_resource type="AudioStream" uid="uid://cxp242pp3knj6" path="res://narracao/menu/somando.wav" id="7_eyu1c"]
 [ext_resource type="AudioStream" uid="uid://dpptpuwbjmx2n" path="res://narracao/menu/subtraindo.wav" id="8_cergd"]
 [ext_resource type="Texture2D" uid="uid://b22k8x1vaao04" path="res://imagens/backgrounds/soma-teste-1.png" id="9_emv4m"]
-[ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="10_b6xtr"]
 [ext_resource type="Texture2D" uid="uid://cw30agoty483i" path="res://imagens/backgrounds/subtracao.png" id="10_eyu1c"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="11_u6toy"]
-[ext_resource type="Script" uid="uid://yvlt17h37wvx" path="res://cenas/menu-inicial/botaosom.gd" id="14_ef25g"]
-[ext_resource type="AudioStream" uid="uid://bc3nle126udc7" path="res://narracao/menu/sair.wav" id="15_t06b1"]
-[ext_resource type="Script" uid="uid://btra6tf5qf04w" path="res://scripts/botao_sair.gd" id="15_tcr1x"]
+[ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="14_cergd"]
 [ext_resource type="Texture2D" uid="uid://c0c3x11uy7kwj" path="res://buttons/botoes-menu/play.png" id="16_ef25g"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcr1x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4h3qw"]
 size = Vector2(20.23256, 20.8)
@@ -42,36 +37,6 @@ modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
 position = Vector2(239, 124)
 scale = Vector2(0.317, 0.317)
 texture = ExtResource("1_uxpq5")
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.082
-anchor_top = 0.9480001
-anchor_right = 0.082
-anchor_bottom = 0.9480001
-offset_left = -36.36
-offset_top = -9.960022
-offset_right = 36.639984
-offset_bottom = 13.039978
-grow_horizontal = 2
-grow_vertical = 0
-focus_mode = 0
-mouse_force_pass_scroll_events = false
-theme = ExtResource("10_b6xtr")
-theme_override_fonts/font = ExtResource("2_4vtvw")
-theme_override_font_sizes/font_size = 16
-text = "SAIR"
-script = ExtResource("14_ef25g")
-meu_som_de_narracao = ExtResource("15_t06b1")
-
-[node name="Area2D" type="Area2D" parent="Button"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
-position = Vector2(36, 12)
-scale = Vector2(3.7, 1.2)
-shape = SubResource("RectangleShape2D_tcr1x")
-script = ExtResource("15_tcr1x")
 
 [node name="SomaTeste1" type="Sprite2D" parent="."]
 position = Vector2(136.5, 129.5)
@@ -181,41 +146,10 @@ theme_override_fonts/font = ExtResource("2_4vtvw")
 theme_override_font_sizes/font_size = 25
 text = "SELECIONE A FASE"
 
-<<<<<<< HEAD
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.082
-anchor_top = 0.9480001
-anchor_right = 0.082
-anchor_bottom = 0.9480001
-offset_left = -36.36
-offset_top = -9.960022
-offset_right = 36.639984
-offset_bottom = 13.039978
-grow_horizontal = 2
-grow_vertical = 0
-focus_mode = 0
-mouse_filter = 1
-theme = ExtResource("10_b6xtr")
-theme_override_fonts/font = ExtResource("2_4vtvw")
-theme_override_font_sizes/font_size = 16
-text = "SAIR"
-script = ExtResource("14_ef25g")
-meu_som_de_narracao = ExtResource("15_t06b1")
-
-[node name="Area2D" type="Area2D" parent="Button"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
-position = Vector2(36, 12)
-scale = Vector2(3.7, 1.2)
-shape = SubResource("RectangleShape2D_tcr1x")
-
-=======
->>>>>>> 6a8a1c7 (relatórios prontos)
 [node name="Sair" type="Sprite2D" parent="."]
-position = Vector2(9, 258)
-scale = Vector2(0.43218744, 0.4321874)
+z_index = 1
+position = Vector2(13.0425, 258.5425)
+scale = Vector2(0.5, 0.477)
 texture = ExtResource("11_u6toy")
 
 [node name="95f1477088a542CaB6259Bbb4Ab21f0f3" type="Sprite2D" parent="."]
@@ -228,8 +162,10 @@ position = Vector2(264, 223.99998)
 scale = Vector2(0.6132807, 0.64062405)
 texture = ExtResource("16_ef25g")
 
-[connection signal="pressed" from="Button" to="." method="sair"]
-[connection signal="mouse_entered" from="Button/Area2D" to="." method="_on_area_mouse_entered"]
+[node name="BotaoSair" parent="." instance=ExtResource("14_cergd")]
+position = Vector2(0, 235.99997)
+scale = Vector2(0.7, 0.7)
+
 [connection signal="mouse_entered" from="fase1/Area2D" to="." method="_on_area_mouse_entered"]
 [connection signal="mouse_entered" from="fase2/Area2D" to="." method="_on_area_mouse_entered"]
 [connection signal="pressed" from="iniciarfase1" to="." method="_on_iniciarfase_1_pressed"]

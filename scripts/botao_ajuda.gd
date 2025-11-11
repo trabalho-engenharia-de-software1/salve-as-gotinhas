@@ -92,3 +92,18 @@ func _parar_tour():
 	passo_atual = 0
 	tour_timer.stop()
 	PopupManager.esconder_ajuda()
+
+func iniciar_tour_automatico():
+	# Verifica se a ajuda já está ativa (para não bugar)
+	if ajuda_ativa:
+		return
+		
+	# Verifica se o tour está pronto (se a lista de passos não está vazia)
+	if passos_de_ajuda.is_empty():
+		# (Não mostra o erro "Nenhuma ajuda configurada" automaticamente)
+		return
+	
+	print("Iniciando tour de ajuda AUTOMÁTICO...")
+	ajuda_ativa = true
+	passo_atual = 0
+	_mostrar_proximo_passo() # Mostra o primeiro passo

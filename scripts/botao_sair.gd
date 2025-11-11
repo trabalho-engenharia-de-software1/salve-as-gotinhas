@@ -29,6 +29,7 @@ func _ready():
 # --- O RESTO DO SEU SCRIPT ESTÁ PERFEITO E NÃO MUDA ---
 
 func sair() -> void:
+	DadosDoJogo.descartar_run_atual()
 	get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-inicial.tscn")
 	
 func _on_area_mouse_entered():

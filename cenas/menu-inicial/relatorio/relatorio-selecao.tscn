@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://blak8guq6x5jy"]
+[gd_scene load_steps=17 format=3 uid="uid://blak8guq6x5jy"]
 
 [ext_resource type="Script" uid="uid://da85m5tgo2pci" path="res://scripts/menu-inicial/menu_selecao_fase.gd" id="1_npur4"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_p6qw6"]
@@ -7,23 +7,19 @@
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_gl12n"]
 [ext_resource type="Texture2D" uid="uid://b22k8x1vaao04" path="res://imagens/backgrounds/soma-teste-1.png" id="5_cv0od"]
 [ext_resource type="Texture2D" uid="uid://cw30agoty483i" path="res://imagens/backgrounds/subtracao.png" id="6_ddhdm"]
-[ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="7_gaaor"]
-[ext_resource type="Script" uid="uid://yvlt17h37wvx" path="res://cenas/menu-inicial/botaosom.gd" id="9_ad8ii"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="9_cv0od"]
 [ext_resource type="Texture2D" uid="uid://c0c3x11uy7kwj" path="res://buttons/botoes-menu/play.png" id="10_ddhdm"]
 [ext_resource type="Script" uid="uid://ccupdfvc1sw4g" path="res://cenas/fase2/labelsom.gd" id="11_6o8of"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="11_8mj5h"]
 [ext_resource type="AudioStream" uid="uid://cxp242pp3knj6" path="res://narracao/menu/somando.wav" id="12_sp4xu"]
 [ext_resource type="AudioStream" uid="uid://dpptpuwbjmx2n" path="res://narracao/menu/subtraindo.wav" id="13_sp4xu"]
-[ext_resource type="AudioStream" uid="uid://bc3nle126udc7" path="res://narracao/menu/sair.wav" id="14_rfyks"]
+[ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="14_ad8ii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4h3qw"]
 size = Vector2(20.23256, 20.8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef25g"]
 size = Vector2(20.11628, 20.8)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcr1x"]
 
 [node name="RelatorioSelecao" type="Control"]
 layout_mode = 3
@@ -148,37 +144,9 @@ theme_override_fonts/font = ExtResource("2_gaaor")
 theme_override_font_sizes/font_size = 25
 text = "SELECIONE A FASE"
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.082
-anchor_top = 0.9480001
-anchor_right = 0.082
-anchor_bottom = 0.9480001
-offset_left = -36.36
-offset_top = -9.960022
-offset_right = 36.639984
-offset_bottom = 13.039978
-grow_horizontal = 2
-grow_vertical = 0
-focus_mode = 0
-mouse_filter = 1
-theme = ExtResource("7_gaaor")
-theme_override_fonts/font = ExtResource("2_gaaor")
-theme_override_font_sizes/font_size = 16
-text = "SAIR"
-script = ExtResource("9_ad8ii")
-meu_som_de_narracao = ExtResource("14_rfyks")
-
-[node name="Area2D" type="Area2D" parent="Button"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
-position = Vector2(36, 12)
-scale = Vector2(3.7, 1.2)
-shape = SubResource("RectangleShape2D_tcr1x")
-
 [node name="Sair" type="Sprite2D" parent="."]
-position = Vector2(9, 258)
+z_index = 1
+position = Vector2(13.999999, 258)
 scale = Vector2(0.43218744, 0.4321874)
 texture = ExtResource("9_cv0od")
 
@@ -192,9 +160,11 @@ position = Vector2(264, 223.99998)
 scale = Vector2(0.6132807, 0.64062405)
 texture = ExtResource("10_ddhdm")
 
+[node name="BotaoSair" parent="." instance=ExtResource("14_ad8ii")]
+position = Vector2(1.0000005, 236)
+scale = Vector2(0.7, 0.7)
+
 [connection signal="mouse_entered" from="fase1/Area2D" to="." method="_on_area_mouse_entered"]
 [connection signal="mouse_entered" from="fase2/Area2D" to="." method="_on_area_mouse_entered"]
 [connection signal="pressed" from="iniciarsomando" to="." method="_on_iniciarsomando_pressed"]
 [connection signal="pressed" from="iniciarsubtraindo" to="." method="_on_iniciarsubtraindo_pressed"]
-[connection signal="pressed" from="Button" to="." method="sair"]
-[connection signal="mouse_entered" from="Button/Area2D" to="." method="_on_area_mouse_entered"]

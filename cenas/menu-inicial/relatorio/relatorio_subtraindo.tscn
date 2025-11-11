@@ -7,14 +7,11 @@
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_ig0cu"]
 [ext_resource type="Texture2D" uid="uid://b1ij2a8t4xv6w" path="res://imagens/backgrounds/borda lateral- atualizada - 1.png" id="6_ou351"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="8_6ersq"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="8_ig0cu"]
-=======
 [ext_resource type="Script" uid="uid://biqvrfldvudik" path="res://cenas/menu-inicial/relatorio/relatorio_nome.gd" id="9_il3ul"]
 [ext_resource type="Script" uid="uid://dojyi5u5gnr4h" path="res://cenas/menu-inicial/relatorio/relatorio_acertos.gd" id="10_vhtj1"]
 [ext_resource type="Script" uid="uid://yx2aourd1tpt" path="res://cenas/menu-inicial/relatorio/relatorio_erro.gd" id="11_t17m1"]
 [ext_resource type="Script" uid="uid://b0231avpg8cmx" path="res://cenas/menu-inicial/relatorio/relatorio_tempo.gd" id="12_pg7bc"]
->>>>>>> 6a8a1c7 (relatórios prontos)
 
 [node name="RelatorioSomando" type="Control"]
 layout_mode = 3
@@ -222,11 +219,9 @@ position = Vector2(15.339998, 259.34)
 scale = Vector2(0.60375, 0.6662509)
 texture = ExtResource("8_6ersq")
 
-<<<<<<< HEAD
 [node name="BotaoSair" parent="." instance=ExtResource("8_ig0cu")]
 position = Vector2(19.000002, 237)
 scale = Vector2(0.7, 0.7)
-=======
 [node name="Label15" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -312,4 +307,3 @@ theme_override_font_sizes/font_size = 8
 script = ExtResource("12_pg7bc")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
->>>>>>> 6a8a1c7 (relatórios prontos)

@@ -10,12 +10,9 @@
 [ext_resource type="Script" uid="uid://djc1eaejrjmcb" path="res://cenas/menu-inicial/relatorio/relatorio_etapa2.gd" id="7_gjb63"]
 [ext_resource type="Script" uid="uid://biqvrfldvudik" path="res://cenas/menu-inicial/relatorio/relatorio_nome.gd" id="7_p5atl"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="8_gbqnv"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="8_xq13t"]
-=======
 [ext_resource type="Script" uid="uid://bx2d6ebncelkp" path="res://cenas/menu-inicial/relatorio/relatorio_etapa4.gd" id="8_oc5nr"]
 [ext_resource type="Script" uid="uid://di1po6ih3wkuk" path="res://cenas/menu-inicial/relatorio/relatorio_etapa3.gd" id="9_q4juv"]
->>>>>>> 6a8a1c7 (relatórios prontos)
 
 [node name="RelatorioSomando" type="Control"]
 layout_mode = 3

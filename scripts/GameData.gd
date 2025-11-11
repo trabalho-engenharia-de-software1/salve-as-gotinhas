@@ -36,3 +36,21 @@ func reset() -> void:
 	flag1 = 0
 	flag2 = 0
 	nome_jogador =""
+	
+func descartar_run_atual() -> void:
+	# Limpa todos os dados temporários da run
+	tempo5 = 0 
+	tempo4 = 0
+	tempo3 = 0
+	tempo2 = 0
+	tempo1 = 0
+	botoes_corretos_fase1.clear()
+	valores.clear()
+	erros_acumulados = 0
+	erro_etapa2 = 0
+	erro_etapa3 = 0
+	erro_etapa4 = 0
+	erro_fase2 = 0
+	pontos_fase2 = 0
+	flag1 = 0
+	flag2 = 0
