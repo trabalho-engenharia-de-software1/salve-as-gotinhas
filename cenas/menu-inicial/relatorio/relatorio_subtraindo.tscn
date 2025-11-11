@@ -5,9 +5,9 @@
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_6ersq"]
 [ext_resource type="Texture2D" uid="uid://6ib6uipxcy5l" path="res://imagens/backgrounds/1pixel.png" id="3_16ols"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_ig0cu"]
-[ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="5_gs4qd"]
 [ext_resource type="Texture2D" uid="uid://b1ij2a8t4xv6w" path="res://imagens/backgrounds/borda lateral- atualizada - 1.png" id="6_ou351"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="8_6ersq"]
+[ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="8_ig0cu"]
 
 [node name="RelatorioSomando" type="Control"]
 layout_mode = 3
@@ -137,25 +137,6 @@ theme_override_fonts/font = ExtResource("4_ig0cu")
 theme_override_font_sizes/font_size = 16
 text = "TEMPO"
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -215.0
-offset_top = -23.0
-offset_right = -165.0
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(0.91, 0.91)
-focus_mode = 0
-theme = ExtResource("5_gs4qd")
-theme_override_fonts/font = ExtResource("3_6ersq")
-theme_override_font_sizes/font_size = 16
-text = "SAIR"
-
 [node name="BordaLateralAtualizada1" type="Sprite2D" parent="."]
 position = Vector2(257.5, 91.999985)
 scale = Vector2(19.406252, 6.25)
@@ -230,8 +211,10 @@ scale = Vector2(6.533, 2.450393)
 texture = ExtResource("6_ou351")
 
 [node name="Sair" type="Sprite2D" parent="."]
-position = Vector2(12, 257)
-scale = Vector2(0.895, 0.895)
+position = Vector2(15.339998, 259.34)
+scale = Vector2(0.60375, 0.6662509)
 texture = ExtResource("8_6ersq")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="BotaoSair" parent="." instance=ExtResource("8_ig0cu")]
+position = Vector2(19.000002, 237)
+scale = Vector2(0.7, 0.7)

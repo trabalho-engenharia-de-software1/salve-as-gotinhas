@@ -21,7 +21,7 @@ func _ready():
 	self.pressed.connect(_on_pressed)
 	
 	tour_timer = Timer.new()
-	tour_timer.wait_time = 4.0
+	tour_timer.wait_time = 4.5
 	tour_timer.one_shot = true
 	add_child(tour_timer)
 	tour_timer.timeout.connect(_mostrar_proximo_passo)

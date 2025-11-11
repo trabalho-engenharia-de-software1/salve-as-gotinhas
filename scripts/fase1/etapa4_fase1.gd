@@ -76,33 +76,44 @@ func _ready():
 	var lista_de_passos = [
 		{
 			"tipo": "alvo_manual",
-			"pos_centro_pixels": Vector2(90, 80), 
+			"pos_centro_pixels": Vector2(73, 70), 
 			"raios_pixels": Vector2(50, 40),      
-			"texto": "Este é o primeiro objeto que você escolheu."
+			"texto": "Este é o primeiro objeto que você escolheu.",
+			"audio": preload("res://narracao/fase 1/este e o primeiro objeto que vc escolheu.wav")
 		},
 		{
 			"tipo": "alvo_manual",
-			"pos_centro_pixels": Vector2(200, 80),
+			"pos_centro_pixels": Vector2(225, 70),
 			"raios_pixels": Vector2(50, 40),     
-			"texto": "Este é o segundo objeto."
+			"texto": "Este é o segundo objeto.",
+			"audio": preload("res://narracao/fase 1/e este e o segundo.wav")
 		},
 		{
 			"tipo": "alvo_manual",
-			"pos_centro_pixels": Vector2(148, 133), 
-			"raios_pixels": Vector2(140, 19),      
-			"texto": "Some as gotas dos objetos."
+			"pos_centro_pixels": Vector2(370, 70),
+			"raios_pixels": Vector2(50, 40),     
+			"texto": "Este é o terceiro objeto.",
+			"audio": preload("res://narracao/fase 1/este-é-o-terceiro-objeto.wav")
 		},
 		{
 			"tipo": "alvo_manual",
-			"pos_centro_pixels": Vector2(404, 130), 
-			"raios_pixels": Vector2(84, 130),      
-			"texto": "Qual destas é a resposta correta para a soma?"
+			"pos_centro_pixels": Vector2(230, 133), 
+			"raios_pixels": Vector2(230, 35),      
+			"texto": "Some as gotas dos objetos.",
+			"audio": preload("res://narracao/fase 1/some as gotas dos objetos.wav")
 		},
 		{
 			"tipo": "alvo_manual",
-			"pos_centro_pixels": Vector2(320, 140), 
-			"raios_pixels": Vector2(15, 110),      
-			"texto": "Para escolher uma resposta, clique em algum desses botoes"
+			"pos_centro_pixels": Vector2(230, 210), 
+			"raios_pixels": Vector2(235, 55),      
+			"texto": "Qual destas é a resposta correta para a soma?",
+			"audio": preload("res://narracao/fase 1/qual destas e a resposta correta para a soma .wav")
+		},
+		{
+			"tipo": "alvo_manual",
+			"pos_centro_pixels": Vector2(200, 140), 
+			"raios_pixels": Vector2(0, 0),      
+			"texto": "Escolha a resposta clicando no botao correto!"
 		}
 	]
 	
@@ -220,21 +231,28 @@ func _configurar_sprite(sprite_alvo: Sprite2D, valor_do_botao: int, audio_alvo: 
 
 func _on_resposta_3_button_down() -> void:
 	erro += 1
-	var texto_aviso = "essa resposta não é a correta"
+	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
+	var texto_aviso = "essa nao e a resposta correta"
 	PopupManager.mostrar(texto_aviso)
+	NarradorGlobal.tocar_narracao(audio)
 
 
 func _on_resposta_2_button_down() -> void:
 	DadosDoJogo.erro_etapa2 = erro
-	var texto_aviso = "parabens, você acertou"
+	var audio = preload("res://narracao/fase2/você-usou-bem-a-sua-água.-Parabéns.wav")
+	var texto_aviso = "você usou bem a sua água. Parabéns"
 	PopupManager.mostrar(texto_aviso)
+	NarradorGlobal.tocar_narracao(audio)
+	await get_tree().create_timer(4.5).timeout
 	ir_prox_etapa()
 
 
 func _on_resposta_button_down() -> void:
 	erro += 1
-	var texto_aviso = "essa resposta não é a correta"
+	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
+	var texto_aviso = "essa nao e a resposta correta"
 	PopupManager.mostrar(texto_aviso)
+	NarradorGlobal.tocar_narracao(audio)
 
 func ir_prox_etapa() -> void:
 	

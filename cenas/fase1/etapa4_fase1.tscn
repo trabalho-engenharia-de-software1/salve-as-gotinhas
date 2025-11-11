@@ -368,8 +368,6 @@ texture = ExtResource("4_wwssh")
 position = Vector2(174, 121)
 texture = ExtResource("4_wwssh")
 
-[node name="HelpLayer2" parent="." instance=ExtResource("5_2a2rl")]
-
 [node name="BotaoSair2" parent="." instance=ExtResource("6_y38o5")]
 position = Vector2(-5, 221)
 

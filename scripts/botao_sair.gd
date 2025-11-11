@@ -1,19 +1,42 @@
+# Anexado ao nó raiz "BotaoSair" (que é um Node2D)
 extends Node2D
 
-@onready var som_hover: AudioStreamPlayer2D = $AudioStreamPlayer2D
-@onready var area: Area2D = $Area2D
+@export var meu_som_de_narracao: AudioStream
+
+@onready var botao: Button = $sair
+	
+var hover_timer: Timer
+const HOVER_DELAY = 0.5
 
 func _ready():
-	if area:
-		area.input_pickable = true
-		area.mouse_entered.connect(_on_area_2d_mouse_entered)
-	else:
-		push_error("⚠️ Area2D não encontrada! Verifique a hierarquia.")
+	# 1. Conecta o sinal de "clique" do botão
+	botao.pressed.connect(sair) # Conecta à sua função 'sair()'
+	
+	# 2. Conecta os sinais de mouse DO PRÓPRIO BOTÃO
+	# (Nós não precisamos mais da 'area')
+	botao.mouse_entered.connect(_on_area_mouse_entered)
+	botao.mouse_exited.connect(_on_area_mouse_exited)
+	
+	# 3. Configura o timer
+	hover_timer = Timer.new()
+	hover_timer.wait_time = HOVER_DELAY
+	hover_timer.one_shot = true
+	add_child(hover_timer)
+	
+	# 4. Conecta o timer à função de "tocar"
+	hover_timer.timeout.connect(_on_hover_timer_timeout)
 
-func _on_area_2d_mouse_entered() -> void:
-	print("Mouse entrou em:", name)
-	if som_hover and not som_hover.playing:
-		som_hover.play()
+# --- O RESTO DO SEU SCRIPT ESTÁ PERFEITO E NÃO MUDA ---
 
-func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-selecao-fase.tscn")
+func sair() -> void:
+	get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-inicial.tscn")
+	
+func _on_area_mouse_entered():
+	hover_timer.start()
+
+func _on_area_mouse_exited():
+	hover_timer.stop()
+	NarradorGlobal.tocar_narracao(null)
+	
+func _on_hover_timer_timeout():
+	NarradorGlobal.tocar_narracao(meu_som_de_narracao)

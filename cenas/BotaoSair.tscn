@@ -1,19 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://bduvxvwg6a5tb"]
+[gd_scene load_steps=5 format=3 uid="uid://bduvxvwg6a5tb"]
 
 [ext_resource type="Script" uid="uid://btra6tf5qf04w" path="res://scripts/botao_sair.gd" id="1_r4f7v"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="1_v2kss"]
 [ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="2_0n2yk"]
-[ext_resource type="AudioStream" uid="uid://bc3nle126udc7" path="res://narracao/menu/sair.wav" id="4_otgjo"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgs2l"]
+[ext_resource type="AudioStream" uid="uid://bc3nle126udc7" path="res://narracao/menu/sair.wav" id="5_jgs2l"]
 
 [node name="BotaoSair" type="Node2D"]
 script = ExtResource("1_r4f7v")
+meu_som_de_narracao = ExtResource("5_jgs2l")
 
 [node name="sair" type="Button" parent="."]
 offset_left = 8.0
 offset_top = 16.0
-offset_right = 87.0
+offset_right = 96.0
 offset_bottom = 45.0
 focus_mode = 0
 theme = ExtResource("2_0n2yk")
@@ -21,18 +20,4 @@ theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("1_v2kss")
 text = "SAIR"
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(8, 16)
-collision_priority = 100.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(40, 14.5)
-scale = Vector2(4.2, 1.6)
-shape = SubResource("RectangleShape2D_jgs2l")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(8, 16)
-stream = ExtResource("4_otgjo")
-
-[connection signal="pressed" from="sair" to="." method="_on_button_pressed"]
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="pressed" from="sair" to="." method="sair"]

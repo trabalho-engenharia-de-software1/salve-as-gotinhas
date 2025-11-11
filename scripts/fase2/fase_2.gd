@@ -1,5 +1,9 @@
 extends Node2D
 
+@onready var reservatorio = $Reservatorio
+@onready var botao_ajuda = $HelpLayer/botaoAjuda
+@onready var medidor_total = $MedidorTotal
+
 var agua_maxima: float = 100.0
 var agua_atual: float = 100.0
 var pontos = 0
@@ -7,10 +11,6 @@ var pontos = 0
 var inicio_fase: float
 var fim_fase: float
 var duracao: float
-
-@onready var reservatorio = $Reservatorio
-@onready var botao_ajuda = $HelpLayer/botaoAjuda
-@onready var medidor_total = $MedidorTotal
 
 # --- MUDANÇA 1: Variáveis para guardar as coordenadas manuais ---
 var pos_manual_reserv = Vector2(70, 140) # Use os valores que funcionam
@@ -78,10 +78,12 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 	
 	if is_zero_approx(agua_atual):
 		# 1. MOSTRA o popup de vitória
+		var audio = preload("res://narracao/fase2/você-usou-bem-a-sua-água.-Parabéns.wav")
 		PopupManager.mostrar("Voce usou bem a sua agua. Parabens!!")
+		NarradorGlobal.tocar_narracao(audio)
 		
 		# 2. ESPERA o jogador ler
-		await get_tree().create_timer(3.0).timeout
+		await get_tree().create_timer(4.5).timeout
 		
 		# 3. MANDA O POPUP SE ESCONDER
 		PopupManager.esconder_ajuda()
@@ -103,15 +105,17 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 		PopupManager.mostrar_ajuda_manual(
 			pos_manual_reserv, 
 			raios_manual_reserv, 
-			"Gastou mais agua que tinha. Tente novamente"
+			"Gastou mais agua que tinha. Tente novamente",
 		)
+		var audio2 = preload("res://narracao/fase2/gastou-mais-água-que-tinha.-Tente-novamente.wav")
+		NarradorGlobal.tocar_narracao(audio2)
 		fim_fase = Time.get_unix_time_from_system()
 		duracao = fim_fase - inicio_fase
 		print("Duração total:", duracao, "s")
 		DadosDoJogo.erro_fase2 = DadosDoJogo.erro_fase2 + 1
 		DadosDoJogo.tempo5 = DadosDoJogo.tempo5 + duracao
 		# 2. ESPERA o jogador ler
-		await get_tree().create_timer(3.0).timeout
+		await get_tree().create_timer(4.8).timeout
 		
 		# 3. MANDA O POPUP SE ESCONDER
 		PopupManager.esconder_ajuda()

@@ -332,8 +332,6 @@ position = Vector2(43, 230)
 scale = Vector2(80, 83)
 shape = SubResource("RectangleShape2D_84yh3")
 
-[node name="HelpLayer2" parent="." instance=ExtResource("10_jt2rn")]
-
 [node name="BotaoSair2" parent="." instance=ExtResource("11_7eouo")]
 position = Vector2(-7, 220)
 

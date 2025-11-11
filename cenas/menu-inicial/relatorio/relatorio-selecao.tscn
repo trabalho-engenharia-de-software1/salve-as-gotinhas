@@ -1,27 +1,29 @@
-[gd_scene load_steps=17 format=3 uid="uid://blak8guq6x5jy"]
+[gd_scene load_steps=20 format=3 uid="uid://blak8guq6x5jy"]
 
+[ext_resource type="Script" uid="uid://da85m5tgo2pci" path="res://scripts/menu-inicial/menu_selecao_fase.gd" id="1_npur4"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_p6qw6"]
-[ext_resource type="Script" uid="uid://7hh22cagyaua" path="res://scripts/menu-inicial/relatorio_selecao.gd" id="1_vhoy2"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="2_gaaor"]
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="3_vhoy2"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_gl12n"]
 [ext_resource type="Texture2D" uid="uid://b22k8x1vaao04" path="res://imagens/backgrounds/soma-teste-1.png" id="5_cv0od"]
 [ext_resource type="Texture2D" uid="uid://cw30agoty483i" path="res://imagens/backgrounds/subtracao.png" id="6_ddhdm"]
 [ext_resource type="Theme" uid="uid://ctbnfvmw4wfb6" path="res://estilos/botao-sair.tres" id="7_gaaor"]
+[ext_resource type="Script" uid="uid://yvlt17h37wvx" path="res://cenas/menu-inicial/botaosom.gd" id="9_ad8ii"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="9_cv0od"]
 [ext_resource type="Texture2D" uid="uid://c0c3x11uy7kwj" path="res://buttons/botoes-menu/play.png" id="10_ddhdm"]
 [ext_resource type="Script" uid="uid://ccupdfvc1sw4g" path="res://cenas/fase2/labelsom.gd" id="11_6o8of"]
+[ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="11_8mj5h"]
 [ext_resource type="AudioStream" uid="uid://cxp242pp3knj6" path="res://narracao/menu/somando.wav" id="12_sp4xu"]
 [ext_resource type="AudioStream" uid="uid://dpptpuwbjmx2n" path="res://narracao/menu/subtraindo.wav" id="13_sp4xu"]
+[ext_resource type="AudioStream" uid="uid://bc3nle126udc7" path="res://narracao/menu/sair.wav" id="14_rfyks"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sp4xu"]
-size = Vector2(23.783785, 26.666656)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4h3qw"]
+size = Vector2(20.23256, 20.8)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ad8ii"]
-size = Vector2(20.23256, 19.2)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ef25g"]
+size = Vector2(20.11628, 20.8)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gr6e"]
-size = Vector2(20.11628, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcr1x"]
 
 [node name="RelatorioSelecao" type="Control"]
 layout_mode = 3
@@ -30,130 +32,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_vhoy2")
+size_flags_horizontal = 0
+mouse_filter = 2
+script = ExtResource("1_npur4")
 
-[node name="BackgroundMenuInicial2" type="Sprite2D" parent="."]
+[node name="BackgroundMenuInicial" type="Sprite2D" parent="."]
 modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
 position = Vector2(239, 124)
 scale = Vector2(0.317, 0.317)
 texture = ExtResource("1_p6qw6")
 
-[node name="fase2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 278.0
-offset_top = 28.0
-offset_right = 412.0
-offset_bottom = 49.0
-size_flags_horizontal = 8
-size_flags_vertical = 0
-theme_override_constants/outline_size = 4
-theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("2_gaaor")
-
-[node name="somando" type="Button" parent="."]
-layout_mode = 0
-offset_left = 51.0
-offset_top = 212.0
-offset_right = 221.0
-offset_bottom = 241.0
-focus_mode = 0
-theme = ExtResource("3_vhoy2")
-theme_override_fonts/font = ExtResource("4_gl12n")
-theme_override_font_sizes/font_size = 16
-text = " somando"
-
-[node name="sub" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -222.0
-offset_top = -60.0
-offset_right = -53.0
-offset_bottom = -31.0
-grow_horizontal = 0
-grow_vertical = 0
-focus_mode = 0
-theme = ExtResource("3_vhoy2")
-theme_override_fonts/font = ExtResource("4_gl12n")
-theme_override_font_sizes/font_size = 16
-text = "SUBTRAINDO"
-
 [node name="SomaTeste1" type="Sprite2D" parent="."]
-position = Vector2(136.5, 127.5)
+position = Vector2(136.5, 129.5)
 scale = Vector2(10.5625, 10.5625)
 texture = ExtResource("5_cv0od")
 
 [node name="SomaTeste2" type="Sprite2D" parent="."]
-position = Vector2(342.5, 127.5)
+position = Vector2(342.5, 129.5)
 scale = Vector2(10.5625, 10.5625)
 texture = ExtResource("6_ddhdm")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -89.0
-offset_top = 8.0
-offset_right = 89.0
-offset_bottom = 41.0
-grow_horizontal = 2
-size_flags_vertical = 8
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/line_spacing = 0
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 0
-theme_override_constants/outline_size = 9
-theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("2_gaaor")
-theme_override_font_sizes/font_size = 25
-text = "relatório"
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -215.0
-offset_top = -25.0
-offset_right = -165.0
-offset_bottom = -2.0
-grow_horizontal = 2
-grow_vertical = 0
-focus_mode = 0
-mouse_filter = 1
-theme = ExtResource("7_gaaor")
-theme_override_fonts/font = ExtResource("2_gaaor")
-theme_override_font_sizes/font_size = 16
-text = "SAIR"
-
-[node name="Area2D" type="Area2D" parent="Button"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
-position = Vector2(18.999996, 11)
-scale = Vector2(3.7, 1.2)
-shape = SubResource("RectangleShape2D_sp4xu")
-
-[node name="Sair" type="Sprite2D" parent="."]
-position = Vector2(12, 257)
-scale = Vector2(0.895, 0.895)
-texture = ExtResource("9_cv0od")
-metadata/_edit_lock_ = true
-
-[node name="95f1477088a542CaB6259Bbb4Ab21f0f2" type="Sprite2D" parent="."]
-position = Vector2(272, 226)
-scale = Vector2(0.95312417, 1.0624998)
-texture = ExtResource("10_ddhdm")
-
-[node name="95f1477088a542CaB6259Bbb4Ab21f0f3" type="Sprite2D" parent="."]
-position = Vector2(65, 227)
-scale = Vector2(0.95312417, 1.0624998)
-texture = ExtResource("10_ddhdm")
 
 [node name="fase1" type="Label" parent="."]
 layout_mode = 0
@@ -173,9 +70,9 @@ meu_som_de_narracao = ExtResource("12_sp4xu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fase1/Area2D"]
 position = Vector2(51, 110)
 scale = Vector2(8.6, 10)
-shape = SubResource("RectangleShape2D_ad8ii")
+shape = SubResource("RectangleShape2D_4h3qw")
 
-[node name="fase3" type="Label" parent="."]
+[node name="fase2" type="Label" parent="."]
 layout_mode = 0
 offset_left = 278.0
 offset_top = 25.0
@@ -189,14 +86,115 @@ theme_override_fonts/font = ExtResource("2_gaaor")
 script = ExtResource("11_6o8of")
 meu_som_de_narracao = ExtResource("13_sp4xu")
 
-[node name="Area2D" type="Area2D" parent="fase3"]
+[node name="Area2D" type="Area2D" parent="fase2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fase3/Area2D"]
-position = Vector2(64.5, 115)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fase2/Area2D"]
+position = Vector2(64.5, 111)
 scale = Vector2(8.6, 10)
-shape = SubResource("RectangleShape2D_3gr6e")
+shape = SubResource("RectangleShape2D_ef25g")
 
-[connection signal="pressed" from="somando" to="." method="_on_somando_pressed"]
-[connection signal="pressed" from="sub" to="." method="_on_sub_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="iniciarsomando" type="Button" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 208.0
+offset_right = 223.0
+offset_bottom = 243.0
+focus_mode = 0
+theme = ExtResource("3_vhoy2")
+theme_override_fonts/font = ExtResource("4_gl12n")
+theme_override_font_sizes/font_size = 16
+text = "SOMANDO"
+
+[node name="iniciarsubtraindo" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -224.0
+offset_top = -62.0
+offset_right = -53.0
+offset_bottom = -29.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+theme = ExtResource("3_vhoy2")
+theme_override_fonts/font = ExtResource("4_gl12n")
+theme_override_font_sizes/font_size = 16
+text = "SUBTRAINDO
+"
+
+[node name="HelpLayer" parent="." instance=ExtResource("11_8mj5h")]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -89.0
+offset_top = -2.0
+offset_right = 89.0
+offset_bottom = 31.0
+grow_horizontal = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("2_gaaor")
+theme_override_font_sizes/font_size = 25
+text = "SELECIONE A FASE"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.082
+anchor_top = 0.9480001
+anchor_right = 0.082
+anchor_bottom = 0.9480001
+offset_left = -36.36
+offset_top = -9.960022
+offset_right = 36.639984
+offset_bottom = 13.039978
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+mouse_filter = 1
+theme = ExtResource("7_gaaor")
+theme_override_fonts/font = ExtResource("2_gaaor")
+theme_override_font_sizes/font_size = 16
+text = "SAIR"
+script = ExtResource("9_ad8ii")
+meu_som_de_narracao = ExtResource("14_rfyks")
+
+[node name="Area2D" type="Area2D" parent="Button"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
+position = Vector2(36, 12)
+scale = Vector2(3.7, 1.2)
+shape = SubResource("RectangleShape2D_tcr1x")
+
+[node name="Sair" type="Sprite2D" parent="."]
+position = Vector2(9, 258)
+scale = Vector2(0.43218744, 0.4321874)
+texture = ExtResource("9_cv0od")
+
+[node name="95f1477088a542CaB6259Bbb4Ab21f0f3" type="Sprite2D" parent="."]
+position = Vector2(56.000004, 223.99998)
+scale = Vector2(0.6132809, 0.64062405)
+texture = ExtResource("10_ddhdm")
+
+[node name="95f1477088a542CaB6259Bbb4Ab21f0f4" type="Sprite2D" parent="."]
+position = Vector2(264, 223.99998)
+scale = Vector2(0.6132807, 0.64062405)
+texture = ExtResource("10_ddhdm")
+
+[connection signal="mouse_entered" from="fase1/Area2D" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_entered" from="fase2/Area2D" to="." method="_on_area_mouse_entered"]
+[connection signal="pressed" from="iniciarsomando" to="." method="_on_iniciarsomando_pressed"]
+[connection signal="pressed" from="iniciarsubtraindo" to="." method="_on_iniciarsubtraindo_pressed"]
+[connection signal="pressed" from="Button" to="." method="sair"]
 [connection signal="mouse_entered" from="Button/Area2D" to="." method="_on_area_mouse_entered"]

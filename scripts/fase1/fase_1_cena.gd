@@ -22,13 +22,15 @@ func _ready():
 		{
 			"tipo": "alvo_automatico",
 			"alvo": alvo_chuveiro, # O alvo é o botão do chuveiro
-			"texto": "Clique para escolher uma atividade que gasta agua."
+			"texto": "Clique aqui para escolher uma atividade que gasta agua.",
+			"audio": preload("res://narracao/fase 1/clique para escolher uma atividade que gasta agua.wav")
 		},
 		{
 			"tipo": "alvo_manual",
 			"pos_centro_pixels": pos_manual_reserv,
 			"raios_pixels": raios_manual_reserv,
-			"texto": "Escolha 3 itens que gastam agua!"
+			"texto": "Escolha 3 itens que gastam agua!",
+			"audio": preload("res://narracao/fase 1/escolha 3 itens que gastam agua.wav")
 		}
 	]
 	script_do_botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
@@ -50,9 +52,11 @@ func _on_botão_2_button_down() -> void:
 func _on_botão_3_button_down() -> void:
 	erro = erro + 1
 	var texto_aviso = "Esse item não gasta água!"
-	var pos_centro_pc = Vector2(300, 75) # Posição (X, Y) do centro do computador
+	var audio = preload("res://narracao/fase 1/esse item nao gasta agua.wav")
+	var pos_centro_pc = Vector2(290, 60) # Posição (X, Y) do centro do computador
 	var raios_pc = Vector2(55, 55)       # Tamanho do oval (Largura, Altura)
 	PopupManager.mostrar_ajuda_manual(pos_centro_pc, raios_pc, texto_aviso)
+	NarradorGlobal.tocar_narracao(audio)
 	$botão3.disabled = true
 
 
@@ -83,9 +87,11 @@ func _on_botão_6_button_down() -> void:
 func _on_botão_7_button_down() -> void:
 	erro = erro + 1
 	var texto_aviso = "Esse item não gasta água!"
-	var pos_centro_bola = Vector2(300, 185) # Posição (X, Y) do centro do computador
+	var audio = preload("res://narracao/fase 1/esse item nao gasta agua.wav")
+	var pos_centro_bola = Vector2(297, 170) # Posição (X, Y) do centro do computador
 	var raios_bola = Vector2(38, 38)       # Tamanho do oval (Largura, Altura)
 	PopupManager.mostrar_ajuda_manual(pos_centro_bola, raios_bola, texto_aviso)
+	NarradorGlobal.tocar_narracao(audio)
 	$botão7.disabled = true
 
 

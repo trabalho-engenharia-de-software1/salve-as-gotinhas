@@ -11,7 +11,7 @@ var timer_auto_fechar: Timer
 
 func _ready():
 	timer_auto_fechar = Timer.new()
-	timer_auto_fechar.wait_time = 3.0
+	timer_auto_fechar.wait_time = 4.5
 	timer_auto_fechar.one_shot = true
 	add_child(timer_auto_fechar)
 	timer_auto_fechar.timeout.connect(esconder_popup)

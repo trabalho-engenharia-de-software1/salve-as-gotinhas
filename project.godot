@@ -23,7 +23,6 @@ buses/default_bus_layout="res://cenas/default_bus_layout.tres"
 [autoload]
 
 PopupManager="*res://scripts/popupManager.gd"
-HelpLayer="*res://cenas/menu-inicial/help-layer.tscn"
 DadosDoJogo="*res://scripts/GameData.gd"
 RelatorioDados="*res://scripts/relatorio_dados.gd"
 LabelVolume="*res://scripts/menu-inicial/label_volume.gd"

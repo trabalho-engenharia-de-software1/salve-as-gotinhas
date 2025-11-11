@@ -20,22 +20,25 @@ func _ready() -> void:
 			"tipo": "alvo_automatico",
 			"alvo": botao_jogar, 
 			"texto": "Clique em JOGAR para começar a aventura!",
-			
+			"audio":preload("res://narracao/menu/clique-em-Jogar-para-começar-a-aventura.wav")
 		},
 		{
 			"tipo": "alvo_automatico",
 			"alvo": botao_config, 
 			"texto": "Clique em CONFIGURACOES para ajustar a narracao!",
+			"audio":preload("res://narracao/menu/clique-em-configurações-para-ajustar-a-narração.wav")
 		},
 		{
 			"tipo": "alvo_automatico",
 			"alvo": botao_creditos,
-			"texto": "Veja quem trabalhou neste jogo."
+			"texto": "Veja quem trabalhou neste jogo.",
+			"audio":preload("res://narracao/menu/veja-quem-trabalhou-neste-jogo.wav")
 		},
 		{
 			"tipo": "alvo_automatico",
 			"alvo": botao_sair,
-			"texto": "clique em SAIR para fechar o jogo."
+			"texto": "clique em SAIR para fechar o jogo.",
+			"audio":preload("res://narracao/menu/clique-em-sair-para-fechar-o-jogo.wav")
 		}
 	]
 	# Entrega a lista de passos para o script do botão de ajuda
