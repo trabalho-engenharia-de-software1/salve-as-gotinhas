@@ -19,6 +19,7 @@ var tempo4 = 0
 var tempo5 = 0 
 
 func reset() -> void:
+	RelatorioDados.qtd =RelatorioDados.qtd + 1
 	tempo5 = 0 
 	tempo4 = 0
 	tempo3 = 0

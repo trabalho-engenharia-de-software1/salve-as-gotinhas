@@ -54,7 +54,7 @@ func _ready():
 	_configurar_label($Label3, DadosDoJogo.valores[0]+DadosDoJogo.valores[2]-1, $Label3/AudioStreamPlayer2D)
 	_configurar_label($Label4, DadosDoJogo.valores[0]+DadosDoJogo.valores[2]-3, $Label4/AudioStreamPlayer2D)
 	_configurar_label($Label6, DadosDoJogo.valores[0] + DadosDoJogo.valores[2], $Label6/AudioStreamPlayer2D)
-	_configurar_label($Label7, DadosDoJogo.valores[0]+DadosDoJogo.valores[2]-2, $Label7/AudioStreamPlayer2D)
+	_configurar_label($Label7, DadosDoJogo.valores[0]+DadosDoJogo.valores[2]+1, $Label7/AudioStreamPlayer2D)
 	
 	# 2. Configura o PRIMEIRO Sprite (Posição de índice 0 do array)
 	_configurar_sprite($Sprite1, acertos_fase_anterior[0],$Sprite1/AudioStreamPlayer2D)
