@@ -84,7 +84,7 @@ func _ready():
 			"pos_centro_pixels": Vector2(202, 90),
 			"raios_pixels": Vector2(50, 40),     
 			"texto": "Este é o terceiro objeto.",
-			"audio": preload("res://narracao/fase 1/este-é-o-terceiro-objeto.wav")
+			"audio": preload("res://narracao/fase 1/esteo3objeto.wav")
 		},
 		{
 			"tipo": "alvo_manual",
