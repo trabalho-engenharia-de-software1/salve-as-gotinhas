@@ -7,11 +7,20 @@ extends Node2D
 	
 var hover_timer: Timer
 const HOVER_DELAY = 0.5
-
+var pai = ""
 func _ready():
 	# 1. Conecta o sinal de "clique" do botão
 	botao.pressed.connect(sair) # Conecta à sua função 'sair()'
-	
+	var arvore = get_tree()
+	if arvore == null:
+		print("A árvore ainda não existe!")
+		return
+	pai = arvore.get_current_scene()
+	if pai == null:
+		print("Nenhuma cena carregada ainda!")
+		return
+	print("Cena atual:", pai.name)
+	pai = pai.name
 	# 2. Conecta os sinais de mouse DO PRÓPRIO BOTÃO
 	# (Nós não precisamos mais da 'area')
 	botao.mouse_entered.connect(_on_area_mouse_entered)
@@ -29,11 +38,13 @@ func _ready():
 # --- O RESTO DO SEU SCRIPT ESTÁ PERFEITO E NÃO MUDA ---
 
 func sair() -> void:
-	if DadosDoJogo.flag1 == 0:
-		DadosDoJogo.descartar_run_atual1()
-	if DadosDoJogo.flag2 == 0:
-		DadosDoJogo.descartar_run_atual2()
-	get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-inicial.tscn")
+	if pai == "Fase1Cena" or pai == "Etapa4Fase1" or pai == "Etapa3Fase1" or pai == "Etapa2Fase1" or pai == "Fase2Cena":
+		DadosDoJogo.reset()
+		get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-selecao-fase.tscn")
+	else:
+		if pai == "MenuSelecao":
+			DadosDoJogo.reset()
+		get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-inicial.tscn")
 	
 func _on_area_mouse_entered():
 	hover_timer.start()

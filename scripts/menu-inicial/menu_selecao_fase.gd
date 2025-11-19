@@ -39,18 +39,6 @@ func sair() -> void:
 	get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-inicial.tscn")
 	
 func confg() -> void:
-	RelatorioDados.nome_jogador.append(DadosDoJogo.nome_jogador)
-	RelatorioDados.erros_acumulados.append(DadosDoJogo.erros_acumulados)
-	RelatorioDados.erro_etapa2.append(DadosDoJogo.erro_etapa2)
-	RelatorioDados.erro_etapa3.append(DadosDoJogo.erro_etapa3)
-	RelatorioDados.erro_etapa4.append(DadosDoJogo.erro_etapa4)
-	RelatorioDados.erro_fase2.append(DadosDoJogo.erro_fase2)
-	RelatorioDados.pontos_fase2.append(DadosDoJogo.pontos_fase2)
-	RelatorioDados.tempo1.append(DadosDoJogo.tempo1)
-	RelatorioDados.tempo2.append(DadosDoJogo.tempo2)
-	RelatorioDados.tempo3.append(DadosDoJogo.tempo3)
-	RelatorioDados.tempo4.append(DadosDoJogo.tempo4)
-	RelatorioDados.tempo5.append(DadosDoJogo.tempo5)
 	DadosDoJogo.reset()
 
 
