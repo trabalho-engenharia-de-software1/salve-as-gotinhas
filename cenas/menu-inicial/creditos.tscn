@@ -19,7 +19,7 @@ grow_vertical = 2
 script = ExtResource("1_wwioi")
 
 [node name="BackgroundMenuInicial2" type="Sprite2D" parent="."]
-modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
+modulate = Color(0.24840015, 0.24840018, 0.24840012, 1)
 position = Vector2(239, 124)
 scale = Vector2(0.317, 0.317)
 texture = ExtResource("2_dlmhd")
@@ -49,7 +49,7 @@ offset_bottom = 182.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
+theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("4_ckb85")
 text = "O OBJETIVO DO JOGO E AUXILIAR NO ENSINO, 
 CONSCIENTIZANDO SOBRE O USO CORRETO DA AGUA
@@ -75,7 +75,7 @@ grow_vertical = 0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 4
+theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("4_ckb85")
 text = "produzido por Daniel, Felipe BENHUK, 
 FELIPE DE SANTOS, FERNANDO, TOBIAS."

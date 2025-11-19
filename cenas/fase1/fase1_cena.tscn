@@ -37,6 +37,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbxf7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlmcf"]
+size = Vector2(20, 19.563267)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mhbk4"]
 
@@ -301,7 +302,7 @@ meu_som_de_narracao = ExtResource("20_v51e0")
 [node name="Area2D" type="Area2D" parent="regador"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="regador/Area2D"]
-position = Vector2(46, 230)
+position = Vector2(46, 245.2857)
 scale = Vector2(76.5, 70)
 shape = SubResource("RectangleShape2D_rlmcf")
 

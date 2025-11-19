@@ -1,37 +1,51 @@
-[gd_scene load_steps=3 format=3 uid="uid://cn4rapd6fycug"]
+[gd_scene load_steps=6 format=3 uid="uid://cn4rapd6fycug"]
 
 [ext_resource type="Script" uid="uid://ceg3en8eehmuw" path="res://cenas/menu-inicial/cadastro.gd" id="1_qc5mk"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="2_n1sp3"]
+[ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_i3mo8"]
+[ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="4_cw7b5"]
+[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_ns034"]
 
 [node name="Cadastro" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_qc5mk")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="BackgroundMenuInicial" type="Sprite2D" parent="."]
+modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
 position = Vector2(239, 124)
 scale = Vector2(0.317, 0.317)
 texture = ExtResource("2_n1sp3")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 160.0
-offset_top = 44.0
-offset_right = 284.0
-offset_bottom = 67.0
-text = "Insira seu nome"
+offset_left = 104.0
+offset_top = 46.0
+offset_right = 374.0
+offset_bottom = 76.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_i3mo8")
+theme_override_font_sizes/font_size = 23
+text = "Insira seu nome:"
 
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 172.0
-offset_top = 105.0
-offset_right = 309.0
-offset_bottom = 136.0
+offset_left = 174.0
+offset_top = 96.0
+offset_right = 311.0
+offset_bottom = 127.0
+focus_mode = 1
+focus_behavior_recursive = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("4_ns034")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 175.0
-offset_top = 157.0
-offset_right = 295.0
-offset_bottom = 190.0
+offset_top = 130.0
+offset_right = 310.0
+offset_bottom = 161.0
+focus_behavior_recursive = 1
+theme = ExtResource("4_cw7b5")
 text = "Confirmar"
