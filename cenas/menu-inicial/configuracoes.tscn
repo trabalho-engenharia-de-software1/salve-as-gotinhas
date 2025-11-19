@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://co6pvlhqookc5"]
+[gd_scene load_steps=10 format=3 uid="uid://co6pvlhqookc5"]
 
-[ext_resource type="Script" uid="uid://da85m5tgo2pci" path="res://scripts/menu-inicial/menu_selecao_fase.gd" id="1_oxylr"]
+[ext_resource type="Script" uid="uid://du6uv7o4sxmxx" path="res://cenas/menu-inicial/configuracoes.gd" id="1_oxylr"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="3_0iq5r"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="4_0lb05"]
+[ext_resource type="Texture2D" uid="uid://dxwtfv5atsmou" path="res://buttons/botao-check/botao-check.png" id="6_j3sth"]
+[ext_resource type="Texture2D" uid="uid://bw3n6dwddli6k" path="res://buttons/botao-check/botao-vazio.png" id="7_0iq5r"]
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="7_hq8fr"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="7_x4x87"]
 [ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="7_xy1o3"]
@@ -60,11 +62,62 @@ theme_override_fonts/font = ExtResource("4_0lb05")
 theme_override_font_sizes/font_size = 25
 text = "Configurações"
 
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.0
+offset_top = 116.0
+offset_right = 40.0
+offset_bottom = 149.0
+grow_horizontal = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("4_0lb05")
+theme_override_font_sizes/font_size = 18
+text = "DIFICULDADE:"
+
 [node name="Sair" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(219.99998, 237.99998)
 scale = Vector2(0.61437494, 0.61437404)
 texture = ExtResource("7_x4x87")
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 1
+offset_left = 174.0
+offset_top = 117.0
+offset_right = 218.0
+offset_bottom = 141.0
+theme_override_icons/checked = ExtResource("6_j3sth")
+theme_override_icons/unchecked = ExtResource("7_0iq5r")
+flat = true
+
+[node name="CheckButton2" type="CheckButton" parent="."]
+layout_mode = 1
+offset_left = 281.0
+offset_top = 116.0
+offset_right = 325.0
+offset_bottom = 140.0
+theme_override_icons/checked = ExtResource("6_j3sth")
+theme_override_icons/unchecked = ExtResource("7_0iq5r")
+flat = true
+
+[node name="CheckButton3" type="CheckButton" parent="."]
+layout_mode = 1
+offset_left = 227.0
+offset_top = 116.0
+offset_right = 271.0
+offset_bottom = 140.0
+theme_override_icons/checked = ExtResource("6_j3sth")
+theme_override_icons/unchecked = ExtResource("7_0iq5r")
+flat = true
 
 [node name="volume-layer" parent="." instance=ExtResource("8_hq8fr")]
 layer = 2

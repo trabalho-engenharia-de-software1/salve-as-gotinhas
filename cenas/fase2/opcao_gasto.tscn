@@ -16,11 +16,13 @@ theme_override_icons/checked = ExtResource("1_1cvmd")
 theme_override_icons/unchecked = ExtResource("2_fn3ub")
 flat = true
 script = ExtResource("2_7xbv1")
+custo_e_gotas = 0
 
 [node name="Gotas" type="Node2D" parent="."]
 position = Vector2(-79, 52)
 
 [node name="gotinha" type="Sprite2D" parent="Gotas"]
+visible = false
 position = Vector2(48.791992, -8.87207)
 scale = Vector2(0.02030471, 0.027468747)
 texture = ExtResource("3_7xbv1")

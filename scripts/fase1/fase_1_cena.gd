@@ -103,16 +103,35 @@ func _on_botão_8_button_down() -> void:
 	$botão8.disabled = true
 
 func colocar_valor() -> void:
-	if qtd == 1:
-		valor = randi()%2 + 3
-		num.append(valor)
-	if qtd == 2:
-		valor = randi()%3 + 4
-		num.append(valor)
-	if qtd == 3:
-		valor = randi()%4 + 7
-		num.append(valor)
-		
+	if DadosDoJogo.dific == 3:
+		if qtd == 1:
+			valor = randi()%2 + 3
+			num.append(valor)
+		if qtd == 2:
+			valor = randi()%3 + 4
+			num.append(valor)
+		if qtd == 3:
+			valor = randi()%4 + 7
+			num.append(valor)
+	elif DadosDoJogo.dific == 2:
+		if qtd == 1:
+			valor = randi()%2 + 3
+			num.append(valor)
+		if qtd == 2:
+			valor = randi()%3 + 4
+			num.append(valor)
+		if qtd == 3:
+			valor = randi()%4 + 3
+	elif DadosDoJogo.dific == 1:
+		if qtd == 1:
+			valor = randi()%2 + 3
+			num.append(valor)
+		if qtd == 2:
+			valor = randi()%2 + 4
+			num.append(valor)
+		if qtd == 3:
+			valor = randi()%3 + 3
+			num.append(valor)
 func analizar_qtd() -> void:
 	if qtd == 3:
 		ir_prox_etapa()

@@ -29,7 +29,10 @@ func _ready():
 # --- O RESTO DO SEU SCRIPT ESTÁ PERFEITO E NÃO MUDA ---
 
 func sair() -> void:
-	DadosDoJogo.descartar_run_atual()
+	if DadosDoJogo.flag1 == 0:
+		DadosDoJogo.descartar_run_atual1()
+	if DadosDoJogo.flag2 == 0:
+		DadosDoJogo.descartar_run_atual2()
 	get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-inicial.tscn")
 	
 func _on_area_mouse_entered():
