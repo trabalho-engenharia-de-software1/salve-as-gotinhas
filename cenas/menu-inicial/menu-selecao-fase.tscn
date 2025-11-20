@@ -21,7 +21,7 @@ size = Vector2(20.23256, 20.8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef25g"]
 size = Vector2(20.11628, 20.8)
 
-[node name="Control" type="Control"]
+[node name="MenuSelecao" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
