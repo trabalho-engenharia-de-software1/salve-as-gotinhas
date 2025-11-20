@@ -46,21 +46,28 @@
 size = Vector2(20, 17.81668)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d56le"]
+size = Vector2(20, 19.053095)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3wk8"]
 size = Vector2(5.847701, 9.564409)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_weuwx"]
+size = Vector2(77, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tmyn1"]
+size = Vector2(60, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdbqf"]
+size = Vector2(73, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjfh2"]
+size = Vector2(91, 20.000015)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_084ib"]
+size = Vector2(82, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81gph"]
+size = Vector2(82, 20)
 
 [node name="Fase2Cena" type="Node2D"]
 script = ExtResource("1_8eytn")
@@ -213,8 +220,8 @@ meu_som_de_narracao = ExtResource("16_d56le")
 [node name="Area2D" type="Area2D" parent="BoxOpcoes/SpriteOpcao5"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BoxOpcoes/SpriteOpcao5/Area2D"]
-position = Vector2(40, -95)
-scale = Vector2(35, 35)
+position = Vector2(40, -111.5708)
+scale = Vector2(35, 34.999996)
 shape = SubResource("RectangleShape2D_d56le")
 
 [node name="SpriteOpcao6" type="Sprite2D" parent="BoxOpcoes"]
@@ -232,37 +239,32 @@ scale = Vector2(50, 50)
 shape = SubResource("RectangleShape2D_k3wk8")
 
 [node name="OpcaoGasto" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 216.0
-offset_top = 58.0
-offset_right = 247.0
-offset_bottom = 82.0
+offset_left = 160.00002
+offset_right = 188.00002
 custo_e_gotas = 3
 
 [node name="OpcaoGasto2" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 332.0
-offset_top = 56.0
-offset_right = 360.0
-offset_bottom = 80.0
+offset_left = 272.0
+offset_right = 300.0
+custo_e_gotas = 1
 
 [node name="OpcaoGasto3" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 432.0
-offset_top = 57.925003
-offset_right = 468.94998
-offset_bottom = 81.925
+offset_left = 376.00003
+offset_right = 404.00003
 custo_e_gotas = 2
 
 [node name="OpcaoGasto5" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 309.0
-offset_top = 172.0
-offset_right = 345.0
-offset_bottom = 196.0
+offset_left = 264.0
+offset_top = 136.0
+offset_right = 292.0
+offset_bottom = 160.0
 custo_e_gotas = 4
 
 [node name="OpcaoGasto6" parent="BoxOpcoes" instance=ExtResource("4_eap3x")]
-offset_left = 427.0
-offset_top = 169.0
-offset_right = 464.0
-offset_bottom = 193.0
+offset_left = 368.0
+offset_top = 136.0
+offset_right = 396.0
+offset_bottom = 160.0
 custo_e_gotas = 3
 
 [node name="Reservatorio" parent="." instance=ExtResource("5_8eytn")]
@@ -294,7 +296,7 @@ meu_som_de_narracao = ExtResource("25_weuwx")
 [node name="Area2D" type="Area2D" parent="Label"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Area2D"]
-position = Vector2(10, 20)
+position = Vector2(-18.5, 20)
 shape = SubResource("RectangleShape2D_weuwx")
 
 [node name="Menos2" type="Sprite2D" parent="."]
@@ -317,7 +319,7 @@ meu_som_de_narracao = ExtResource("26_tmyn1")
 [node name="Area2D" type="Area2D" parent="Label2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label2/Area2D"]
-position = Vector2(10, 20)
+position = Vector2(-10, 20)
 shape = SubResource("RectangleShape2D_tmyn1")
 
 [node name="Menos3" type="Sprite2D" parent="."]
@@ -340,7 +342,7 @@ meu_som_de_narracao = ExtResource("25_brcbt")
 [node name="Area2D" type="Area2D" parent="Label3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label3/Area2D"]
-position = Vector2(10, 20)
+position = Vector2(-16.5, 20)
 shape = SubResource("RectangleShape2D_kdbqf")
 
 [node name="Menos4" type="Sprite2D" parent="."]
@@ -364,7 +366,7 @@ meu_som_de_narracao = ExtResource("26_5af04")
 [node name="Area2D" type="Area2D" parent="Label4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label4/Area2D"]
-position = Vector2(10, 20)
+position = Vector2(-25.5, 19.999985)
 shape = SubResource("RectangleShape2D_rjfh2")
 
 [node name="Menos5" type="Sprite2D" parent="."]
@@ -387,7 +389,7 @@ meu_som_de_narracao = ExtResource("27_nt3yd")
 [node name="Area2D" type="Area2D" parent="Label5"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label5/Area2D"]
-position = Vector2(10, 20)
+position = Vector2(-21, 20)
 shape = SubResource("RectangleShape2D_084ib")
 
 [node name="Menos6" type="Sprite2D" parent="."]
@@ -410,14 +412,14 @@ meu_som_de_narracao = ExtResource("25_weuwx")
 [node name="Area2D" type="Area2D" parent="Label6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label6/Area2D"]
-position = Vector2(10, 20)
+position = Vector2(-21, 20)
 shape = SubResource("RectangleShape2D_81gph")
 
 [node name="OpcaoGasto2" parent="." instance=ExtResource("4_eap3x")]
-offset_left = 196.0
-offset_top = 152.0
-offset_right = 240.0
-offset_bottom = 176.0
+offset_left = 144.0
+offset_top = 136.0
+offset_right = 172.0
+offset_bottom = 160.0
 custo_e_gotas = 5
 
 [node name="MedidorTotal" parent="." instance=ExtResource("14_tfabg")]
