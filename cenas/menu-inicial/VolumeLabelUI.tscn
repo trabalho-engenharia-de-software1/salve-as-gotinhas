@@ -13,7 +13,6 @@ scale = Vector2(1.6855018, 1.3694997)
 texture = ExtResource("2_w2v6l")
 
 [node name="slidervolume" type="HSlider" parent="."]
-anchors_preset = -1
 offset_left = 296.0
 offset_top = 89.0
 offset_right = 387.4286

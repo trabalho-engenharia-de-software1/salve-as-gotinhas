@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cn4rapd6fycug"]
+[gd_scene load_steps=7 format=3 uid="uid://cn4rapd6fycug"]
 
 [ext_resource type="Script" uid="uid://ceg3en8eehmuw" path="res://cenas/menu-inicial/cadastro.gd" id="1_qc5mk"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="2_n1sp3"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_i3mo8"]
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="4_cw7b5"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_ns034"]
+[ext_resource type="Texture2D" uid="uid://c0c3x11uy7kwj" path="res://buttons/botoes-menu/play.png" id="6_ns034"]
 
 [node name="Cadastro" type="Control"]
 layout_mode = 3
@@ -49,3 +50,8 @@ offset_bottom = 161.0
 focus_behavior_recursive = 1
 theme = ExtResource("4_cw7b5")
 text = "Confirmar"
+
+[node name="95f1477088a542CaB6259Bbb4Ab21f0f3" type="Sprite2D" parent="."]
+position = Vector2(183, 146.00002)
+scale = Vector2(0.5878905, 0.60156196)
+texture = ExtResource("6_ns034")
