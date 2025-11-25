@@ -247,7 +247,7 @@ func _on_resposta_2_button_down() -> void:
 	ir_prox_etapa()
 
 
-func _on_resposta_button_down() -> void:
+func _on_resposta3_button_down() -> void:
 	erro += 1
 	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
 	var texto_aviso = "essa nao e a resposta correta"
