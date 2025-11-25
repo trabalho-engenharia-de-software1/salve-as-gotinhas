@@ -39,7 +39,7 @@ func _ready():
 
 func sair() -> void:
 	if pai == "Fase1Cena" or pai == "Etapa4Fase1" or pai == "Etapa3Fase1" or pai == "Etapa2Fase1" or pai == "Fase2Cena":
-		DadosDoJogo.reset()
+		DadosDoJogo.reset1()
 		get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-selecao-fase.tscn")
 	else:
 		if pai == "MenuSelecao":

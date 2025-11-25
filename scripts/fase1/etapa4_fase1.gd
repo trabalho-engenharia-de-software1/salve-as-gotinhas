@@ -229,7 +229,7 @@ func _configurar_sprite(sprite_alvo: Sprite2D, valor_do_botao: int, audio_alvo: 
 
 
 
-func _on_resposta_3_button_down() -> void:
+func _on_resposta_4_button_down() -> void:
 	erro += 1
 	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
 	var texto_aviso = "essa nao e a resposta correta"
@@ -276,4 +276,9 @@ func ir_prox_etapa() -> void:
 
 
 func _on_area_mouse_entered() -> void:
+	pass # Replace with function body.
+
+
+
+func _on_area_mouse_exited() -> void:
 	pass # Replace with function body.

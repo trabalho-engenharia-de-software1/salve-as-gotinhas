@@ -258,3 +258,7 @@ func ir_prox_etapa() -> void:
 
 func _on_area_mouse_entered() -> void:
 	pass # Replace with function body.
+
+
+func _on_area_mouse_exited() -> void:
+	pass # Replace with function body.
