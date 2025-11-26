@@ -8,16 +8,11 @@ var audio_player: AudioStreamPlayer
 @onready var som_hover: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var area: Area2D = $Area2D
 
-
-
 func _ready():
 	area.input_pickable = true
 	if area:
 		area.mouse_entered.connect(_on_area_mouse_entered)
-	else:
-		push_error("⚠️ Area2D não encontrada! Verifique a hierarquia.")
-	
-
+		
 	self.pressed.connect(_on_pressed)
 	
 	tour_timer = Timer.new()
@@ -26,10 +21,8 @@ func _ready():
 	add_child(tour_timer)
 	tour_timer.timeout.connect(_mostrar_proximo_passo)
 	
-	# A CONEXÃO 'PopupManager.tour_cancelado_pelo_popup.connect' FOI REMOVIDA
 	audio_player = AudioStreamPlayer.new()
 	add_child(audio_player)
-# --- O resto do script continua EXATAMENTE IGUAL ---
 
 func habilitar_ajuda_com_passos(passos: Array):
 	self.passos_de_ajuda = passos
@@ -42,8 +35,7 @@ func _on_pressed():
 		if passos_de_ajuda.is_empty():
 			PopupManager.mostrar("Nenhuma ajuda configurada.")
 			return
-		
-		print("Iniciando tour de ajuda...")
+			
 		ajuda_ativa = true
 		passo_atual = 0
 		_mostrar_proximo_passo()
@@ -53,11 +45,9 @@ func _mostrar_proximo_passo():
 	if passo_atual >= passos_de_ajuda.size():
 		_parar_tour()
 		return
-
+		
 	var passo_info = passos_de_ajuda[passo_atual]
 	var texto_atual = passo_info["texto"]
-	
-	# --- A NOVA LÓGICA DE TIPO ---
 	
 	# Checa se o passo é do tipo "automático" (baseado em um nó)
 	if passo_info["tipo"] == "alvo_automatico":
@@ -74,7 +64,6 @@ func _mostrar_proximo_passo():
 		var raios = passo_info["raios_pixels"]
 		PopupManager.mostrar_ajuda_manual(pos_centro, raios, texto_atual)
 	
-	# --- FIM DA NOVA LÓGICA ---
 	if passo_info.has("audio") and passo_info["audio"] != null:
 		audio_player.stream = passo_info["audio"]
 		audio_player.play()
@@ -94,16 +83,14 @@ func _parar_tour():
 	PopupManager.esconder_ajuda()
 
 func iniciar_tour_automatico():
-	# Verifica se a ajuda já está ativa (para não bugar)
+	# Verifica se a ajuda já está ativa
 	if ajuda_ativa:
 		return
 		
-	# Verifica se o tour está pronto (se a lista de passos não está vazia)
+	# Verifica se a lista de passos não está vazia
 	if passos_de_ajuda.is_empty():
-		# (Não mostra o erro "Nenhuma ajuda configurada" automaticamente)
 		return
-	
-	print("Iniciando tour de ajuda AUTOMÁTICO...")
+		
 	ajuda_ativa = true
 	passo_atual = 0
-	_mostrar_proximo_passo() # Mostra o primeiro passo
+	_mostrar_proximo_passo()

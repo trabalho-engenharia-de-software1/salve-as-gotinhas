@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://co6pvlhqookc5"]
+[gd_scene load_steps=9 format=3 uid="uid://co6pvlhqookc5"]
 
 [ext_resource type="Script" uid="uid://du6uv7o4sxmxx" path="res://cenas/menu-inicial/configuracoes.gd" id="1_oxylr"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="3_0iq5r"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bw3n6dwddli6k" path="res://buttons/botao-check/botao-vazio.png" id="7_0iq5r"]
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="7_hq8fr"]
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="7_x4x87"]
-[ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="7_xy1o3"]
 [ext_resource type="PackedScene" uid="uid://biuoqellwps4o" path="res://cenas/menu-inicial/VolumeLabelUI.tscn" id="8_hq8fr"]
 
 [node name="Control" type="Control"]
@@ -38,8 +37,6 @@ theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("4_0lb05")
 text = "VOLUME DA Narração:"
-
-[node name="HelpLayer" parent="." instance=ExtResource("7_xy1o3")]
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

@@ -122,6 +122,7 @@ func colocar_valor() -> void:
 			num.append(valor)
 		if qtd == 3:
 			valor = randi()%4 + 3
+			num.append(valor)
 	elif DadosDoJogo.dific == 1:
 		if qtd == 1:
 			valor = randi()%2 + 3
@@ -132,26 +133,20 @@ func colocar_valor() -> void:
 		if qtd == 3:
 			valor = randi()%3 + 3
 			num.append(valor)
+			
 func analizar_qtd() -> void:
 	if qtd == 3:
 		ir_prox_etapa()
-		
-# No script da FASE 1
-
-# ...
 
 func ir_prox_etapa() -> void:
 	
-	# 1. SALVAR OS DADOS NO AUTOLOAD (DadosDoJogo)
 	# Copia o array de acertos da Fase 1 para a variável global
 	DadosDoJogo.botoes_corretos_fase1 = botoesPrecionados
 	
-	fim_fase = Time.get_unix_time_from_system()
-	duracao = fim_fase - inicio_fase
-	print("Duração total:", duracao, "s")
-	DadosDoJogo.tempo1 =duracao
+	fim_fase = Time.get_unix_time_from_system() # Pega o tempo ao fim da fase
+	duracao = fim_fase - inicio_fase # Calcula a diferenca de tempo do fim da fase e do inicio
+	DadosDoJogo.tempo1 = duracao # Salva na variavel global
 	DadosDoJogo.valores = num
-	# Copia o contador de erros da Fase 1 para a variável global
 	DadosDoJogo.erros_acumulados = erro
 	
 	# 2. TROCA DE CENA

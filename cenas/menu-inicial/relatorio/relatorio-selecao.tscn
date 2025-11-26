@@ -1,7 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://blak8guq6x5jy"]
+[gd_scene load_steps=16 format=3 uid="uid://blak8guq6x5jy"]
 
-[ext_resource type="Script" uid="uid://da85m5tgo2pci" path="res://scripts/menu-inicial/menu_selecao_fase.gd" id="1_npur4"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_p6qw6"]
+[ext_resource type="Script" uid="uid://7hh22cagyaua" path="res://scripts/menu-inicial/relatorio_selecao.gd" id="1_sp4xu"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="2_gaaor"]
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="3_vhoy2"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_gl12n"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="9_cv0od"]
 [ext_resource type="Texture2D" uid="uid://c0c3x11uy7kwj" path="res://buttons/botoes-menu/play.png" id="10_ddhdm"]
 [ext_resource type="Script" uid="uid://ccupdfvc1sw4g" path="res://cenas/fase2/labelsom.gd" id="11_6o8of"]
-[ext_resource type="PackedScene" uid="uid://b83rhs5pm0s7u" path="res://cenas/menu-inicial/help-layer.tscn" id="11_8mj5h"]
 [ext_resource type="AudioStream" uid="uid://cxp242pp3knj6" path="res://narracao/menu/somando.wav" id="12_sp4xu"]
 [ext_resource type="AudioStream" uid="uid://dpptpuwbjmx2n" path="res://narracao/menu/subtraindo.wav" id="13_sp4xu"]
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="14_ad8ii"]
@@ -30,7 +29,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 mouse_filter = 2
-script = ExtResource("1_npur4")
+script = ExtResource("1_sp4xu")
 
 [node name="BackgroundMenuInicial" type="Sprite2D" parent="."]
 modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
@@ -120,8 +119,6 @@ theme_override_fonts/font = ExtResource("4_gl12n")
 theme_override_font_sizes/font_size = 16
 text = "SUBTRAINDO
 "
-
-[node name="HelpLayer" parent="." instance=ExtResource("11_8mj5h")]
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
