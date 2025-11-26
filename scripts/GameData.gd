@@ -54,7 +54,7 @@ func reset() -> void:
 		RelatorioDados.tempo2.append(0)
 		RelatorioDados.tempo3.append(0)
 		RelatorioDados.tempo4.append(0)
-	if flag2 == 0:
+	if flag2 == 1:
 		RelatorioDados.erro_fase2.append(DadosDoJogo.erro_fase2)
 		RelatorioDados.pontos_fase2.append(DadosDoJogo.pontos_fase2)
 		RelatorioDados.tempo5.append(DadosDoJogo.tempo5)
