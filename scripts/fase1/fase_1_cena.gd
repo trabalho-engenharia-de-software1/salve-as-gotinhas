@@ -121,17 +121,17 @@ func colocar_valor() -> void:
 			valor = randi()%3 + 4
 			num.append(valor)
 		if qtd == 3:
-			valor = randi()%4 + 3
+			valor = randi()%3 + 3
 			num.append(valor)
 	elif DadosDoJogo.dific == 1:
 		if qtd == 1:
-			valor = randi()%2 + 3
+			valor = randi()%2 + 2
 			num.append(valor)
 		if qtd == 2:
-			valor = randi()%2 + 4
+			valor = randi()%2 + 2
 			num.append(valor)
 		if qtd == 3:
-			valor = randi()%3 + 3
+			valor = randi()%2 + 3
 			num.append(valor)
 			
 func analizar_qtd() -> void:
