@@ -31,17 +31,20 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6j30p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_plan0"]
+size = Vector2(19.421103, 20.23265)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfyno"]
+size = Vector2(19.53662, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbxf7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlmcf"]
-size = Vector2(20, 19.563267)
+size = Vector2(20, 17.318367)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mhbk4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_84yh3"]
+size = Vector2(20.537502, 20)
 
 [node name="Fase1Cena" type="Node2D"]
 script = ExtResource("1_ep0u1")
@@ -145,6 +148,7 @@ offset_top = 100.0
 offset_right = 109.0
 offset_bottom = 130.0
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("2_gbic8")
 text = "Chuveiro"
 
@@ -155,6 +159,7 @@ offset_top = 98.76
 offset_right = 229.0
 offset_bottom = 128.76001
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("2_gbic8")
 text = "Mangueira"
 
@@ -165,6 +170,7 @@ offset_top = 98.76
 offset_right = 353.0
 offset_bottom = 128.76001
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("2_gbic8")
 text = "Computador"
 
@@ -175,6 +181,7 @@ offset_top = 99.0
 offset_right = 466.0
 offset_bottom = 129.0
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("2_gbic8")
 text = "Regador"
 
@@ -185,6 +192,7 @@ offset_top = 199.76001
 offset_right = 115.0
 offset_bottom = 229.76001
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("2_gbic8")
 text = "Descarga
 "
@@ -196,6 +204,7 @@ offset_top = 199.76001
 offset_right = 233.0
 offset_bottom = 229.76001
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("2_gbic8")
 toggle_mode = true
 text = "Torneira"
@@ -207,6 +216,7 @@ offset_top = 199.76001
 offset_right = 351.0
 offset_bottom = 229.76001
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("2_gbic8")
 text = "Esportes
 "
@@ -218,6 +228,7 @@ offset_top = 199.76001
 offset_right = 475.0
 offset_bottom = 229.76001
 focus_mode = 0
+mouse_filter = 1
 theme = ExtResource("2_gbic8")
 keep_pressed_outside = true
 text = "Bebedouro"
@@ -260,7 +271,7 @@ meu_som_de_narracao = ExtResource("14_06r1y")
 [node name="Area2D" type="Area2D" parent="descarga"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="descarga/Area2D"]
-position = Vector2(26, 230)
+position = Vector2(14.285706, 238.14307)
 scale = Vector2(76.5, 70)
 shape = SubResource("RectangleShape2D_plan0")
 
@@ -274,7 +285,7 @@ meu_som_de_narracao = ExtResource("16_k1x4i")
 [node name="Area2D" type="Area2D" parent="torneira"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="torneira/Area2D"]
-position = Vector2(100.98, 230)
+position = Vector2(118.704346, 230.00024)
 scale = Vector2(76.5, 70)
 shape = SubResource("RectangleShape2D_lfyno")
 
@@ -302,7 +313,7 @@ meu_som_de_narracao = ExtResource("20_v51e0")
 [node name="Area2D" type="Area2D" parent="regador"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="regador/Area2D"]
-position = Vector2(46, 245.2857)
+position = Vector2(46, 323.85712)
 scale = Vector2(76.5, 70)
 shape = SubResource("RectangleShape2D_rlmcf")
 
@@ -329,8 +340,8 @@ meu_som_de_narracao = ExtResource("24_86pkt")
 [node name="Area2D" type="Area2D" parent="pc"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pc/Area2D"]
-position = Vector2(43, 230)
-scale = Vector2(80, 83)
+position = Vector2(21.5, 230)
+scale = Vector2(80, 82.99999)
 shape = SubResource("RectangleShape2D_84yh3")
 
 [node name="BotaoSair2" parent="." instance=ExtResource("11_7eouo")]

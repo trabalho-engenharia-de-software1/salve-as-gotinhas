@@ -18,7 +18,9 @@ func _on_confirmar_pressed():
 	
 	# Verifica se o nome não está vazio
 	if nome_jogador.is_empty():
+		var audio = preload("res://narracao/menu/por favor insira um nome .wav")
 		PopupManager.mostrar("Por favor, insira um nome!") # Se estiver vazio, mostra um popup de erro
+		NarradorGlobal.tocar_narracao(audio, true)
 		return # Para a função aqui
 		
 	# Senao, Salva o nome na variavel global

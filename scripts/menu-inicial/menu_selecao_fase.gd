@@ -24,6 +24,7 @@ func _ready() -> void:
 		}
 	]
 	botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
+	botao_ajuda.iniciar_tour_automatico()
 	if DadosDoJogo.flag1 == 1 and DadosDoJogo.flag2 == 1:
 		sair()
 

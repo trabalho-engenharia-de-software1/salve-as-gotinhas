@@ -111,6 +111,7 @@ func _ready():
 	
 	# Entrega a lista de passos para o script do botão de ajuda
 	script_do_botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
+	script_do_botao_ajuda.iniciar_tour_automatico()
 # --- FIM DA ADIÇÃO 2 ---
 	
 	
@@ -213,7 +214,7 @@ func _on_resposta_4_button_down() -> void:
 	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
 	var texto_aviso = "essa não e a resposta correta"
 	PopupManager.mostrar(texto_aviso)
-	NarradorGlobal.tocar_narracao(audio) # <-- Isso usa o popup simples, está perfeito.
+	NarradorGlobal.tocar_narracao(audio, true) # <-- Isso usa o popup simples, está perfeito.
 
 
 func _on_resposta_3_button_down() -> void:
@@ -221,7 +222,7 @@ func _on_resposta_3_button_down() -> void:
 	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
 	var texto_aviso = "essa não e a resposta correta"
 	PopupManager.mostrar(texto_aviso)
-	NarradorGlobal.tocar_narracao(audio)
+	NarradorGlobal.tocar_narracao(audio, true)
 
 
 func _on_resposta_2_button_down() -> void:
@@ -229,7 +230,7 @@ func _on_resposta_2_button_down() -> void:
 	var audio = preload("res://narracao/fase 1/parabens vamos complicar agora.wav")
 	var texto_aviso = "parabéns, vamos complicar agora"
 	PopupManager.mostrar(texto_aviso)
-	NarradorGlobal.tocar_narracao(audio)
+	NarradorGlobal.tocar_narracao(audio, true)
 	ir_prox_etapa()
 
 
@@ -238,7 +239,7 @@ func _on_resposta_button_down() -> void:
 	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
 	var texto_aviso = "essa não e a resposta correta"
 	PopupManager.mostrar(texto_aviso)
-	NarradorGlobal.tocar_narracao(audio)
+	NarradorGlobal.tocar_narracao(audio, true)
 
 func ir_prox_etapa() -> void:
 	

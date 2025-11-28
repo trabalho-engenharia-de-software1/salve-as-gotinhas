@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_xfxsx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acrrd"]
+size = Vector2(21.5625, 22.857143)
 
 [node name="HelpLayer" type="CanvasLayer"]
 
@@ -26,7 +27,7 @@ script = ExtResource("2_67qyk")
 [node name="Area2D" type="Area2D" parent="botaoAjuda"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="botaoAjuda/Area2D"]
-position = Vector2(-13, 5)
+position = Vector2(-15.5, 7)
 scale = Vector2(3.2, 1.4)
 shape = SubResource("RectangleShape2D_acrrd")
 

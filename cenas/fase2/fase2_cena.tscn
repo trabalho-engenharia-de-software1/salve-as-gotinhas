@@ -43,28 +43,28 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fepj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkx4k"]
-size = Vector2(20, 17.81668)
+size = Vector2(29.227322, 22.333368)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d56le"]
 size = Vector2(20, 19.053095)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3wk8"]
-size = Vector2(5.847701, 9.564409)
+size = Vector2(19.1786, 21.861526)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_weuwx"]
-size = Vector2(77, 20)
+size = Vector2(85, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tmyn1"]
-size = Vector2(60, 20)
+size = Vector2(92, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdbqf"]
-size = Vector2(73, 20)
+size = Vector2(81, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjfh2"]
 size = Vector2(91, 20.000015)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_084ib"]
-size = Vector2(82, 20)
+size = Vector2(90, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81gph"]
 size = Vector2(82, 20)
@@ -205,7 +205,7 @@ meu_som_de_narracao = ExtResource("14_nkx4k")
 [node name="Area2D" type="Area2D" parent="BoxOpcoes/SpriteOpcao4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BoxOpcoes/SpriteOpcao4/Area2D"]
-position = Vector2(0, 43.666504)
+position = Vector2(20.876465, 178.66699)
 scale = Vector2(40, 40)
 shape = SubResource("RectangleShape2D_nkx4k")
 
@@ -234,7 +234,7 @@ meu_som_de_narracao = ExtResource("18_k3wk8")
 [node name="Area2D" type="Area2D" parent="BoxOpcoes/SpriteOpcao6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BoxOpcoes/SpriteOpcao6/Area2D"]
-position = Vector2(110.23242, 5.1237793)
+position = Vector2(15.411133, 62.05493)
 scale = Vector2(50, 50)
 shape = SubResource("RectangleShape2D_k3wk8")
 
@@ -302,7 +302,7 @@ meu_som_de_narracao = ExtResource("25_weuwx")
 [node name="Area2D" type="Area2D" parent="Label"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Area2D"]
-position = Vector2(-18.5, 20)
+position = Vector2(-22.5, 20)
 shape = SubResource("RectangleShape2D_weuwx")
 
 [node name="Menos2" type="Sprite2D" parent="."]
@@ -325,7 +325,7 @@ meu_som_de_narracao = ExtResource("26_tmyn1")
 [node name="Area2D" type="Area2D" parent="Label2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label2/Area2D"]
-position = Vector2(-10, 20)
+position = Vector2(-26, 20)
 shape = SubResource("RectangleShape2D_tmyn1")
 
 [node name="Menos3" type="Sprite2D" parent="."]
@@ -348,7 +348,7 @@ meu_som_de_narracao = ExtResource("25_brcbt")
 [node name="Area2D" type="Area2D" parent="Label3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label3/Area2D"]
-position = Vector2(-16.5, 20)
+position = Vector2(-20.5, 20)
 shape = SubResource("RectangleShape2D_kdbqf")
 
 [node name="Menos4" type="Sprite2D" parent="."]
@@ -395,7 +395,7 @@ meu_som_de_narracao = ExtResource("27_nt3yd")
 [node name="Area2D" type="Area2D" parent="Label5"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label5/Area2D"]
-position = Vector2(-21, 20)
+position = Vector2(-25, 20)
 shape = SubResource("RectangleShape2D_084ib")
 
 [node name="Menos6" type="Sprite2D" parent="."]

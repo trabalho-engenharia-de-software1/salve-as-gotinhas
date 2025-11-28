@@ -43,7 +43,7 @@ func _ready() -> void:
 	]
 	# Entrega a lista de passos para o script do botão de ajuda
 	botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
-	
+	botao_ajuda.iniciar_tour_automatico()
 	# --- Conecta os sinais dos botões ---
 	botao_jogar.pressed.connect(_on_jogar_pressed)
 	botao_sair.pressed.connect(_on_sair_pressed)

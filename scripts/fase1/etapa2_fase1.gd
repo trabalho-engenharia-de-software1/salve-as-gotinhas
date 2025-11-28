@@ -25,6 +25,7 @@ const AUDIO8 = preload("res://narracao/gotinhas/positivo/8.wav")
 const AUDIO9 = preload("res://narracao/gotinhas/positivo/9.wav")
 const AUDIO10 = preload("res://narracao/gotinhas/positivo/10.wav")
 const AUDIO11 = preload("res://narracao/gotinhas/positivo/2.wav")
+const AUDIO12 = preload("res://narracao/gotinhas/positivo/1.wav")
 
 var erro = 0
 var qtd = 0 # (Seu código original, mantido)
@@ -104,6 +105,7 @@ func _ready():
 	
 	# Entrega a lista de passos para o script do botão de ajuda
 	script_do_botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
+	script_do_botao_ajuda.iniciar_tour_automatico()
 # --- FIM DA ADIÇÃO 2 ---
 func _configurar_label(label_alvo: Label, valor_do_botao: int, audio_alvo: AudioStreamPlayer2D):
 	
@@ -111,6 +113,9 @@ func _configurar_label(label_alvo: Label, valor_do_botao: int, audio_alvo: Audio
 	var novo_audio: AudioStream = AUDIO_DEFAULT
 	# Define qual textura deve ser carregada com base no valor.
 	match valor_do_botao:
+		1:
+			novo_texto = " 1"
+			novo_audio = AUDIO12
 		2:
 			novo_texto = " 2"
 			novo_audio = AUDIO11
@@ -186,8 +191,8 @@ func _on_resposta_4_button_down() -> void:
 	erro += 1
 	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
 	var texto_aviso = "essa não e a resposta correta"
-	PopupManager.mostrar(texto_aviso) # <-- Isso usa o popup simples, está perfeito.
-	NarradorGlobal.tocar_narracao(audio)
+	PopupManager.mostrar(texto_aviso) 
+	NarradorGlobal.tocar_narracao(audio, true)
 
 
 func _on_resposta_3_button_down() -> void:
@@ -195,7 +200,7 @@ func _on_resposta_3_button_down() -> void:
 	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
 	var texto_aviso = "essa não e a resposta correta"
 	PopupManager.mostrar(texto_aviso)
-	NarradorGlobal.tocar_narracao(audio)
+	NarradorGlobal.tocar_narracao(audio, true)
 
 
 func _on_resposta_2_button_down() -> void:
@@ -203,7 +208,7 @@ func _on_resposta_2_button_down() -> void:
 	var audio = preload("res://narracao/fase 1/parabens vamos complicar agora.wav")
 	var texto_aviso = "parabéns, vamos complicar agora"
 	PopupManager.mostrar(texto_aviso)
-	NarradorGlobal.tocar_narracao(audio)
+	NarradorGlobal.tocar_narracao(audio, true)
 	ir_prox_etapa()
 
 
@@ -212,7 +217,7 @@ func _on_resposta_button_down() -> void:
 	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
 	var texto_aviso = "essa não e a resposta correta"
 	PopupManager.mostrar(texto_aviso)
-	NarradorGlobal.tocar_narracao(audio)
+	NarradorGlobal.tocar_narracao(audio, true)
 
 func ir_prox_etapa() -> void:
 	

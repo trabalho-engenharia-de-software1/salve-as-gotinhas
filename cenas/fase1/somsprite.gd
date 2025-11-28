@@ -19,6 +19,8 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	print("Mouse saiu da área:", self.name)
 	timer.stop()
+	if audio_player.playing:
+		audio_player.stop()
 
 func _on_timer_timeout():
 	# Para o áudio caso já esteja tocando

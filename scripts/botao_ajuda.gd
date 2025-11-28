@@ -4,7 +4,8 @@ var passos_de_ajuda: Array = []
 var passo_atual: int = 0
 var ajuda_ativa: bool = false
 var tour_timer: Timer
-var audio_player: AudioStreamPlayer
+
+# Removemos o audio_player interno e usamos o Global
 @onready var som_hover: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var area: Area2D = $Area2D
 
@@ -21,8 +22,7 @@ func _ready():
 	add_child(tour_timer)
 	tour_timer.timeout.connect(_mostrar_proximo_passo)
 	
-	audio_player = AudioStreamPlayer.new()
-	add_child(audio_player)
+	# Removemos a criação do audio_player local, não precisa mais.
 
 func habilitar_ajuda_com_passos(passos: Array):
 	self.passos_de_ajuda = passos
@@ -49,30 +49,29 @@ func _mostrar_proximo_passo():
 	var passo_info = passos_de_ajuda[passo_atual]
 	var texto_atual = passo_info["texto"]
 	
-	# Checa se o passo é do tipo "automático" (baseado em um nó)
 	if passo_info["tipo"] == "alvo_automatico":
 		var no_alvo_atual = passo_info["alvo"]
 		if not is_instance_valid(no_alvo_atual):
-			print("ERRO: Alvo automático não encontrado.")
 			_parar_tour()
 			return
 		PopupManager.mostrar_ajuda_contextual(no_alvo_atual, texto_atual)
 	
-	# Checa se o passo é do tipo "manual" (baseado em coordenadas)
 	elif passo_info["tipo"] == "alvo_manual":
 		var pos_centro = passo_info["pos_centro_pixels"]
 		var raios = passo_info["raios_pixels"]
 		PopupManager.mostrar_ajuda_manual(pos_centro, raios, texto_atual)
 	
+	# --- AQUI ESTÁ A MUDANÇA ---
 	if passo_info.has("audio") and passo_info["audio"] != null:
-		audio_player.stream = passo_info["audio"]
-		audio_player.play()
+		# Chamamos o NarradorGlobal com TRUE (Prioridade Alta!)
+		# Isso vai calar qualquer som de hover imediatamente.
+		NarradorGlobal.tocar_narracao(passo_info["audio"], true)
 	
 	passo_atual += 1
 	tour_timer.start()
 
 func _on_area_mouse_entered() -> void:
-	print("Mouse entrou em:", name)
+	# O som de hover do próprio botão de ajuda continua local (opcional)
 	if som_hover and not som_hover.playing:
 		som_hover.play()
 		
@@ -81,16 +80,12 @@ func _parar_tour():
 	passo_atual = 0
 	tour_timer.stop()
 	PopupManager.esconder_ajuda()
+	# Opcional: Parar o áudio quando fecha o tour
+	NarradorGlobal.tocar_narracao(null)
 
 func iniciar_tour_automatico():
-	# Verifica se a ajuda já está ativa
-	if ajuda_ativa:
-		return
-		
-	# Verifica se a lista de passos não está vazia
-	if passos_de_ajuda.is_empty():
-		return
-		
+	if ajuda_ativa: return
+	if passos_de_ajuda.is_empty(): return
 	ajuda_ativa = true
 	passo_atual = 0
 	_mostrar_proximo_passo()

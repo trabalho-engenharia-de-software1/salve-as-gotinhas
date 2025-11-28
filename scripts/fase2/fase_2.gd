@@ -57,6 +57,7 @@ func _ready():
 	]
 	
 	botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
+	botao_ajuda.iniciar_tour_automatico()
 	medidor_total.atualizar_medidor(agua_atual, agua_maxima)
 
 # Função chamada quando qualquer objeto é clicado
@@ -77,7 +78,7 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 		# Mostra o popup de vitória
 		var audio = preload("res://narracao/fase2/voce usou bem a sua agua, parabens .wav")
 		PopupManager.mostrar("Voce usou bem a sua água. Parabéns!!")
-		NarradorGlobal.tocar_narracao(audio)
+		NarradorGlobal.tocar_narracao(audio, true)
 		
 		# Espera o jogador ler
 		await get_tree().create_timer(4.5).timeout
@@ -103,7 +104,7 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 		)
 		
 		var audio2 = preload("res://narracao/fase2/gastou mais agua que tinha, tente novamente .wav")
-		NarradorGlobal.tocar_narracao(audio2)
+		NarradorGlobal.tocar_narracao(audio2, true)
 		fim_fase = Time.get_unix_time_from_system()
 		duracao = fim_fase - inicio_fase
 		print("Duração total:", duracao, "s")

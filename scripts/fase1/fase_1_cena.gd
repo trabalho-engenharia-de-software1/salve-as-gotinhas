@@ -34,6 +34,7 @@ func _ready():
 		}
 	]
 	script_do_botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
+	script_do_botao_ajuda.iniciar_tour_automatico()
 
 func _on_botão_1_button_down() -> void:
 	botoesPrecionados.append(1)
@@ -56,7 +57,7 @@ func _on_botão_3_button_down() -> void:
 	var pos_centro_pc = Vector2(290, 60) # Posição (X, Y) do centro do computador
 	var raios_pc = Vector2(55, 55)       # Tamanho do oval (Largura, Altura)
 	PopupManager.mostrar_ajuda_manual(pos_centro_pc, raios_pc, texto_aviso)
-	NarradorGlobal.tocar_narracao(audio)
+	NarradorGlobal.tocar_narracao(audio, true)
 	$botão3.disabled = true
 
 
@@ -91,7 +92,7 @@ func _on_botão_7_button_down() -> void:
 	var pos_centro_bola = Vector2(297, 170) # Posição (X, Y) do centro do computador
 	var raios_bola = Vector2(38, 38)       # Tamanho do oval (Largura, Altura)
 	PopupManager.mostrar_ajuda_manual(pos_centro_bola, raios_bola, texto_aviso)
-	NarradorGlobal.tocar_narracao(audio)
+	NarradorGlobal.tocar_narracao(audio, true)
 	$botão7.disabled = true
 
 
@@ -103,6 +104,7 @@ func _on_botão_8_button_down() -> void:
 	$botão8.disabled = true
 
 func colocar_valor() -> void:
+	valor = 0
 	if DadosDoJogo.dific == 3:
 		if qtd == 1:
 			valor = randi()%2 + 3
@@ -133,7 +135,6 @@ func colocar_valor() -> void:
 		if qtd == 3:
 			valor = randi()%2 + 3
 			num.append(valor)
-			
 func analizar_qtd() -> void:
 	if qtd == 3:
 		ir_prox_etapa()

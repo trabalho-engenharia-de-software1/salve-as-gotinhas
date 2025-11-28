@@ -16,10 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://c0c3x11uy7kwj" path="res://buttons/botoes-menu/play.png" id="16_ef25g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4h3qw"]
-size = Vector2(20.23256, 20.8)
+size = Vector2(20.23256, 21.600002)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef25g"]
-size = Vector2(20.11628, 20.8)
+size = Vector2(20.11628, 21.1)
 
 [node name="MenuSelecao" type="Control"]
 layout_mode = 3
@@ -51,9 +51,9 @@ texture = ExtResource("10_eyu1c")
 [node name="fase1" type="Label" parent="."]
 layout_mode = 0
 offset_left = 84.0
-offset_top = 26.0
+offset_top = 24.0
 offset_right = 186.0
-offset_bottom = 47.0
+offset_bottom = 45.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_constants/outline_size = 4
@@ -65,7 +65,7 @@ meu_som_de_narracao = ExtResource("7_eyu1c")
 [node name="Area2D" type="Area2D" parent="fase1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fase1/Area2D"]
-position = Vector2(51, 110)
+position = Vector2(51, 113)
 scale = Vector2(8.6, 10)
 shape = SubResource("RectangleShape2D_4h3qw")
 
@@ -87,7 +87,7 @@ meu_som_de_narracao = ExtResource("8_cergd")
 [node name="Area2D" type="Area2D" parent="fase2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fase2/Area2D"]
-position = Vector2(64.5, 111)
+position = Vector2(64.5, 112.5)
 scale = Vector2(8.6, 10)
 shape = SubResource("RectangleShape2D_ef25g")
 
