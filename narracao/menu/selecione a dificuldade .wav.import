@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dgow5g2g24xmw"
+path="res://.godot/imported/selecione a dificuldade .wav-099a968ff9bd3531922789178e2a7db8.sample"
+
+[deps]
+
+source_file="res://narracao/menu/selecione a dificuldade .wav"
+dest_files=["res://.godot/imported/selecione a dificuldade .wav-099a968ff9bd3531922789178e2a7db8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

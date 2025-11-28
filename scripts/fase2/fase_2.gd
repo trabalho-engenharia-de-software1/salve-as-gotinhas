@@ -75,7 +75,7 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 	
 	if is_zero_approx(agua_atual):
 		# Mostra o popup de vitória
-		var audio = preload("res://narracao/fase2/voceusoubemsuaagua.wav")
+		var audio = preload("res://narracao/fase2/voce usou bem a sua agua, parabens .wav")
 		PopupManager.mostrar("Voce usou bem a sua água. Parabéns!!")
 		NarradorGlobal.tocar_narracao(audio)
 		
@@ -102,7 +102,7 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 			"Gastou mais água que tinha. Tente novamente",
 		)
 		
-		var audio2 = preload("res://narracao/fase2/gastoumaisagua.wav")
+		var audio2 = preload("res://narracao/fase2/gastou mais agua que tinha, tente novamente .wav")
 		NarradorGlobal.tocar_narracao(audio2)
 		fim_fase = Time.get_unix_time_from_system()
 		duracao = fim_fase - inicio_fase

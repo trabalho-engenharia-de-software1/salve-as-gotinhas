@@ -30,6 +30,7 @@ const AUDIO13 = preload("res://narracao/gotinhas/positivo/13.wav")
 const AUDIO14 = preload("res://narracao/gotinhas/positivo/14.wav")
 const AUDIO15 = preload("res://narracao/gotinhas/positivo/15.wav")
 const AUDIO16 = preload("res://narracao/gotinhas/positivo/16.wav")
+const AUDIO17 = preload("res://narracao/gotinhas/positivo/2.wav")
 
 var erro = 0
 var qtd = 0 # (Seu código original, mantido)
@@ -121,6 +122,9 @@ func _configurar_label(label_alvo: Label, valor_do_botao: int, audio_alvo: Audio
 	var novo_audio: AudioStream = AUDIO_DEFAULT
 	# Define qual textura deve ser carregada com base no valor.
 	match valor_do_botao:
+		2:
+			novo_texto = " 2"
+			novo_audio = AUDIO17
 		3:
 			novo_texto = " 3"
 			novo_audio = AUDIO3

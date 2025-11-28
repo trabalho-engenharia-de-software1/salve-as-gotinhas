@@ -27,3 +27,23 @@ func _on_confirmar_pressed():
 	
 	# E muda para a cena de selecao de fase
 	get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-selecao-fase.tscn")
+
+
+func _on_area_mouse_entered() -> void:
+	pass # Replace with function body.
+
+
+func _on_area_mouse_exited() -> void:
+	pass # Replace with function body.
+
+
+func _on_mouse_entered() -> void:
+	pass # Replace with function body.
+
+
+func _on_mouse_exited() -> void:
+	pass # Replace with function body.
+
+
+func _on_area_2d_mouse_entered() -> void:
+	pass # Replace with function body.

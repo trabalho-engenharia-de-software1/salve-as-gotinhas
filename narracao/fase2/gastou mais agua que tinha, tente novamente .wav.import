@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bfokuv3wn640b"
+path="res://.godot/imported/gastou mais agua que tinha, tente novamente .wav-8629e16125c15b0df1c4f32c053dcbeb.sample"
+
+[deps]
+
+source_file="res://narracao/fase2/gastou mais agua que tinha, tente novamente .wav"
+dest_files=["res://.godot/imported/gastou mais agua que tinha, tente novamente .wav-8629e16125c15b0df1c4f32c053dcbeb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

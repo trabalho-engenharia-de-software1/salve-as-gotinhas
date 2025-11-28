@@ -1,15 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://cn4rapd6fycug"]
+[gd_scene load_steps=10 format=3 uid="uid://cn4rapd6fycug"]
 
 [ext_resource type="Script" uid="uid://ceg3en8eehmuw" path="res://cenas/menu-inicial/cadastro.gd" id="1_qc5mk"]
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="2_n1sp3"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="3_i3mo8"]
 [ext_resource type="Theme" uid="uid://4vvlbttduirb" path="res://estilos/tema-botoes.tres" id="4_cw7b5"]
 [ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_ns034"]
+[ext_resource type="Script" uid="uid://c7goxj6bavsyk" path="res://cenas/menu-inicial/botao_som.gd" id="6_hvqyq"]
 [ext_resource type="Texture2D" uid="uid://c0c3x11uy7kwj" path="res://buttons/botoes-menu/play.png" id="6_ns034"]
+[ext_resource type="AudioStream" uid="uid://crxijcprc3y83" path="res://narracao/menu/confirmar.wav" id="7_br8bx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7dhf"]
+size = Vector2(19.852942, 31)
 
 [node name="Cadastro" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+mouse_filter = 2
 script = ExtResource("1_qc5mk")
 
 [node name="BackgroundMenuInicial" type="Sprite2D" parent="."]
@@ -48,10 +54,22 @@ offset_top = 130.0
 offset_right = 310.0
 offset_bottom = 161.0
 focus_behavior_recursive = 1
+mouse_filter = 2
 theme = ExtResource("4_cw7b5")
 text = "Confirmar"
+script = ExtResource("6_hvqyq")
+meu_som_de_narracao = ExtResource("7_br8bx")
+
+[node name="Area2D" type="Area2D" parent="Button"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
+position = Vector2(67.5, 15.5)
+scale = Vector2(6.8, 1)
+shape = SubResource("RectangleShape2D_q7dhf")
 
 [node name="95f1477088a542CaB6259Bbb4Ab21f0f3" type="Sprite2D" parent="."]
 position = Vector2(183, 146.00002)
 scale = Vector2(0.5878905, 0.60156196)
 texture = ExtResource("6_ns034")
+
+[connection signal="mouse_entered" from="Button/Area2D" to="." method="_on_area_2d_mouse_entered"]

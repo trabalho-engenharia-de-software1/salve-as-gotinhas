@@ -13,9 +13,11 @@ func _ready():
 	mouse_exited.connect(_on_mouse_exited)
 
 func _on_mouse_entered():
+	print("Mouse entrou na área:", self.name)
 	timer.start()
 
 func _on_mouse_exited():
+	print("Mouse saiu da área:", self.name)
 	timer.stop()
 
 func _on_timer_timeout():

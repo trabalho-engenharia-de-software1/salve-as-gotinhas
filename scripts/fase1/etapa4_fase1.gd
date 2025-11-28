@@ -34,6 +34,7 @@ const AUDIO17 = preload("res://narracao/gotinhas/positivo/17.wav")
 const AUDIO18 = preload("res://narracao/gotinhas/positivo/18.wav")
 const AUDIO19 = preload("res://narracao/gotinhas/positivo/19.wav")
 const AUDIO20 = preload("res://narracao/gotinhas/positivo/20.wav")
+const AUDIO21 = preload("res://narracao/gotinhas/positivo/2.wav")
 
 var erro = 0
 var qtd = 0 # (Seu código original, mantido)
@@ -130,6 +131,9 @@ func _configurar_label(label_alvo: Label, valor_do_botao: int, audio_alvo: Audio
 	var novo_audio: AudioStream = AUDIO_DEFAULT
 	# Define qual textura deve ser carregada com base no valor.
 	match valor_do_botao:
+		2:
+			novo_texto = " 2"
+			novo_audio = AUDIO21
 		3:
 			novo_texto = " 3"
 			novo_audio = AUDIO3
@@ -239,7 +243,7 @@ func _on_resposta_4_button_down() -> void:
 
 func _on_resposta_2_button_down() -> void:
 	DadosDoJogo.erro_etapa2 = erro
-	var audio = preload("res://narracao/fase2/voceusoubemsuaagua.wav")
+	var audio = preload("res://narracao/fase2/voce usou bem a sua agua, parabens .wav")
 	var texto_aviso = "você usou bem a sua água. Parabéns"
 	PopupManager.mostrar(texto_aviso)
 	NarradorGlobal.tocar_narracao(audio)

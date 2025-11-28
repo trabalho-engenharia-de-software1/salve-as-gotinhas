@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://blo42m3gwl0ev"
+path="res://.godot/imported/por favor insira um nome .wav-063eacced2e5c1fb07b6dd4af1b8a2a9.sample"
+
+[deps]
+
+source_file="res://narracao/menu/por favor insira um nome .wav"
+dest_files=["res://.godot/imported/por favor insira um nome .wav-063eacced2e5c1fb07b6dd4af1b8a2a9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://n1u7ly75hlm6"
+path="res://.godot/imported/veja quem trabalhou neste jogo .wav-ea3e4b85b80724b6b20e550bffc42edd.sample"
+
+[deps]
+
+source_file="res://narracao/menu/veja quem trabalhou neste jogo .wav"
+dest_files=["res://.godot/imported/veja quem trabalhou neste jogo .wav-ea3e4b85b80724b6b20e550bffc42edd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

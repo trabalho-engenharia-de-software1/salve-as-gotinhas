@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://v610lwus2heg"
+path="res://.godot/imported/clique em sair para fechar o jogo .wav-0bf240e7c70fe810e8cc514b88fda26d.sample"
+
+[deps]
+
+source_file="res://narracao/menu/clique em sair para fechar o jogo .wav"
+dest_files=["res://.godot/imported/clique em sair para fechar o jogo .wav-0bf240e7c70fe810e8cc514b88fda26d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
