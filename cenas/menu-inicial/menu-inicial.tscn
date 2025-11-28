@@ -176,7 +176,7 @@ mouse_force_pass_scroll_events = false
 theme = ExtResource("6_hii50")
 theme_override_constants/h_separation = 0
 theme_override_fonts/font = ExtResource("3_fb2ec")
-text = "CREDITOS"
+text = "CRÉDITOS"
 script = ExtResource("7_w434a")
 meu_som_de_narracao = ExtResource("11_w434a")
 

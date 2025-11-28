@@ -22,14 +22,14 @@ func _ready():
 		{
 			"tipo": "alvo_automatico",
 			"alvo": alvo_chuveiro, # O alvo é o botão do chuveiro
-			"texto": "Clique aqui para escolher uma atividade que gasta agua.",
+			"texto": "Clique aqui para escolher uma atividade que gasta água.",
 			"audio": preload("res://narracao/fase 1/clique para escolher uma atividade que gasta agua.wav")
 		},
 		{
 			"tipo": "alvo_manual",
 			"pos_centro_pixels": pos_manual_reserv,
 			"raios_pixels": raios_manual_reserv,
-			"texto": "Escolha 3 itens que gastam agua!",
+			"texto": "Escolha 3 itens que gastam água!",
 			"audio": preload("res://narracao/fase 1/escolha 3 itens que gastam agua.wav")
 		}
 	]

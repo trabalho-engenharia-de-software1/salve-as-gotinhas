@@ -97,7 +97,7 @@ func _ready():
 			"tipo": "alvo_manual",
 			"pos_centro_pixels": Vector2(450, 140), 
 			"raios_pixels": Vector2(20, 110),      
-			"texto": "Escolha a resposta clicando no botao correto!"
+			"texto": "Escolha a resposta clicando no botão correto!"
 		}
 	]
 	
@@ -181,7 +181,7 @@ func _configurar_sprite(sprite_alvo: Sprite2D, valor_do_botao: int, audio_alvo: 
 func _on_resposta_4_button_down() -> void:
 	erro += 1
 	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
-	var texto_aviso = "essa nao e a resposta correta"
+	var texto_aviso = "essa não e a resposta correta"
 	PopupManager.mostrar(texto_aviso) # <-- Isso usa o popup simples, está perfeito.
 	NarradorGlobal.tocar_narracao(audio)
 
@@ -189,7 +189,7 @@ func _on_resposta_4_button_down() -> void:
 func _on_resposta_3_button_down() -> void:
 	erro += 1
 	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
-	var texto_aviso = "essa nao e a resposta correta"
+	var texto_aviso = "essa não e a resposta correta"
 	PopupManager.mostrar(texto_aviso)
 	NarradorGlobal.tocar_narracao(audio)
 
@@ -197,7 +197,7 @@ func _on_resposta_3_button_down() -> void:
 func _on_resposta_2_button_down() -> void:
 	DadosDoJogo.erro_etapa2 = erro
 	var audio = preload("res://narracao/fase 1/parabens vamos complicar agora.wav")
-	var texto_aviso = "parabens, vamos complicar agora"
+	var texto_aviso = "parabéns, vamos complicar agora"
 	PopupManager.mostrar(texto_aviso)
 	NarradorGlobal.tocar_narracao(audio)
 	ir_prox_etapa()
@@ -206,7 +206,7 @@ func _on_resposta_2_button_down() -> void:
 func _on_resposta_button_down() -> void:
 	erro += 1
 	var audio = preload("res://narracao/fase 1/esta nao e a resposta correta.wav")
-	var texto_aviso = "essa nao e a resposta correta"
+	var texto_aviso = "essa não e a resposta correta"
 	PopupManager.mostrar(texto_aviso)
 	NarradorGlobal.tocar_narracao(audio)
 

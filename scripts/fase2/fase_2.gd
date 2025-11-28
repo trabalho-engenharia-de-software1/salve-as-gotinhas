@@ -51,7 +51,7 @@ func _ready():
 			"tipo": "alvo_manual",
 			"pos_centro_pixels": Vector2(220, 105),
 			"raios_pixels": Vector2(50, 23),
-			"texto": "O chuveiro gasta 3 gotas de agua.",
+			"texto": "O chuveiro gasta 3 gotas de água.",
 			"audio":preload("res://narracao/fase2/ochuveirogasta3gotasdeagua.wav")
 		}
 	]
@@ -76,7 +76,7 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 	if is_zero_approx(agua_atual):
 		# Mostra o popup de vitória
 		var audio = preload("res://narracao/fase2/voceusoubemsuaagua.wav")
-		PopupManager.mostrar("Voce usou bem a sua agua. Parabens!!")
+		PopupManager.mostrar("Voce usou bem a sua água. Parabéns!!")
 		NarradorGlobal.tocar_narracao(audio)
 		
 		# Espera o jogador ler
@@ -99,7 +99,7 @@ func _on_opcao_toggled(foi_marcado: bool, opcao_clicada):
 		PopupManager.mostrar_ajuda_manual(
 			pos_manual_reserv, 
 			raios_manual_reserv, 
-			"Gastou mais agua que tinha. Tente novamente",
+			"Gastou mais água que tinha. Tente novamente",
 		)
 		
 		var audio2 = preload("res://narracao/fase2/gastoumaisagua.wav")

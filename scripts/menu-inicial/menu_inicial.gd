@@ -25,7 +25,7 @@ func _ready() -> void:
 		{
 			"tipo": "alvo_automatico",
 			"alvo": botao_config, 
-			"texto": "Clique em CONFIGURACOES para ajustar a narracao!",
+			"texto": "Clique em CONFIGURACÕES para ajustar a narracão!",
 			"audio":preload("res://narracao/menu/clique-em-configurações-para-ajustar-a-narração.wav")
 		},
 		{
