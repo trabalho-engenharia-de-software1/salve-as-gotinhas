@@ -1,0 +1,221 @@
+[gd_scene load_steps=10 format=3 uid="uid://02eauwdke1cf"]
+
+[ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_3p4pg"]
+[ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="2_e1p8u"]
+[ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="2_t1hwa"]
+[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_8vj34"]
+[ext_resource type="Texture2D" uid="uid://6ib6uipxcy5l" path="res://imagens/backgrounds/1pixel.png" id="3_b83qt"]
+[ext_resource type="Texture2D" uid="uid://b1ij2a8t4xv6w" path="res://imagens/backgrounds/borda lateral- atualizada - 1.png" id="5_y4shf"]
+[ext_resource type="Texture2D" uid="uid://bbbbh8ol03mof" path="res://buttons/botoes-menu/sair.png" id="7_p7mo4"]
+[ext_resource type="Texture2D" uid="uid://dxwtfv5atsmou" path="res://buttons/botao-check/botao-check.png" id="8_my3ea"]
+[ext_resource type="Texture2D" uid="uid://dg6pxesb40piw" path="res://buttons/ampulheta.png" id="9_nx26a"]
+
+[node name="RelatorioAluno" type="Node2D"]
+
+[node name="BackgroundMenuInicial" type="Sprite2D" parent="."]
+modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
+position = Vector2(239, 124)
+scale = Vector2(0.317, 0.317)
+texture = ExtResource("1_3p4pg")
+
+[node name="BotaoSair2" parent="." instance=ExtResource("2_t1hwa")]
+position = Vector2(-5, 221)
+
+[node name="1Pixel" type="Sprite2D" parent="."]
+modulate = Color(0.29803923, 0.40392157, 0.29803923, 1)
+position = Vector2(238.74948, 161.93835)
+rotation = -3.1415925
+scale = Vector2(400.52264, -103.21561)
+texture = ExtResource("3_b83qt")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 2.0
+offset_right = 474.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("2_e1p8u")
+theme_override_font_sizes/font_size = 25
+text = "Parabéns por concluir
+       as duas fases!! 
+Este é o seu desempenho:"
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 41.999996
+offset_top = 144.0
+offset_right = 501.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_8vj34")
+theme_override_font_sizes/font_size = 25
+text = "FASE 1:"
+
+[node name="Label4" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 171.0
+offset_top = 118.0
+offset_right = 630.0
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_8vj34")
+theme_override_font_sizes/font_size = 16
+text = "ACERTOS"
+
+[node name="Label6" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 375.0
+offset_top = 118.0
+offset_right = 834.0
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_8vj34")
+theme_override_font_sizes/font_size = 16
+text = "TEMPO"
+
+[node name="Label5" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 283.0
+offset_top = 118.0
+offset_right = 350.0
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_8vj34")
+theme_override_font_sizes/font_size = 16
+text = "ERROS"
+
+[node name="Label3" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 38.999996
+offset_top = 182.0
+offset_right = 498.0
+offset_bottom = 281.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_8vj34")
+theme_override_font_sizes/font_size = 25
+text = "FASE 2:"
+
+[node name="BordaLateralAtualizada10" type="Sprite2D" parent="."]
+position = Vector2(238.50002, 261)
+scale = Vector2(13.406251, 6.25)
+texture = ExtResource("5_y4shf")
+
+[node name="BordaLateralAtualizada11" type="Sprite2D" parent="."]
+position = Vector2(238, 226.99998)
+scale = Vector2(13.312499, 6.25)
+texture = ExtResource("5_y4shf")
+
+[node name="BordaLateralAtualizada12" type="Sprite2D" parent="."]
+position = Vector2(238.99998, 187.99998)
+scale = Vector2(13.3125, 6.25)
+texture = ExtResource("5_y4shf")
+
+[node name="BordaLateralAtualizada13" type="Sprite2D" parent="."]
+position = Vector2(238.50002, 159.99998)
+scale = Vector2(13.40625, 6.25)
+texture = ExtResource("5_y4shf")
+
+[node name="BordaLateralAtualizada23" type="Sprite2D" parent="."]
+position = Vector2(246.00006, 164.73376)
+rotation = 1.5707964
+scale = Vector2(3.2980843, 2.450393)
+texture = ExtResource("5_y4shf")
+
+[node name="BordaLateralAtualizada24" type="Sprite2D" parent="."]
+position = Vector2(420.00006, 164.73376)
+rotation = 1.5707964
+scale = Vector2(3.2980843, 2.450393)
+texture = ExtResource("5_y4shf")
+
+[node name="BordaLateralAtualizada26" type="Sprite2D" parent="."]
+position = Vector2(333.00006, 164.14355)
+rotation = 1.5707964
+scale = Vector2(3.2611952, 2.450393)
+texture = ExtResource("5_y4shf")
+
+[node name="BordaLateralAtualizada27" type="Sprite2D" parent="."]
+position = Vector2(20.000057, 164.14355)
+rotation = 1.5707964
+scale = Vector2(3.2611952, 2.450393)
+texture = ExtResource("5_y4shf")
+
+[node name="BordaLateralAtualizada25" type="Sprite2D" parent="."]
+position = Vector2(132.00002, 164.94931)
+rotation = 1.5707964
+scale = Vector2(3.3115573, 2.450393)
+texture = ExtResource("5_y4shf")
+
+[node name="Sair" type="Sprite2D" parent="."]
+position = Vector2(275, 130.00002)
+scale = Vector2(0.6037496, 0.63499975)
+texture = ExtResource("7_p7mo4")
+
+[node name="BotaoCheck" type="Sprite2D" parent="."]
+position = Vector2(161, 129)
+texture = ExtResource("8_my3ea")
+
+[node name="Ampulheta" type="Sprite2D" parent="."]
+position = Vector2(365.99997, 129)
+scale = Vector2(0.59765786, 0.58289975)
+texture = ExtResource("9_nx26a")
