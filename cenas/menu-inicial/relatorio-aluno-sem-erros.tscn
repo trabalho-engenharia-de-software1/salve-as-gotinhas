@@ -1,0 +1,188 @@
+[gd_scene load_steps=9 format=3 uid="uid://cto8u8g0da2ul"]
+
+[ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_0v5o8"]
+[ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="2_2hh6k"]
+[ext_resource type="Texture2D" uid="uid://6ib6uipxcy5l" path="res://imagens/backgrounds/1pixel.png" id="3_7qjkt"]
+[ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="4_lhwvs"]
+[ext_resource type="FontFile" uid="uid://clkjjfanemm5b" path="res://fonts/Silkscreen/Silkscreen-Regular.ttf" id="5_erfwj"]
+[ext_resource type="Texture2D" uid="uid://b1ij2a8t4xv6w" path="res://imagens/backgrounds/borda lateral- atualizada - 1.png" id="6_sidpn"]
+[ext_resource type="Texture2D" uid="uid://dxwtfv5atsmou" path="res://buttons/botao-check/botao-check.png" id="8_2uq1l"]
+[ext_resource type="Texture2D" uid="uid://dg6pxesb40piw" path="res://buttons/ampulheta.png" id="9_77cyq"]
+
+[node name="RelatorioAluno" type="Node2D"]
+
+[node name="BackgroundMenuInicial" type="Sprite2D" parent="."]
+modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
+position = Vector2(239, 124)
+scale = Vector2(0.317, 0.317)
+texture = ExtResource("1_0v5o8")
+
+[node name="BotaoSair2" parent="." instance=ExtResource("2_2hh6k")]
+position = Vector2(-5, 221)
+
+[node name="1Pixel" type="Sprite2D" parent="."]
+modulate = Color(0.29803923, 0.40392157, 0.29803923, 1)
+position = Vector2(239.60583, 163.88574)
+rotation = -3.1415925
+scale = Vector2(313.02917, -99.39204)
+texture = ExtResource("3_7qjkt")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 2.0
+offset_right = 474.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("4_lhwvs")
+theme_override_font_sizes/font_size = 25
+text = "Parabéns por concluir
+       as duas fases!! 
+Este é o seu desempenho:"
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 86.60309
+offset_top = 144.03561
+offset_right = 545.6031
+offset_bottom = 243.03561
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("5_erfwj")
+theme_override_font_sizes/font_size = 25
+text = "FASE 1:"
+
+[node name="Label4" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 215.60309
+offset_top = 118.03561
+offset_right = 674.6031
+offset_bottom = 217.03561
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("5_erfwj")
+theme_override_font_sizes/font_size = 16
+text = "ACERTOS"
+
+[node name="Label6" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 331.16565
+offset_top = 116.03561
+offset_right = 790.16565
+offset_bottom = 215.03561
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("5_erfwj")
+theme_override_font_sizes/font_size = 16
+text = "TEMPO"
+
+[node name="Label3" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 83.60309
+offset_top = 182.03561
+offset_right = 542.6031
+offset_bottom = 281.0356
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("5_erfwj")
+theme_override_font_sizes/font_size = 25
+text = "FASE 2:"
+
+[node name="BordaLateralAtualizada10" type="Sprite2D" parent="."]
+position = Vector2(239.10309, 261.0356)
+scale = Vector2(10.531251, 6.25)
+texture = ExtResource("6_sidpn")
+
+[node name="BordaLateralAtualizada11" type="Sprite2D" parent="."]
+position = Vector2(238.6031, 225.03561)
+scale = Vector2(10.4375, 6.25)
+texture = ExtResource("6_sidpn")
+
+[node name="BordaLateralAtualizada12" type="Sprite2D" parent="."]
+position = Vector2(239.10309, 190.03561)
+scale = Vector2(10.468751, 6.25)
+texture = ExtResource("6_sidpn")
+
+[node name="BordaLateralAtualizada13" type="Sprite2D" parent="."]
+position = Vector2(239.1031, 162.03561)
+scale = Vector2(10.468751, 6.25)
+texture = ExtResource("6_sidpn")
+
+[node name="BordaLateralAtualizada23" type="Sprite2D" parent="."]
+position = Vector2(290.60315, 164.76938)
+rotation = 1.5707964
+scale = Vector2(3.2980843, 2.450393)
+texture = ExtResource("6_sidpn")
+
+[node name="BordaLateralAtualizada26" type="Sprite2D" parent="."]
+position = Vector2(377.60315, 164.17917)
+rotation = 1.5707964
+scale = Vector2(3.2611952, 2.450393)
+texture = ExtResource("6_sidpn")
+
+[node name="BordaLateralAtualizada27" type="Sprite2D" parent="."]
+position = Vector2(64.60315, 164.17917)
+rotation = 1.5707964
+scale = Vector2(3.2611952, 2.450393)
+texture = ExtResource("6_sidpn")
+
+[node name="BordaLateralAtualizada25" type="Sprite2D" parent="."]
+position = Vector2(176.6031, 164.98492)
+rotation = 1.5707964
+scale = Vector2(3.3115573, 2.450393)
+texture = ExtResource("6_sidpn")
+
+[node name="BotaoCheck" type="Sprite2D" parent="."]
+position = Vector2(205.60309, 129.03561)
+texture = ExtResource("8_2uq1l")
+
+[node name="Ampulheta" type="Sprite2D" parent="."]
+position = Vector2(322.16562, 127.03561)
+scale = Vector2(0.59765786, 0.58289975)
+texture = ExtResource("9_77cyq")
