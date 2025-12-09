@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cto8u8g0da2ul"]
+[gd_scene load_steps=10 format=3 uid="uid://cto8u8g0da2ul"]
 
 [ext_resource type="Texture2D" uid="uid://cx2pr3nroiq1b" path="res://imagens/backgrounds/background-menu-inicial.png" id="1_0v5o8"]
+[ext_resource type="Script" uid="uid://431vtvvq5w5q" path="res://cenas/menu-inicial/relatorio_aluno_sem_erros.gd" id="1_2hh6k"]
 [ext_resource type="PackedScene" uid="uid://bduvxvwg6a5tb" path="res://cenas/BotaoSair.tscn" id="2_2hh6k"]
 [ext_resource type="Texture2D" uid="uid://6ib6uipxcy5l" path="res://imagens/backgrounds/1pixel.png" id="3_7qjkt"]
 [ext_resource type="FontFile" uid="uid://b7iv04e430tio" path="res://fonts/Silkscreen/Silkscreen-Bold.ttf" id="4_lhwvs"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dg6pxesb40piw" path="res://buttons/ampulheta.png" id="9_77cyq"]
 
 [node name="RelatorioAluno" type="Node2D"]
+script = ExtResource("1_2hh6k")
 
 [node name="BackgroundMenuInicial" type="Sprite2D" parent="."]
 modulate = Color(0.39256206, 0.39256206, 0.39256206, 1)
@@ -133,6 +135,91 @@ theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("5_erfwj")
 theme_override_font_sizes/font_size = 25
 text = "FASE 2:"
+
+[node name="Label9" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 311.0
+offset_top = 180.0
+offset_right = 770.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("5_erfwj")
+theme_override_font_sizes/font_size = 25
+text = "FASE 2:"
+
+[node name="Label8" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 311.0
+offset_top = 146.0
+offset_right = 770.0
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("5_erfwj")
+theme_override_font_sizes/font_size = 25
+text = "FASE 2:"
+
+[node name="Label7" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 198.0
+offset_top = 179.0
+offset_right = 657.0
+offset_bottom = 278.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("5_erfwj")
+theme_override_font_sizes/font_size = 25
+text = "FASE 2:"
+
+[node name="Label5" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 201.0
+offset_top = 143.0
+offset_right = 660.0
+offset_bottom = 242.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("5_erfwj")
+theme_override_font_sizes/font_size = 25
+text = "4
+"
 
 [node name="BordaLateralAtualizada10" type="Sprite2D" parent="."]
 position = Vector2(239.10309, 261.0356)

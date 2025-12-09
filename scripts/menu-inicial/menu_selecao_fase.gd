@@ -6,27 +6,30 @@ extends Control
 
 func _ready() -> void:
 	await get_tree().process_frame
-	
-	var lista_de_passos = [
-		
-		# Exemplo 1: Destaque automático no Botão A
-		{
-			"tipo": "alvo_automatico",
-			"alvo": iniciar_fase1,
-			"texto": "Clique para jogar a fase 1!",
-			"audio":preload("res://narracao/menu/clique para jogar a fase 1.wav")
-		},
-		{
-			"tipo": "alvo_automatico",
-			"alvo": iniciar_fase2,
-			"texto": "Clique para jogar a fase 2!",
-			"audio":preload("res://narracao/menu/clique para jogar a fase 2.wav")
-		}
-	]
-	botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
-	botao_ajuda.iniciar_tour_automatico()
 	if DadosDoJogo.flag1 == 1 and DadosDoJogo.flag2 == 1:
 		sair()
+		return
+	if !(DadosDoJogo.flag1 == 1 and DadosDoJogo.flag2 == 1):
+		var lista_de_passos = [
+		
+			# Exemplo 1: Destaque automático no Botão A
+			{
+				"tipo": "alvo_automatico",
+				"alvo": iniciar_fase1,
+				"texto": "Clique para jogar a fase 1!",
+				"audio":preload("res://narracao/menu/clique para jogar a fase 1.wav")
+			},
+			{
+				"tipo": "alvo_automatico",
+				"alvo": iniciar_fase2,
+				"texto": "Clique para jogar a fase 2!",
+				"audio":preload("res://narracao/menu/clique para jogar a fase 2.wav")
+			}
+		]
+	
+		botao_ajuda.habilitar_ajuda_com_passos(lista_de_passos)
+		botao_ajuda.iniciar_tour_automatico()
+	
 
 func _on_iniciarfase_1_pressed() -> void:
 	get_tree().change_scene_to_file("res://cenas/fase1/fase1_cena.tscn")
@@ -37,7 +40,7 @@ func _on_iniciarfase_2_pressed() -> void:
 func sair() -> void:
 	print("deu boa")
 	confg()
-	get_tree().change_scene_to_file("res://cenas/menu-inicial/menu-inicial.tscn")
+	get_tree().change_scene_to_file("res://cenas/menu-inicial/relatorio-aluno-sem-erros.tscn")
 	
 func confg() -> void:
 	DadosDoJogo.reset()
